@@ -1,0 +1,31 @@
+/*
+ * Rahardianmif UI
+ * Spacing Foundation Tokens
+ *
+ * Base spacing unit: 4px
+ *
+ * Scope:
+ * - Spacing scale only
+ *
+ */
+
+:root {
+  /* ========================================
+   * Spacing Scale
+   * Base unit: 4px
+   * ======================================== */
+
+  --rm-space-0: 0;
+  --rm-space-1: 4px;
+  --rm-space-2: 8px;
+  --rm-space-3: 12px;
+  --rm-space-4: 16px;
+  --rm-space-5: 20px;
+  --rm-space-6: 24px;
+  --rm-space-8: 32px;
+  --rm-space-10: 40px;
+  --rm-space-12: 48px;
+  --rm-space-16: 64px;
+  --rm-space-20: 80px;
+  --rm-space-24: 96px;
+}

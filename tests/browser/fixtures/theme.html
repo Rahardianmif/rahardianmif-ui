@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  data-rm-theme="system"
+>
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Rahardianmif UI v0.1 Test Fixture
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/src/css/rahardianmif-ui.css"
+  >
+
+  <style>
+    body {
+      margin: 0;
+
+      font-family:
+        var(--rm-font-family-sans);
+
+      font-size:
+        var(--rm-font-size-base);
+
+      line-height:
+        var(--rm-line-height-normal);
+
+      color:
+        var(--rm-text-primary);
+
+      background:
+        var(--rm-page-bg);
+    }
+
+    main {
+      padding:
+        var(--rm-space-6);
+    }
+
+    .fixture-surface {
+      padding:
+        var(--rm-space-4);
+
+      color:
+        var(--rm-text-primary);
+
+      background:
+        var(--rm-surface);
+
+      border:
+        1px solid var(--rm-border);
+
+      border-radius:
+        var(--rm-radius-md);
+
+      box-shadow:
+        var(--rm-shadow-sm);
+    }
+
+    .fixture-secondary {
+      color:
+        var(--rm-text-secondary);
+    }
+
+    .fixture-probe {
+      display: none;
+
+      color:
+        var(--rm-primary);
+
+      background:
+        var(--rm-surface);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>
+      Rahardianmif UI
+    </h1>
+
+    <section
+      class="fixture-surface"
+      aria-labelledby="foundation-title"
+    >
+      <h2 id="foundation-title">
+        Foundation Test Fixture
+      </h2>
+
+      <p class="fixture-secondary">
+        Test fixture untuk v0.1 Foundations
+        dan Theme System.
+      </p>
+    </section>
+
+    <span
+      id="primary-probe"
+      class="fixture-probe"
+      aria-hidden="true"
+    ></span>
+  </main>
+
+  <script type="module">
+    import RahardianmifUI
+      from "/src/js/rahardianmif-ui.js";
+
+    import {
+      setThemePreference,
+      getThemePreference,
+      getEffectiveTheme,
+    } from "/src/js/core/theme-manager.js";
+
+
+    window.rmTestTheme = {
+      setThemePreference,
+      getThemePreference,
+      getEffectiveTheme,
+    };
+
+
+    RahardianmifUI.init();
+
+
+    window.rmTestThemeReady = true;
+  </script>
+</body>
+</html>

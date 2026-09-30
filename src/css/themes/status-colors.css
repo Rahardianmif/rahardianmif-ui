@@ -1,0 +1,43 @@
+/*
+ * Rahardianmif UI
+ * Semantic Status Color Tokens
+ *
+ */
+
+:root {
+  /* ========================================
+   * Success
+   * ======================================== */
+
+  --rm-success: #16A34A;
+  --rm-success-hover: #15803D;
+  --rm-success-soft: #DCFCE7;
+  --rm-success-text-strong: #166534;
+
+  /* ========================================
+   * Danger
+   * ======================================== */
+
+  --rm-danger: #DC2626;
+  --rm-danger-hover: #B91C1C;
+  --rm-danger-soft: #FEE2E2;
+  --rm-danger-text-strong: #991B1B;
+
+  /* ========================================
+   * Warning
+   * ======================================== */
+
+  --rm-warning: #D97706;
+  --rm-warning-hover: #B45309;
+  --rm-warning-soft: #FEF3C7;
+  --rm-warning-text-strong: #92400E;
+
+  /* ========================================
+   * Info
+   * ======================================== */
+
+  --rm-info: #2563EB;
+  --rm-info-hover: #1D4ED8;
+  --rm-info-soft: #DBEAFE;
+  --rm-info-text-strong: #1E40AF;
+}

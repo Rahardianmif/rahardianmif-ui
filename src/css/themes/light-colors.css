@@ -1,0 +1,61 @@
+/*
+ * Rahardianmif UI
+ * Light Theme Semantic Color Tokens
+ *
+ * Components should consume semantic tokens
+ * instead of primitive palette values whenever possible.
+ */
+
+:root,
+[data-rm-theme="light"] {
+  /* ========================================
+   * Background & Surface
+   * ======================================== */
+
+  --rm-page-bg: var(--rm-color-slate-50);
+
+  --rm-surface: #FFFFFF;
+  --rm-surface-secondary: var(--rm-color-slate-100);
+  --rm-surface-strong: var(--rm-color-slate-200);
+
+  /*
+   * Surface A1:
+   * Light elevated surface intentionally aliases
+   * the base surface.
+   *
+   * Elevation differentiation may later be expressed
+   * through existing semantic shadow/border systems.
+   */
+  --rm-surface-elevated: var(--rm-surface);
+
+  /* ========================================
+   * Border
+   * ======================================== */
+
+  --rm-border: var(--rm-color-slate-300);
+  --rm-border-soft: var(--rm-color-slate-200);
+
+  /* ========================================
+   * Text
+   * ======================================== */
+
+  --rm-text-primary: var(--rm-color-slate-900);
+  --rm-text-secondary: var(--rm-color-slate-600);
+  --rm-text-muted: var(--rm-color-slate-500);
+  --rm-text-disabled: var(--rm-color-slate-400);
+
+  /* ========================================
+   * Supporting
+   * ======================================== */
+
+  --rm-supporting: var(--rm-color-navy-900);
+
+  /* ========================================
+   * Primary / Accent
+   * ======================================== */
+
+  --rm-primary: var(--rm-color-cyan-600);
+  --rm-primary-hover: var(--rm-color-cyan-700);
+  --rm-primary-active: var(--rm-color-cyan-800);
+  --rm-primary-soft: var(--rm-color-cyan-100);
+}

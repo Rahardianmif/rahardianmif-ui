@@ -1,0 +1,39 @@
+/*
+ * Rahardianmif UI
+ * Main CSS Entry Point
+ *
+ * Dependency direction:
+ *
+ * Foundations
+ *     ↓
+ * Themes
+ *
+ * Components, patterns, layout, utilities,
+ * and base styles are intentionally not included
+ * until their roadmap phase is implemented.
+ */
+
+
+/* ========================================
+ * Foundations
+ * ======================================== */
+
+@import "./foundations/colors.css";
+@import "./foundations/typography.css";
+@import "./foundations/spacing.css";
+@import "./foundations/radius.css";
+@import "./foundations/z-index.css";
+@import "./foundations/motion.css";
+@import "./foundations/breakpoints.css";
+
+
+/* ========================================
+ * Themes
+ * ======================================== */
+
+@import "./themes/light-colors.css";
+@import "./themes/dark-colors.css";
+@import "./themes/status-colors.css";
+
+@import "./themes/light-shadow.css";
+@import "./themes/dark-shadow.css";

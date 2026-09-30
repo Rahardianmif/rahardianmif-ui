@@ -1,0 +1,61 @@
+/*
+ * Rahardianmif UI
+ * Primitive Color Tokens
+ *
+ * Neutral    : Slate
+ * Supporting : Navy
+ * Accent     : Cyan
+ */
+
+:root {
+  /* ========================================
+   * Slate
+   * Neutral / Surface
+   * ======================================== */
+
+  --rm-color-slate-50: #F8FAFC;
+  --rm-color-slate-100: #F1F5F9;
+  --rm-color-slate-200: #E2E8F0;
+  --rm-color-slate-300: #CBD5E1;
+  --rm-color-slate-400: #94A3B8;
+  --rm-color-slate-500: #64748B;
+  --rm-color-slate-600: #475569;
+  --rm-color-slate-700: #334155;
+  --rm-color-slate-800: #1E293B;
+  --rm-color-slate-900: #0F172A;
+  --rm-color-slate-950: #020617;
+
+  /* ========================================
+   * Cyan
+   * Brand / Accent
+   * ======================================== */
+
+  --rm-color-cyan-50: #ECFEFF;
+  --rm-color-cyan-100: #CFFAFE;
+  --rm-color-cyan-200: #A5F3FC;
+  --rm-color-cyan-300: #67E8F9;
+  --rm-color-cyan-400: #22D3EE;
+  --rm-color-cyan-500: #06B6D4;
+  --rm-color-cyan-600: #0891B2;
+  --rm-color-cyan-700: #0E7490;
+  --rm-color-cyan-800: #155E75;
+  --rm-color-cyan-900: #164E63;
+  --rm-color-cyan-950: #083344;
+
+  /* ========================================
+   * Navy
+   * Supporting / Structure
+   * ======================================== */
+
+  --rm-color-navy-50: #F2F7FB;
+  --rm-color-navy-100: #DFEBF5;
+  --rm-color-navy-200: #C5DCEC;
+  --rm-color-navy-300: #9CC5DF;
+  --rm-color-navy-400: #6AA9CE;
+  --rm-color-navy-500: #478CB7;
+  --rm-color-navy-600: #346F98;
+  --rm-color-navy-700: #2B597B;
+  --rm-color-navy-800: #274B66;
+  --rm-color-navy-900: #16324F;
+  --rm-color-navy-950: #0C1D2E;
+}

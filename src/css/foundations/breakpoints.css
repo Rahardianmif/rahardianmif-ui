@@ -1,0 +1,12 @@
+/*
+Rahardianmif UI responsive breakpoints
+Canonical values are documented here because CSS custom properties
+cannot be relied on directly inside standard media-query conditions.
+
+XS   default (<36rem)
+SM   36rem
+MD   48rem
+LG   64rem
+XL   80rem
+2XL  96rem
+*/

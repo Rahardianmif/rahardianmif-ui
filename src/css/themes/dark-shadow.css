@@ -1,0 +1,16 @@
+[data-rm-theme="dark"] {
+  --rm-shadow-xs:
+    0 1px 2px rgb(0 0 0 / 0.24);
+
+  --rm-shadow-sm:
+    0 2px 4px rgb(0 0 0 / 0.28);
+
+  --rm-shadow-md:
+    0 6px 12px -2px rgb(0 0 0 / 0.32);
+
+  --rm-shadow-lg:
+    0 12px 24px -4px rgb(0 0 0 / 0.36);
+
+  --rm-shadow-xl:
+    0 20px 40px -8px rgb(0 0 0 / 0.42);
+}

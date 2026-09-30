@@ -1,0 +1,15 @@
+/*
+ * Rahardianmif UI
+ * Motion Foundation Tokens
+ *
+ * Motion should provide feedback and continuity,
+ * not decorative movement.
+ *
+ */
+
+:root {
+  --rm-motion-fast: 120ms;
+  --rm-motion-normal: 200ms;
+  --rm-motion-slow: 320ms;
+  --rm-motion-extended: 480ms;
+}

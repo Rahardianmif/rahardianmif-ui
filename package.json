@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "engines": {
+        "node": ">=22.12.0 <23"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "check:js": "node --check src/js/core/theme-manager.js && node --check src/js/rahardianmif-ui.js",
+        "test:unit": "vitest run",
+        "test:browser": "playwright test tests/browser",
+        "test:a11y": "playwright test tests/accessibility",
+        "test:playwright": "playwright test",
+        "test": "npm run check:js && npm run test:unit && npm run test:playwright"
+    },
+    "devDependencies": {
+        "@axe-core/playwright": "^4.13.0",
+        "@playwright/test": "^1.63.0",
+        "vite": "^8.3.1",
+        "vitest": "^5.0.2"
+    }
+}
