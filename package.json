@@ -13,7 +13,8 @@
         "test:browser": "playwright test tests/browser",
         "test:a11y": "playwright test tests/accessibility",
         "test:playwright": "playwright test",
-        "test": "npm run check:js && npm run test:unit && npm run test:playwright"
+        "test": "npm run check:js && npm run test:unit && npm run test:playwright",
+        "test:release": "npm run test:unit && npm run test:playwright && npm run build"
     },
     "devDependencies": {
         "@axe-core/playwright": "^4.13.0",

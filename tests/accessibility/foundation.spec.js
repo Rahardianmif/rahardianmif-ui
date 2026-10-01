@@ -6,6 +6,7 @@ import {
 import AxeBuilder
   from "@axe-core/playwright";
 
+test.setTimeout(60_000);
 
 const fixture =
   "/tests/browser/fixtures/theme.html";

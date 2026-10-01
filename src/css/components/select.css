@@ -1,0 +1,170 @@
+/*
+ * Rahardianmif UI
+ * Native Select Component
+ *
+ * v0.2.4
+ *
+ * Sizes:
+ * - SM: 36px
+ * - MD: 44px
+ * - LG: 52px
+ *
+ * Default:
+ * - MD
+ *
+ * States:
+ * - Default
+ * - Hover
+ * - Focus-visible
+ * - Disabled
+ * - Invalid
+ *
+ * Implementation:
+ * - Native <select>
+ * - CSS-only chevron
+ * - No JavaScript
+ */
+
+.rm-select {
+  --rm-select-height: 44px;
+  --rm-select-padding-x: var(--rm-space-3);
+  --rm-select-font-size: var(--rm-font-size-base);
+
+  box-sizing: border-box;
+
+  display: block;
+
+  inline-size: 100%;
+  block-size: var(--rm-select-height);
+  min-inline-size: 0;
+
+  padding-block: 0;
+  padding-inline-start: var(--rm-select-padding-x);
+  padding-inline-end: calc(
+    var(--rm-select-padding-x) + 24px
+  );
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-md);
+
+  background-color: var(--rm-surface);
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      currentColor 50%
+    ),
+    linear-gradient(
+      135deg,
+      currentColor 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 14px) 50%;
+
+  background-size:
+    4px 4px,
+    4px 4px;
+
+  background-repeat: no-repeat;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-select-font-size);
+  font-weight: var(--rm-font-weight-regular);
+  line-height: var(--rm-line-height-normal);
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--rm-motion-fast),
+    border-color var(--rm-motion-fast),
+    color var(--rm-motion-fast),
+    box-shadow var(--rm-motion-fast);
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-select--sm {
+  --rm-select-height: 36px;
+  --rm-select-padding-x: var(--rm-space-2);
+  --rm-select-font-size: var(--rm-font-size-sm);
+}
+
+.rm-select--md {
+  --rm-select-height: 44px;
+  --rm-select-padding-x: var(--rm-space-3);
+  --rm-select-font-size: var(--rm-font-size-base);
+}
+
+.rm-select--lg {
+  --rm-select-height: 52px;
+  --rm-select-padding-x: var(--rm-space-4);
+  --rm-select-font-size: var(--rm-font-size-base);
+}
+
+
+/* ========================================
+ * Hover
+ * ======================================== */
+
+.rm-select:hover:not(:disabled) {
+  border-color: var(--rm-text-muted);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-select:focus-visible {
+  border-color: var(--rm-primary);
+
+  outline: 2px solid var(--rm-primary);
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Disabled
+ * ======================================== */
+
+.rm-select:disabled {
+  background-color: var(--rm-surface-secondary);
+  color: var(--rm-text-disabled);
+
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+ * Invalid
+ * ======================================== */
+
+.rm-select.is-invalid,
+.rm-select[aria-invalid="true"] {
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-select {
+    transition: none;
+  }
+}

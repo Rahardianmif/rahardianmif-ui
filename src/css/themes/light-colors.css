@@ -43,6 +43,8 @@
   --rm-text-secondary: var(--rm-color-slate-600);
   --rm-text-muted: var(--rm-color-slate-500);
   --rm-text-disabled: var(--rm-color-slate-400);
+  --rm-text-on-primary: var(--rm-color-slate-900);
+  --rm-text-on-danger: var(--rm-color-slate-50);
 
   /* ========================================
    * Supporting

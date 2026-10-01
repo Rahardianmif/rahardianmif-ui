@@ -1,0 +1,52 @@
+@import "../../src/css/rahardianmif-ui.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: var(--rm-font-family-sans);
+
+  color: var(--rm-text-primary);
+  background: var(--rm-page-bg);
+}
+
+.rm-demo {
+  display: grid;
+
+  gap: var(--rm-space-6);
+
+  padding: var(--rm-space-6);
+}
+
+.rm-demo__theme {
+  display: grid;
+
+  gap: var(--rm-space-5);
+
+  padding: var(--rm-space-6);
+
+  color: var(--rm-text-primary);
+  background: var(--rm-page-bg);
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-lg);
+}
+
+.rm-demo__group {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--rm-space-3);
+
+  align-items: center;
+}
+
+.rm-demo__full-width {
+  inline-size: 100%;
+  max-inline-size: 30rem;
+}

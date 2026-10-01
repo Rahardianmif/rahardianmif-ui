@@ -656,7 +656,7 @@ describe(
                         match[1] ?? match[2]
                 );
 
-                expect(imports).toEqual([
+                const expectedCoreImports = [
                     "./foundations/colors.css",
                     "./foundations/typography.css",
                     "./foundations/spacing.css",
@@ -670,7 +670,39 @@ describe(
                     "./themes/status-colors.css",
                     "./themes/light-shadow.css",
                     "./themes/dark-shadow.css",
-                ]);
+                ];
+
+                expect(
+                    imports.slice(
+                        0,
+                        expectedCoreImports.length
+                    )
+                ).toEqual(
+                    expectedCoreImports
+                );
+
+                const lastThemeIndex =
+                    imports.indexOf(
+                        "./themes/dark-shadow.css"
+                    );
+
+                const firstComponentIndex =
+                    imports.findIndex(
+                        (importPath) =>
+                            importPath.startsWith(
+                                "./components/"
+                            )
+                    );
+
+                if (
+                    firstComponentIndex !== -1
+                ) {
+                    expect(
+                        firstComponentIndex
+                    ).toBeGreaterThan(
+                        lastThemeIndex
+                    );
+                }
             }
         );
 

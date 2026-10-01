@@ -1,0 +1,277 @@
+/*
+ * Rahardianmif UI
+ * Switch Component
+ *
+ * v0.2.6
+ *
+ * Semantic source:
+ * - Native <input type="checkbox">
+ *
+ * Sizes:
+ * - SM: 32 × 18px
+ * - MD: 40 × 22px
+ * - LG: 48 × 26px
+ *
+ * Default:
+ * - MD
+ *
+ * No JavaScript.
+ * No role="switch" in this phase.
+ */
+
+.rm-switch-field {
+  --rm-switch-width: 40px;
+  --rm-switch-height: 22px;
+  --rm-switch-gap: 2px;
+
+  display: inline-grid;
+
+  grid-template-columns:
+    var(--rm-switch-width)
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  column-gap: var(--rm-space-2);
+  row-gap: var(--rm-space-1);
+
+  position: relative;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-base);
+  line-height: var(--rm-line-height-normal);
+}
+
+
+/* ========================================
+ * Native Input
+ *
+ * Remains semantic, focusable,
+ * and keyboard operable.
+ * ======================================== */
+
+.rm-switch {
+  position: absolute;
+
+  inline-size: 1px;
+  block-size: 1px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  clip-path: inset(50%);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+
+/* ========================================
+ * Track
+ * ======================================== */
+
+.rm-switch__track {
+  box-sizing: border-box;
+
+  display: block;
+
+  inline-size: var(--rm-switch-width);
+  block-size: var(--rm-switch-height);
+
+  margin-block-start: 0.125em;
+
+  position: relative;
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-pill);
+
+  background: var(--rm-surface-strong);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--rm-motion-fast),
+    border-color var(--rm-motion-fast),
+    box-shadow var(--rm-motion-fast);
+}
+
+
+/* ========================================
+ * Thumb
+ * ======================================== */
+
+.rm-switch__thumb {
+  display: block;
+
+  inline-size: calc(
+    var(--rm-switch-height)
+    - (var(--rm-switch-gap) * 2)
+    - 2px
+  );
+
+  block-size: calc(
+    var(--rm-switch-height)
+    - (var(--rm-switch-gap) * 2)
+    - 2px
+  );
+
+  position: absolute;
+
+  inset-block-start: var(--rm-switch-gap);
+  inset-inline-start: var(--rm-switch-gap);
+
+  border-radius: var(--rm-radius-circle);
+
+  background: var(--rm-surface);
+
+  box-shadow: var(--rm-shadow-xs);
+
+  pointer-events: none;
+
+  transition:
+    transform var(--rm-motion-fast),
+    background-color var(--rm-motion-fast);
+}
+
+
+/* ========================================
+ * Label
+ * ======================================== */
+
+.rm-switch__label {
+  min-inline-size: 0;
+
+  color: var(--rm-text-primary);
+
+  font-weight: var(--rm-font-weight-regular);
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+ * Description
+ * ======================================== */
+
+.rm-switch__description {
+  grid-column: 2;
+
+  margin: 0;
+
+  color: var(--rm-text-muted);
+
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-switch-field--sm {
+  --rm-switch-width: 32px;
+  --rm-switch-height: 18px;
+}
+
+.rm-switch-field--md {
+  --rm-switch-width: 40px;
+  --rm-switch-height: 22px;
+}
+
+.rm-switch-field--lg {
+  --rm-switch-width: 48px;
+  --rm-switch-height: 26px;
+}
+
+
+/* ========================================
+ * Hover
+ * ======================================== */
+
+.rm-switch-field:hover
+.rm-switch:not(:disabled)
++ .rm-switch__track {
+  border-color: var(--rm-text-muted);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-switch:focus-visible
++ .rm-switch__track {
+  outline: 2px solid var(--rm-primary);
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Checked
+ * ======================================== */
+
+.rm-switch:checked
++ .rm-switch__track {
+  border-color: var(--rm-primary);
+  background: var(--rm-primary);
+}
+
+.rm-switch:checked
++ .rm-switch__track
+.rm-switch__thumb {
+  transform: translateX(
+    calc(
+      var(--rm-switch-width)
+      - var(--rm-switch-height)
+    )
+  );
+}
+
+
+/* ========================================
+ * Invalid
+ * ======================================== */
+
+.rm-switch-field.is-invalid
+.rm-switch__track,
+
+.rm-switch[aria-invalid="true"]
++ .rm-switch__track {
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Disabled
+ * ======================================== */
+
+.rm-switch:disabled
++ .rm-switch__track,
+
+.rm-switch:disabled
+~ .rm-switch__label,
+
+.rm-switch:disabled
+~ .rm-switch__description {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-switch__track,
+  .rm-switch__thumb {
+    transition: none;
+  }
+}

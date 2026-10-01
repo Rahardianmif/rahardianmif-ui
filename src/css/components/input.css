@@ -1,0 +1,157 @@
+/*
+ * Rahardianmif UI
+ * Input Component
+ *
+ * v0.2.2
+ *
+ * Supported initial types:
+ * - text
+ * - email
+ * - password
+ * - search
+ * - tel
+ * - url
+ * - number
+ *
+ * Sizes:
+ * - SM: 36px
+ * - MD: 44px
+ * - LG: 52px
+ *
+ * States:
+ * - Default
+ * - Hover
+ * - Focus-visible
+ * - Disabled
+ * - Readonly
+ * - Invalid
+ */
+
+.rm-input {
+  --rm-input-height: 44px;
+  --rm-input-padding-x: var(--rm-space-3);
+  --rm-input-font-size: var(--rm-font-size-base);
+
+  box-sizing: border-box;
+
+  display: block;
+
+  inline-size: 100%;
+  block-size: var(--rm-input-height);
+  min-inline-size: 0;
+
+  padding-block: 0;
+  padding-inline: var(--rm-input-padding-x);
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-md);
+
+  background: var(--rm-surface);
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-input-font-size);
+  font-weight: var(--rm-font-weight-regular);
+  line-height: var(--rm-line-height-normal);
+
+  transition:
+    background-color var(--rm-motion-fast),
+    border-color var(--rm-motion-fast),
+    color var(--rm-motion-fast),
+    box-shadow var(--rm-motion-fast);
+}
+
+.rm-input::placeholder {
+  color: var(--rm-text-muted);
+  opacity: 1;
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-input--sm {
+  --rm-input-height: 36px;
+  --rm-input-padding-x: var(--rm-space-2);
+  --rm-input-font-size: var(--rm-font-size-sm);
+}
+
+.rm-input--md {
+  --rm-input-height: 44px;
+  --rm-input-padding-x: var(--rm-space-3);
+  --rm-input-font-size: var(--rm-font-size-base);
+}
+
+.rm-input--lg {
+  --rm-input-height: 52px;
+  --rm-input-padding-x: var(--rm-space-4);
+  --rm-input-font-size: var(--rm-font-size-base);
+}
+
+
+/* ========================================
+ * Hover
+ * ======================================== */
+
+.rm-input:hover:not(:disabled):not([readonly]) {
+  border-color: var(--rm-text-muted);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-input:focus-visible {
+  border-color: var(--rm-primary);
+
+  outline: 2px solid var(--rm-primary);
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Readonly
+ * ======================================== */
+
+.rm-input[readonly] {
+  background: var(--rm-surface-secondary);
+
+  cursor: default;
+}
+
+
+/* ========================================
+ * Disabled
+ * ======================================== */
+
+.rm-input:disabled {
+  background: var(--rm-surface-secondary);
+  color: var(--rm-text-disabled);
+
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+ * Invalid
+ * ======================================== */
+
+.rm-input.is-invalid,
+.rm-input[aria-invalid="true"] {
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-input {
+    transition: none;
+  }
+}

@@ -1,0 +1,143 @@
+/*
+ * Rahardianmif UI
+ * Validation + Form States
+ *
+ * v0.2.7
+ *
+ * Covered controls:
+ * - Input
+ * - Textarea
+ * - Select
+ * - Checkbox / Radio
+ * - Switch
+ *
+ * Validation communicates state using:
+ * - semantic attributes
+ * - border state
+ * - explicit text message
+ *
+ * Status must not rely on text color alone.
+ */
+
+
+/* ========================================
+ * Required / Optional Indicators
+ * ======================================== */
+
+.rm-field__required {
+  margin-inline-start: var(--rm-space-1);
+
+  color: var(--rm-text-primary);
+
+  font-weight: var(--rm-font-weight-semibold);
+}
+
+.rm-field__optional {
+  margin-inline-start: var(--rm-space-1);
+
+  color: var(--rm-text-muted);
+
+  font-size: var(--rm-font-size-xs);
+  font-weight: var(--rm-font-weight-regular);
+}
+
+
+/* ========================================
+ * Validation Messages
+ * ======================================== */
+
+.rm-field__message--success,
+.rm-field__message--error {
+  color: var(--rm-text-primary);
+}
+
+.rm-field__message--success {
+  font-weight: var(--rm-font-weight-medium);
+}
+
+.rm-field__message--error {
+  font-weight: var(--rm-font-weight-semibold);
+}
+
+
+/* ========================================
+ * Valid — Text Controls
+ * ======================================== */
+
+.rm-input.is-valid,
+.rm-textarea.is-valid,
+.rm-select.is-valid,
+
+.rm-field.is-valid .rm-input,
+.rm-field.is-valid .rm-textarea,
+.rm-field.is-valid .rm-select {
+  border-color: var(--rm-success);
+}
+
+
+/* ========================================
+ * Invalid — Text Controls
+ * ======================================== */
+
+.rm-input.is-invalid,
+.rm-textarea.is-invalid,
+.rm-select.is-invalid,
+
+.rm-input[aria-invalid="true"],
+.rm-textarea[aria-invalid="true"],
+.rm-select[aria-invalid="true"],
+
+.rm-field.is-invalid .rm-input,
+.rm-field.is-invalid .rm-textarea,
+.rm-field.is-invalid .rm-select {
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Valid — Checkbox / Radio
+ * ======================================== */
+
+.rm-choice.is-valid
+.rm-choice__control {
+  border-color: var(--rm-success);
+}
+
+
+/* ========================================
+ * Invalid — Checkbox / Radio
+ * ======================================== */
+
+.rm-choice.is-invalid
+.rm-choice__control,
+
+.rm-checkbox[aria-invalid="true"]
++ .rm-choice__control,
+
+.rm-radio[aria-invalid="true"]
++ .rm-choice__control {
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Valid — Switch
+ * ======================================== */
+
+.rm-switch-field.is-valid
+.rm-switch__track {
+  border-color: var(--rm-success);
+}
+
+
+/* ========================================
+ * Invalid — Switch
+ * ======================================== */
+
+.rm-switch-field.is-invalid
+.rm-switch__track,
+
+.rm-switch[aria-invalid="true"]
++ .rm-switch__track {
+  border-color: var(--rm-danger);
+}

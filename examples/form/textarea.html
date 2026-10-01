@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Rahardianmif UI — Textarea
+    </title>
+
+    <link rel="stylesheet" href="../../src/css/rahardianmif-ui.css">
+
+    <link rel="stylesheet" href="./form-demo.css">
+</head>
+
+<body>
+    <main class="rm-demo">
+        <h1>
+            Rahardianmif UI Textarea
+        </h1>
+
+
+        <!-- Light Theme -->
+
+        <section class="rm-demo__theme" data-rm-theme="light" aria-labelledby="textarea-light-title">
+            <h2 id="textarea-light-title">
+                Light Theme
+            </h2>
+
+            <div class="rm-demo__form">
+                <div class="rm-field">
+                    <label class="rm-field__label" for="textarea-default">
+                        Message
+                    </label>
+
+                    <div class="rm-field__control">
+                        <textarea class="rm-textarea" id="textarea-default" placeholder="Write your message"></textarea>
+                    </div>
+
+                    <p class="rm-field__description" id="textarea-description">
+                        Maximum 500 characters.
+                    </p>
+                </div>
+
+
+                <h3>Sizes</h3>
+
+                <div class="rm-demo__sizes">
+                    <textarea id="textarea-sm" class="rm-textarea rm-textarea--sm"
+                        aria-label="Small textarea"></textarea>
+
+                    <textarea id="textarea-md" class="rm-textarea rm-textarea--md"
+                        aria-label="Medium textarea"></textarea>
+
+                    <textarea id="textarea-lg" class="rm-textarea rm-textarea--lg"
+                        aria-label="Large textarea"></textarea>
+                </div>
+
+
+                <h3>States</h3>
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="textarea-readonly">
+                        Readonly
+                    </label>
+
+                    <div class="rm-field__control">
+                        <textarea class="rm-textarea" id="textarea-readonly" readonly>Readonly content</textarea>
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="textarea-disabled">
+                        Disabled
+                    </label>
+
+                    <div class="rm-field__control">
+                        <textarea class="rm-textarea" id="textarea-disabled" disabled>Disabled content</textarea>
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="textarea-invalid">
+                        Description
+                    </label>
+
+                    <div class="rm-field__control">
+                        <textarea class="rm-textarea is-invalid" id="textarea-invalid" aria-invalid="true"
+                            aria-describedby="textarea-invalid-message"></textarea>
+                    </div>
+
+                    <p class="rm-field__message" id="textarea-invalid-message">
+                        Description is required.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Dark Theme -->
+
+        <section class="rm-demo__theme" data-rm-theme="dark" aria-labelledby="textarea-dark-title">
+            <h2 id="textarea-dark-title">
+                Dark Theme
+            </h2>
+
+            <div class="rm-demo__form">
+                <div class="rm-field">
+                    <label class="rm-field__label" for="textarea-dark">
+                        Message
+                    </label>
+
+                    <div class="rm-field__control">
+                        <textarea class="rm-textarea" id="textarea-dark" placeholder="Write your message"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="textarea-dark-invalid">
+                        Description
+                    </label>
+
+                    <div class="rm-field__control">
+                        <textarea class="rm-textarea is-invalid" id="textarea-dark-invalid" aria-invalid="true"
+                            aria-describedby="textarea-dark-invalid-message"></textarea>
+                    </div>
+
+                    <p class="rm-field__message" id="textarea-dark-invalid-message">
+                        Description is required.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

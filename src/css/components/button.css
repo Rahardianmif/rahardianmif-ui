@@ -1,0 +1,308 @@
+/*
+ * Rahardianmif UI
+ * Button Component
+ *
+ * v0.2 Button Core
+ *
+ * Variants:
+ * - Primary
+ * - Secondary
+ * - Outline
+ * - Ghost
+ * - Danger
+ *
+ * Sizes:
+ * - SM: 36px
+ * - MD: 44px
+ * - LG: 52px
+ *
+ * Modifiers:
+ * - Full width
+ * - Icon-only
+ *
+ * States:
+ * - Default
+ * - Hover
+ * - Focus-visible
+ * - Active
+ * - Disabled
+ * - Loading
+ */
+
+.rm-button {
+  /* ========================================
+   * Component-local defaults
+   * MD is the default size.
+   * ======================================== */
+
+  --rm-button-height: 44px;
+  --rm-button-padding-x: var(--rm-space-4);
+  --rm-button-font-size: var(--rm-font-size-base);
+
+  --rm-button-background: transparent;
+  --rm-button-background-hover: var(--rm-button-background);
+  --rm-button-background-active: var(--rm-button-background-hover);
+
+  --rm-button-color: var(--rm-text-primary);
+
+  --rm-button-border: transparent;
+  --rm-button-border-hover: var(--rm-button-border);
+  --rm-button-border-active: var(--rm-button-border-hover);
+
+  --rm-button-shadow: none;
+  --rm-button-shadow-hover: var(--rm-button-shadow);
+  --rm-button-shadow-active: var(--rm-button-shadow-hover);
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-block-size: var(--rm-button-height);
+
+  padding-block: 0;
+  padding-inline: var(--rm-button-padding-x);
+
+  gap: var(--rm-space-2);
+
+  border: 1px solid var(--rm-button-border);
+  border-radius: var(--rm-radius-md);
+
+  background: var(--rm-button-background);
+  color: var(--rm-button-color);
+
+  box-shadow: var(--rm-button-shadow);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-button-font-size);
+  font-weight: var(--rm-font-weight-semibold);
+  line-height: var(--rm-line-height-normal);
+
+  text-align: center;
+  text-decoration: none;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--rm-motion-fast),
+    border-color var(--rm-motion-fast),
+    color var(--rm-motion-fast),
+    box-shadow var(--rm-motion-fast);
+}
+
+
+/* ========================================
+ * Direct SVG icon support
+ * ======================================== */
+
+.rm-button > svg {
+  flex: 0 0 auto;
+
+  inline-size: 1em;
+  block-size: 1em;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-button--sm {
+  --rm-button-height: 36px;
+  --rm-button-padding-x: var(--rm-space-3);
+  --rm-button-font-size: var(--rm-font-size-sm);
+}
+
+.rm-button--md {
+  --rm-button-height: 44px;
+  --rm-button-padding-x: var(--rm-space-4);
+  --rm-button-font-size: var(--rm-font-size-base);
+}
+
+.rm-button--lg {
+  --rm-button-height: 52px;
+  --rm-button-padding-x: var(--rm-space-5);
+  --rm-button-font-size: var(--rm-font-size-lg);
+}
+
+
+/* ========================================
+ * Primary
+ *
+ * Background intentionally remains Primary
+ * across states.
+ *
+ * This preserves the approved foreground
+ * contrast in Light Theme.
+ * ======================================== */
+
+.rm-button--primary {
+  --rm-button-background: var(--rm-primary);
+  --rm-button-background-hover: var(--rm-primary);
+  --rm-button-background-active: var(--rm-primary);
+
+  --rm-button-color: var(--rm-text-on-primary);
+
+  --rm-button-border-hover: var(--rm-primary-hover);
+  --rm-button-border-active: var(--rm-primary-active);
+
+  --rm-button-shadow-hover: var(--rm-shadow-sm);
+  --rm-button-shadow-active: var(--rm-shadow-xs);
+}
+
+
+/* ========================================
+ * Secondary
+ * ======================================== */
+
+.rm-button--secondary {
+  --rm-button-background: var(--rm-text-primary);
+  --rm-button-background-hover: var(--rm-text-primary);
+  --rm-button-background-active: var(--rm-text-primary);
+
+  --rm-button-color: var(--rm-surface);
+
+  --rm-button-shadow-hover: var(--rm-shadow-sm);
+  --rm-button-shadow-active: var(--rm-shadow-xs);
+}
+
+
+/* ========================================
+ * Outline
+ * ======================================== */
+
+.rm-button--outline {
+  --rm-button-background: transparent;
+  --rm-button-background-hover: var(--rm-surface-secondary);
+  --rm-button-background-active: var(--rm-surface-strong);
+
+  --rm-button-color: var(--rm-text-primary);
+
+  --rm-button-border: var(--rm-border);
+  --rm-button-border-hover: var(--rm-border);
+  --rm-button-border-active: var(--rm-border);
+}
+
+
+/* ========================================
+ * Ghost
+ * ======================================== */
+
+.rm-button--ghost {
+  --rm-button-background: transparent;
+  --rm-button-background-hover: var(--rm-surface-secondary);
+  --rm-button-background-active: var(--rm-surface-strong);
+
+  --rm-button-color: var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Danger
+ * ======================================== */
+
+.rm-button--danger {
+  --rm-button-background: var(--rm-danger);
+  --rm-button-background-hover: var(--rm-danger-hover);
+  --rm-button-background-active: var(--rm-danger-hover);
+
+  --rm-button-color: var(--rm-text-on-danger);
+
+  --rm-button-shadow-active: var(--rm-shadow-xs);
+}
+
+
+/* ========================================
+ * Interaction
+ * ======================================== */
+
+.rm-button:hover:not(:disabled):not([aria-disabled="true"]):not(.is-disabled):not(.is-loading) {
+  background: var(--rm-button-background-hover);
+  border-color: var(--rm-button-border-hover);
+  box-shadow: var(--rm-button-shadow-hover);
+}
+
+.rm-button:active:not(:disabled):not([aria-disabled="true"]):not(.is-disabled):not(.is-loading) {
+  background: var(--rm-button-background-active);
+  border-color: var(--rm-button-border-active);
+  box-shadow: var(--rm-button-shadow-active);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-button:focus-visible {
+  outline: 2px solid var(--rm-primary);
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Disabled
+ *
+ * Native disabled should be preferred for
+ * native <button> elements.
+ * ======================================== */
+
+.rm-button:disabled,
+.rm-button[aria-disabled="true"],
+.rm-button.is-disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+ * Loading
+ *
+ * aria-busy="true" is the semantic state.
+ * .is-loading is the shared visual state.
+ * ======================================== */
+
+.rm-button[aria-busy="true"],
+.rm-button.is-loading {
+  cursor: progress;
+}
+
+
+/* ========================================
+ * Full Width
+ * ======================================== */
+
+.rm-button--full-width {
+  inline-size: 100%;
+}
+
+
+/* ========================================
+ * Icon-only
+ * ======================================== */
+
+.rm-button--icon {
+  inline-size: var(--rm-button-height);
+
+  padding-inline: 0;
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-button {
+    transition: none;
+  }
+}

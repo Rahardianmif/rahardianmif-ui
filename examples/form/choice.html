@@ -1,0 +1,209 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Rahardianmif UI — Checkbox + Radio
+    </title>
+
+    <link rel="stylesheet" href="../../src/css/rahardianmif-ui.css">
+
+    <link rel="stylesheet" href="./form-demo.css">
+</head>
+
+<body>
+    <main class="rm-demo">
+        <h1>
+            Rahardianmif UI Checkbox + Radio
+        </h1>
+
+
+        <section class="rm-demo__theme" data-rm-theme="light" aria-labelledby="choice-light-title">
+            <h2 id="choice-light-title">
+                Light Theme
+            </h2>
+
+
+            <h3>Checkbox</h3>
+
+            <div class="rm-demo__form">
+                <label class="rm-choice">
+                    <input id="checkbox-default" class="rm-checkbox" type="checkbox">
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Remember me
+                    </span>
+                </label>
+
+
+                <label class="rm-choice">
+                    <input id="checkbox-checked" class="rm-checkbox" type="checkbox" checked>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Receive notifications
+                    </span>
+                </label>
+
+
+                <label class="rm-choice">
+                    <input id="checkbox-description" class="rm-checkbox" type="checkbox">
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Product updates
+                    </span>
+
+                    <span class="rm-choice__description">
+                        Receive occasional product announcements.
+                    </span>
+                </label>
+
+
+                <h3>Sizes</h3>
+
+                <label class="rm-choice rm-choice--sm">
+                    <input id="checkbox-sm" class="rm-checkbox" type="checkbox" checked>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Small
+                    </span>
+                </label>
+
+                <label class="rm-choice rm-choice--md">
+                    <input id="checkbox-md" class="rm-checkbox" type="checkbox" checked>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Medium
+                    </span>
+                </label>
+
+                <label class="rm-choice rm-choice--lg">
+                    <input id="checkbox-lg" class="rm-checkbox" type="checkbox" checked>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Large
+                    </span>
+                </label>
+
+
+                <h3>States</h3>
+
+                <label class="rm-choice">
+                    <input id="checkbox-disabled" class="rm-checkbox" type="checkbox" disabled>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Disabled
+                    </span>
+                </label>
+
+
+                <label class="rm-choice is-invalid">
+                    <input id="checkbox-invalid" class="rm-checkbox" type="checkbox" aria-invalid="true"
+                        aria-describedby="checkbox-invalid-message">
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        I agree to the terms
+                    </span>
+
+                    <span class="rm-choice__description" id="checkbox-invalid-message">
+                        You must accept the terms.
+                    </span>
+                </label>
+
+
+                <h3>Radio Group</h3>
+
+                <fieldset>
+                    <legend>
+                        Payment method
+                    </legend>
+
+                    <div class="rm-demo__form">
+                        <label class="rm-choice">
+                            <input id="radio-card" class="rm-radio" type="radio" name="payment" value="card" checked>
+
+                            <span class="rm-choice__control" aria-hidden="true"></span>
+
+                            <span class="rm-choice__label">
+                                Credit card
+                            </span>
+                        </label>
+
+                        <label class="rm-choice">
+                            <input id="radio-transfer" class="rm-radio" type="radio" name="payment" value="transfer">
+
+                            <span class="rm-choice__control" aria-hidden="true"></span>
+
+                            <span class="rm-choice__label">
+                                Bank transfer
+                            </span>
+                        </label>
+
+                        <label class="rm-choice">
+                            <input id="radio-disabled" class="rm-radio" type="radio" name="payment" value="other"
+                                disabled>
+
+                            <span class="rm-choice__control" aria-hidden="true"></span>
+
+                            <span class="rm-choice__label">
+                                Other
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+
+
+        <section class="rm-demo__theme" data-rm-theme="dark" aria-labelledby="choice-dark-title">
+            <h2 id="choice-dark-title">
+                Dark Theme
+            </h2>
+
+            <div class="rm-demo__form">
+                <label class="rm-choice">
+                    <input class="rm-checkbox" type="checkbox" checked>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Dark checkbox
+                    </span>
+                </label>
+
+
+                <label class="rm-choice">
+                    <input class="rm-radio" type="radio" name="dark-option" checked>
+
+                    <span class="rm-choice__control" aria-hidden="true"></span>
+
+                    <span class="rm-choice__label">
+                        Dark radio
+                    </span>
+                </label>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

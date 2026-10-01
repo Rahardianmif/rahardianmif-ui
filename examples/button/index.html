@@ -1,0 +1,166 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Rahardianmif UI — Button
+    </title>
+
+    <link rel="stylesheet" href="../../src/css/rahardianmif-ui.css">
+
+    <link rel="stylesheet" href="./button-demo.css">
+</head>
+
+<body>
+    <main class="rm-demo">
+        <h1>
+            Rahardianmif UI Button
+        </h1>
+
+
+        <!-- ===================================
+         Light Theme
+         =================================== -->
+
+        <section class="rm-demo__theme" data-rm-theme="light" aria-labelledby="light-title">
+            <h2 id="light-title">
+                Light Theme
+            </h2>
+
+
+            <h3>Variants</h3>
+
+            <div class="rm-demo__group">
+                <button id="keyboard-button" class="rm-button rm-button--primary rm-button--md" type="button">
+                    Primary
+                </button>
+
+                <button class="rm-button rm-button--secondary rm-button--md" type="button">
+                    Secondary
+                </button>
+
+                <button class="rm-button rm-button--outline rm-button--md" type="button">
+                    Outline
+                </button>
+
+                <button class="rm-button rm-button--ghost rm-button--md" type="button">
+                    Ghost
+                </button>
+
+                <button id="danger-button" class="rm-button rm-button--danger rm-button--md" type="button">
+                    Delete
+                </button>
+            </div>
+
+
+            <h3>Sizes</h3>
+
+            <div class="rm-demo__group">
+                <button id="button-sm" class="rm-button rm-button--primary rm-button--sm" type="button">
+                    Small
+                </button>
+
+                <button id="button-md" class="rm-button rm-button--primary rm-button--md" type="button">
+                    Medium
+                </button>
+
+                <button id="button-lg" class="rm-button rm-button--primary rm-button--lg" type="button">
+                    Large
+                </button>
+            </div>
+
+
+            <h3>Icons</h3>
+
+            <div class="rm-demo__group">
+                <button class="rm-button rm-button--primary" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M11 5h2v14h-2zM5 11h14v2H5z" />
+                    </svg>
+
+                    Add item
+                </button>
+
+
+                <button class="rm-button rm-button--outline" type="button">
+                    Continue
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="m9 18 6-6-6-6 1.4-1.4L17.8 12l-7.4 7.4z" />
+                    </svg>
+                </button>
+
+
+                <button id="icon-button" class="rm-button rm-button--outline rm-button--icon" type="button"
+                    aria-label="Add item" title="Add item">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M11 5h2v14h-2zM5 11h14v2H5z" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <h3>States</h3>
+
+            <div class="rm-demo__group">
+                <button id="disabled-button" class="rm-button rm-button--primary" type="button" disabled>
+                    Disabled
+                </button>
+
+                <button id="loading-button" class="rm-button rm-button--primary is-loading" type="button"
+                    aria-busy="true" disabled>
+                    Saving…
+                </button>
+            </div>
+
+
+            <h3>Full Width</h3>
+
+            <div id="full-width-container" class="rm-demo__full-width">
+                <button id="full-width-button" class="rm-button rm-button--primary rm-button--full-width" type="button">
+                    Continue
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ===================================
+         Dark Theme
+         =================================== -->
+
+        <section class="rm-demo__theme" data-rm-theme="dark" aria-labelledby="dark-title">
+            <h2 id="dark-title">
+                Dark Theme
+            </h2>
+
+            <div class="rm-demo__group">
+                <button id="dark-primary" class="rm-button rm-button--primary" type="button">
+                    Primary
+                </button>
+
+                <button class="rm-button rm-button--secondary" type="button">
+                    Secondary
+                </button>
+
+                <button class="rm-button rm-button--outline" type="button">
+                    Outline
+                </button>
+
+                <button class="rm-button rm-button--ghost" type="button">
+                    Ghost
+                </button>
+
+                <button class="rm-button rm-button--danger" type="button">
+                    Delete
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

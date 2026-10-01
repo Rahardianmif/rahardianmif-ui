@@ -1,0 +1,50 @@
+/*
+ * Rahardianmif UI
+ * Form Field Foundation
+ *
+ * v0.2.2
+ *
+ * Structure:
+ * - .rm-field
+ * - .rm-field__label
+ * - .rm-field__control
+ * - .rm-field__description
+ * - .rm-field__message
+ */
+
+.rm-field {
+  display: grid;
+  gap: var(--rm-space-2);
+}
+
+.rm-field__label {
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  font-weight: var(--rm-font-weight-medium);
+  line-height: var(--rm-line-height-normal);
+}
+
+.rm-field__control {
+  display: block;
+  min-inline-size: 0;
+}
+
+.rm-field__description,
+.rm-field__message {
+  margin: 0;
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+}
+
+.rm-field__description {
+  color: var(--rm-text-muted);
+}
+
+.rm-field__message {
+  color: var(--rm-text-primary);
+  font-weight: var(--rm-font-weight-medium);
+}

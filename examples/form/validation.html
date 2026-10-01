@@ -1,0 +1,413 @@
+<!doctype html>
+
+<html
+  lang="en"
+  data-rm-theme="light"
+>
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Rahardianmif UI — Validation
+  </title>
+
+  <!-- Rahardianmif UI -->
+  <link
+    rel="stylesheet"
+    href="../../src/css/rahardianmif-ui.css"
+  >
+
+  <!-- Demo-only styles -->
+  <link
+    rel="stylesheet"
+    href="./form-demo.css"
+  >
+</head>
+
+<body>
+  <main class="rm-demo">
+    <h1>
+      Rahardianmif UI Validation
+    </h1>
+
+
+    <section
+      class="rm-demo__theme"
+      data-rm-theme="light"
+      aria-labelledby="validation-light-title"
+    >
+      <h2 id="validation-light-title">
+        Light Theme
+      </h2>
+
+      <div class="rm-demo__form">
+
+
+        <!-- Required -->
+
+        <div class="rm-field">
+          <label
+            class="rm-field__label"
+            for="validation-required"
+          >
+            Email
+
+            <span
+              class="rm-field__required"
+              aria-hidden="true"
+            >
+              *
+            </span>
+          </label>
+
+          <div class="rm-field__control">
+            <input
+              class="rm-input"
+              id="validation-required"
+              type="email"
+              required
+            >
+          </div>
+
+          <p class="rm-field__description">
+            Required field.
+          </p>
+        </div>
+
+
+        <!-- Optional -->
+
+        <div class="rm-field">
+          <label
+            class="rm-field__label"
+            for="validation-optional"
+          >
+            Company
+
+            <span class="rm-field__optional">
+              Optional
+            </span>
+          </label>
+
+          <div class="rm-field__control">
+            <input
+              class="rm-input"
+              id="validation-optional"
+              type="text"
+            >
+          </div>
+        </div>
+
+
+        <!-- Valid Input -->
+
+        <div class="rm-field is-valid">
+          <label
+            class="rm-field__label"
+            for="validation-valid"
+          >
+            Username
+          </label>
+
+          <div class="rm-field__control">
+            <input
+              class="rm-input is-valid"
+              id="validation-valid"
+              type="text"
+              value="rahardian"
+              aria-describedby="validation-valid-message"
+            >
+          </div>
+
+          <p
+            class="rm-field__message rm-field__message--success"
+            id="validation-valid-message"
+          >
+            Username is available.
+          </p>
+        </div>
+
+
+        <!-- Invalid Input -->
+
+        <div class="rm-field is-invalid">
+          <label
+            class="rm-field__label"
+            for="validation-invalid"
+          >
+            Email
+          </label>
+
+          <div class="rm-field__control">
+            <input
+              class="rm-input is-invalid"
+              id="validation-invalid"
+              type="email"
+              value="invalid-email"
+              aria-invalid="true"
+              aria-describedby="validation-invalid-message"
+            >
+          </div>
+
+          <p
+            class="rm-field__message rm-field__message--error"
+            id="validation-invalid-message"
+          >
+            Enter a valid email address.
+          </p>
+        </div>
+
+
+        <!-- Valid Textarea -->
+
+        <div class="rm-field is-valid">
+          <label
+            class="rm-field__label"
+            for="validation-textarea"
+          >
+            Description
+          </label>
+
+          <div class="rm-field__control">
+            <textarea
+              class="rm-textarea is-valid"
+              id="validation-textarea"
+              aria-describedby="validation-textarea-message"
+            >Complete description.</textarea>
+          </div>
+
+          <p
+            class="rm-field__message rm-field__message--success"
+            id="validation-textarea-message"
+          >
+            Description is ready.
+          </p>
+        </div>
+
+
+        <!-- Invalid Select -->
+
+        <div class="rm-field is-invalid">
+          <label
+            class="rm-field__label"
+            for="validation-select"
+          >
+            Category
+          </label>
+
+          <div class="rm-field__control">
+            <select
+              class="rm-select is-invalid"
+              id="validation-select"
+              aria-invalid="true"
+              aria-describedby="validation-select-message"
+            >
+              <option value="">
+                Select category
+              </option>
+
+              <option value="general">
+                General
+              </option>
+            </select>
+          </div>
+
+          <p
+            class="rm-field__message rm-field__message--error"
+            id="validation-select-message"
+          >
+            Select a category.
+          </p>
+        </div>
+
+
+        <!-- Valid Choice -->
+
+        <label class="rm-choice is-valid">
+          <input
+            id="validation-choice"
+            class="rm-checkbox"
+            type="checkbox"
+            checked
+            aria-describedby="validation-choice-message"
+          >
+
+          <span
+            class="rm-choice__control"
+            aria-hidden="true"
+          ></span>
+
+          <span class="rm-choice__label">
+            Terms accepted
+          </span>
+
+          <span
+            class="rm-choice__description"
+            id="validation-choice-message"
+          >
+            Terms have been accepted.
+          </span>
+        </label>
+
+
+        <!-- Invalid Choice -->
+
+        <label class="rm-choice is-invalid">
+          <input
+            id="validation-choice-invalid"
+            class="rm-checkbox"
+            type="checkbox"
+            aria-invalid="true"
+            aria-describedby="validation-choice-invalid-message"
+          >
+
+          <span
+            class="rm-choice__control"
+            aria-hidden="true"
+          ></span>
+
+          <span class="rm-choice__label">
+            Accept privacy policy
+          </span>
+
+          <span
+            class="rm-choice__description"
+            id="validation-choice-invalid-message"
+          >
+            You must accept the privacy policy.
+          </span>
+        </label>
+
+
+        <!-- Valid Switch -->
+
+        <label class="rm-switch-field is-valid">
+          <input
+            id="validation-switch"
+            class="rm-switch"
+            type="checkbox"
+            checked
+            aria-describedby="validation-switch-message"
+          >
+
+          <span
+            class="rm-switch__track"
+            aria-hidden="true"
+          >
+            <span class="rm-switch__thumb"></span>
+          </span>
+
+          <span class="rm-switch__label">
+            Notifications
+          </span>
+
+          <span
+            class="rm-switch__description"
+            id="validation-switch-message"
+          >
+            Notifications are enabled.
+          </span>
+        </label>
+
+
+        <!-- Invalid Switch -->
+
+        <label class="rm-switch-field is-invalid">
+          <input
+            id="validation-switch-invalid"
+            class="rm-switch"
+            type="checkbox"
+            aria-invalid="true"
+            aria-describedby="validation-switch-invalid-message"
+          >
+
+          <span
+            class="rm-switch__track"
+            aria-hidden="true"
+          >
+            <span class="rm-switch__thumb"></span>
+          </span>
+
+          <span class="rm-switch__label">
+            Required setting
+          </span>
+
+          <span
+            class="rm-switch__description"
+            id="validation-switch-invalid-message"
+          >
+            Enable this setting to continue.
+          </span>
+        </label>
+
+      </div>
+    </section>
+
+
+    <section
+      class="rm-demo__theme"
+      data-rm-theme="dark"
+      aria-labelledby="validation-dark-title"
+    >
+      <h2 id="validation-dark-title">
+        Dark Theme
+      </h2>
+
+      <div class="rm-demo__form">
+        <div class="rm-field is-valid">
+          <label
+            class="rm-field__label"
+            for="validation-dark-valid"
+          >
+            Username
+          </label>
+
+          <input
+            class="rm-input is-valid"
+            id="validation-dark-valid"
+            type="text"
+            value="rahardian"
+          >
+
+          <p
+            class="rm-field__message rm-field__message--success"
+          >
+            Username is available.
+          </p>
+        </div>
+
+
+        <div class="rm-field is-invalid">
+          <label
+            class="rm-field__label"
+            for="validation-dark-invalid"
+          >
+            Email
+          </label>
+
+          <input
+            class="rm-input is-invalid"
+            id="validation-dark-invalid"
+            type="email"
+            aria-invalid="true"
+            aria-describedby="validation-dark-invalid-message"
+          >
+
+          <p
+            class="rm-field__message rm-field__message--error"
+            id="validation-dark-invalid-message"
+          >
+            Enter a valid email address.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

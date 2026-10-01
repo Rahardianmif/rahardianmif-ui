@@ -1,14 +1,13 @@
 /*
  * Rahardianmif UI
  * Dark Theme Semantic Color Tokens
- *
  * Components consume the same semantic token names
  * used by the Light Theme.
  */
 
 [data-rm-theme="dark"] {
   /* ========================================
-   * Background & Surface
+   * Surfaces
    * ======================================== */
 
   --rm-page-bg: #08111F;
@@ -17,19 +16,16 @@
   --rm-surface-secondary: #162337;
   --rm-surface-elevated: #1C2B40;
 
-  /*
-   * Surface A1:
-   * Dark strong surface intentionally aliases
-   * the elevated surface.
-   */
   --rm-surface-strong: var(--rm-surface-elevated);
 
+
   /* ========================================
-   * Border
+   * Borders
    * ======================================== */
 
   --rm-border: #2E4057;
   --rm-border-soft: #22334A;
+
 
   /* ========================================
    * Text
@@ -40,14 +36,19 @@
   --rm-text-muted: var(--rm-color-slate-400);
   --rm-text-disabled: var(--rm-color-slate-500);
 
+  --rm-text-on-primary: var(--rm-color-slate-900);
+  --rm-text-on-danger: var(--rm-color-slate-50);
+
+
   /* ========================================
    * Supporting
    * ======================================== */
 
   --rm-supporting: #29496B;
 
+
   /* ========================================
-   * Primary / Accent
+   * Primary
    * ======================================== */
 
   --rm-primary: var(--rm-color-cyan-400);

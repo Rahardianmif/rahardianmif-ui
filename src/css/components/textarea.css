@@ -1,0 +1,147 @@
+/*
+ * Rahardianmif UI
+ * Textarea Component
+ *
+ * v0.2.3
+ *
+ * Sizes:
+ * - SM: min-height 96px
+ * - MD: min-height 120px
+ * - LG: min-height 144px
+ *
+ * Default:
+ * - MD
+ *
+ * Resize:
+ * - Vertical only
+ *
+ * States:
+ * - Default
+ * - Hover
+ * - Focus-visible
+ * - Disabled
+ * - Readonly
+ * - Invalid
+ */
+
+.rm-textarea {
+  --rm-textarea-min-height: 120px;
+
+  box-sizing: border-box;
+
+  display: block;
+
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: var(--rm-textarea-min-height);
+
+  padding: var(--rm-space-3);
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-md);
+
+  background: var(--rm-surface);
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-base);
+  font-weight: var(--rm-font-weight-regular);
+  line-height: var(--rm-line-height-normal);
+
+  resize: vertical;
+
+  transition:
+    background-color var(--rm-motion-fast),
+    border-color var(--rm-motion-fast),
+    color var(--rm-motion-fast),
+    box-shadow var(--rm-motion-fast);
+}
+
+.rm-textarea::placeholder {
+  color: var(--rm-text-muted);
+  opacity: 1;
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-textarea--sm {
+  --rm-textarea-min-height: 96px;
+}
+
+.rm-textarea--md {
+  --rm-textarea-min-height: 120px;
+}
+
+.rm-textarea--lg {
+  --rm-textarea-min-height: 144px;
+}
+
+
+/* ========================================
+ * Hover
+ * ======================================== */
+
+.rm-textarea:hover:not(:disabled):not([readonly]) {
+  border-color: var(--rm-text-muted);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-textarea:focus-visible {
+  border-color: var(--rm-primary);
+
+  outline: 2px solid var(--rm-primary);
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Readonly
+ * ======================================== */
+
+.rm-textarea[readonly] {
+  background: var(--rm-surface-secondary);
+
+  cursor: default;
+}
+
+
+/* ========================================
+ * Disabled
+ * ======================================== */
+
+.rm-textarea:disabled {
+  background: var(--rm-surface-secondary);
+  color: var(--rm-text-disabled);
+
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+ * Invalid
+ * ======================================== */
+
+.rm-textarea.is-invalid,
+.rm-textarea[aria-invalid="true"] {
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-textarea {
+    transition: none;
+  }
+}

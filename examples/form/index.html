@@ -1,0 +1,213 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Rahardianmif UI — Form Field and Input
+    </title>
+
+    <link rel="stylesheet" href="../../src/css/rahardianmif-ui.css">
+
+    <link rel="stylesheet" href="./form-demo.css">
+</head>
+
+<body>
+    <main class="rm-demo">
+        <h1>
+            Rahardianmif UI Form Field + Input
+        </h1>
+
+
+        <!-- Light Theme -->
+
+        <section class="rm-demo__theme" data-rm-theme="light" aria-labelledby="light-form-title">
+            <h2 id="light-form-title">
+                Light Theme
+            </h2>
+
+            <div class="rm-demo__form">
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-text">
+                        Full name
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-text" type="text" placeholder="Enter your name">
+                    </div>
+
+                    <p class="rm-field__description" id="input-text-description">
+                        Enter your legal name.
+                    </p>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-email">
+                        Email
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-email" type="email" autocomplete="email"
+                            placeholder="name@example.com">
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-password">
+                        Password
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-password" type="password" autocomplete="current-password">
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-search">
+                        Search
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-search" type="search" placeholder="Search">
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-tel">
+                        Phone
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-tel" type="tel" autocomplete="tel">
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-url">
+                        Website
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-url" type="url" placeholder="https://example.com">
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-number">
+                        Quantity
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-number" type="number" min="0">
+                    </div>
+                </div>
+
+
+                <h3>Sizes</h3>
+
+                <div class="rm-demo__sizes">
+                    <input id="input-sm" class="rm-input rm-input--sm" type="text" aria-label="Small input"
+                        value="Small">
+
+                    <input id="input-md" class="rm-input rm-input--md" type="text" aria-label="Medium input"
+                        value="Medium">
+
+                    <input id="input-lg" class="rm-input rm-input--lg" type="text" aria-label="Large input"
+                        value="Large">
+                </div>
+
+
+                <h3>States</h3>
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-readonly">
+                        Readonly
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-readonly" type="text" value="Readonly value" readonly>
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-disabled">
+                        Disabled
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="input-disabled" type="text" value="Disabled value" disabled>
+                    </div>
+                </div>
+
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="input-invalid">
+                        Email
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input is-invalid" id="input-invalid" type="email" value="invalid-email"
+                            aria-invalid="true" aria-describedby="input-invalid-message">
+                    </div>
+
+                    <p class="rm-field__message" id="input-invalid-message">
+                        Enter a valid email address.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Dark Theme -->
+
+        <section class="rm-demo__theme" data-rm-theme="dark" aria-labelledby="dark-form-title">
+            <h2 id="dark-form-title">
+                Dark Theme
+            </h2>
+
+            <div class="rm-demo__form">
+                <div class="rm-field">
+                    <label class="rm-field__label" for="dark-input">
+                        Full name
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input" id="dark-input" type="text" placeholder="Enter your name">
+                    </div>
+
+                    <p class="rm-field__description">
+                        Dark theme input example.
+                    </p>
+                </div>
+
+                <div class="rm-field">
+                    <label class="rm-field__label" for="dark-invalid">
+                        Email
+                    </label>
+
+                    <div class="rm-field__control">
+                        <input class="rm-input is-invalid" id="dark-invalid" type="email" aria-invalid="true"
+                            aria-describedby="dark-invalid-message">
+                    </div>
+
+                    <p class="rm-field__message" id="dark-invalid-message">
+                        Enter a valid email address.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

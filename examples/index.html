@@ -1,0 +1,591 @@
+<!doctype html>
+
+<html
+  lang="en"
+  data-rm-theme="light"
+>
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Rahardianmif UI — v0.2 Showcase
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="../src/css/rahardianmif-ui.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./showcase.css"
+  >
+</head>
+
+<body>
+  <main class="rm-showcase">
+    <header class="rm-showcase__header">
+      <p class="rm-showcase__eyebrow">
+        Rahardianmif UI
+      </p>
+
+      <h1 class="rm-showcase__title">
+        v0.2 — Buttons + Basic Forms
+      </h1>
+
+      <p class="rm-showcase__intro">
+        Component showcase for Button, Input, Textarea,
+        Native Select, Checkbox, Radio, Switch,
+        and Validation states.
+      </p>
+
+      <nav
+        class="rm-showcase__nav"
+        aria-label="Component demos"
+      >
+        <a href="./button/index.html">
+          Button
+        </a>
+
+        <a href="./form/index.html">
+          Input
+        </a>
+
+        <a href="./form/textarea.html">
+          Textarea
+        </a>
+
+        <a href="./form/select.html">
+          Select
+        </a>
+
+        <a href="./form/choice.html">
+          Checkbox + Radio
+        </a>
+
+        <a href="./form/switch.html">
+          Switch
+        </a>
+
+        <a href="./form/validation.html">
+          Validation
+        </a>
+      </nav>
+    </header>
+
+
+    <section
+      class="rm-showcase__theme"
+      data-rm-theme="light"
+      aria-labelledby="light-showcase-title"
+    >
+      <div class="rm-showcase__theme-header">
+        <div>
+          <p class="rm-showcase__eyebrow">
+            Theme
+          </p>
+
+          <h2 id="light-showcase-title">
+            Light
+          </h2>
+        </div>
+      </div>
+
+
+      <div class="rm-showcase__grid">
+        <article class="rm-showcase__card">
+          <h3>
+            Button
+          </h3>
+
+          <div class="rm-showcase__row">
+            <button
+              class="rm-button rm-button--primary rm-button--md"
+              type="button"
+            >
+              Primary
+            </button>
+
+            <button
+              class="rm-button rm-button--secondary rm-button--md"
+              type="button"
+            >
+              Secondary
+            </button>
+
+            <button
+              class="rm-button rm-button--outline rm-button--md"
+              type="button"
+            >
+              Outline
+            </button>
+
+            <button
+              class="rm-button rm-button--ghost rm-button--md"
+              type="button"
+            >
+              Ghost
+            </button>
+
+            <button
+              class="rm-button rm-button--danger rm-button--md"
+              type="button"
+            >
+              Danger
+            </button>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Input
+          </h3>
+
+          <div class="rm-field">
+            <label
+              class="rm-field__label"
+              for="showcase-name"
+            >
+              Name
+            </label>
+
+            <div class="rm-field__control">
+              <input
+                class="rm-input"
+                id="showcase-name"
+                type="text"
+                placeholder="Rahardian"
+              >
+            </div>
+
+            <p class="rm-field__description">
+              Standard MD input.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Textarea
+          </h3>
+
+          <div class="rm-field">
+            <label
+              class="rm-field__label"
+              for="showcase-message"
+            >
+              Message
+            </label>
+
+            <div class="rm-field__control">
+              <textarea
+                class="rm-textarea"
+                id="showcase-message"
+                placeholder="Write a message"
+              ></textarea>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Native Select
+          </h3>
+
+          <div class="rm-field">
+            <label
+              class="rm-field__label"
+              for="showcase-country"
+            >
+              Country
+            </label>
+
+            <div class="rm-field__control">
+              <select
+                class="rm-select"
+                id="showcase-country"
+              >
+                <option value="">
+                  Select country
+                </option>
+
+                <option value="id">
+                  Indonesia
+                </option>
+
+                <option value="my">
+                  Malaysia
+                </option>
+
+                <option value="sg">
+                  Singapore
+                </option>
+              </select>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Checkbox + Radio
+          </h3>
+
+          <div class="rm-showcase__stack">
+            <label class="rm-choice">
+              <input
+                class="rm-checkbox"
+                type="checkbox"
+                checked
+              >
+
+              <span
+                class="rm-choice__control"
+                aria-hidden="true"
+              ></span>
+
+              <span class="rm-choice__label">
+                Enable notifications
+              </span>
+            </label>
+
+
+            <fieldset class="rm-showcase__fieldset">
+              <legend>
+                Delivery
+              </legend>
+
+              <label class="rm-choice">
+                <input
+                  class="rm-radio"
+                  type="radio"
+                  name="showcase-delivery"
+                  value="email"
+                  checked
+                >
+
+                <span
+                  class="rm-choice__control"
+                  aria-hidden="true"
+                ></span>
+
+                <span class="rm-choice__label">
+                  Email
+                </span>
+              </label>
+
+              <label class="rm-choice">
+                <input
+                  class="rm-radio"
+                  type="radio"
+                  name="showcase-delivery"
+                  value="sms"
+                >
+
+                <span
+                  class="rm-choice__control"
+                  aria-hidden="true"
+                ></span>
+
+                <span class="rm-choice__label">
+                  SMS
+                </span>
+              </label>
+            </fieldset>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Switch
+          </h3>
+
+          <label class="rm-switch-field">
+            <input
+              class="rm-switch"
+              type="checkbox"
+              checked
+            >
+
+            <span
+              class="rm-switch__track"
+              aria-hidden="true"
+            >
+              <span
+                class="rm-switch__thumb"
+              ></span>
+            </span>
+
+            <span class="rm-switch__label">
+              Automatic updates
+            </span>
+
+            <span class="rm-switch__description">
+              Install updates automatically.
+            </span>
+          </label>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Validation
+          </h3>
+
+          <div class="rm-showcase__stack">
+            <div class="rm-field is-valid">
+              <label
+                class="rm-field__label"
+                for="showcase-valid"
+              >
+                Username
+              </label>
+
+              <div class="rm-field__control">
+                <input
+                  class="rm-input is-valid"
+                  id="showcase-valid"
+                  type="text"
+                  value="rahardian"
+                  aria-describedby="showcase-valid-message"
+                >
+              </div>
+
+              <p
+                class="rm-field__message rm-field__message--success"
+                id="showcase-valid-message"
+              >
+                Username is available.
+              </p>
+            </div>
+
+
+            <div class="rm-field is-invalid">
+              <label
+                class="rm-field__label"
+                for="showcase-invalid"
+              >
+                Email
+
+                <span
+                  class="rm-field__required"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
+              </label>
+
+              <div class="rm-field__control">
+                <input
+                  class="rm-input is-invalid"
+                  id="showcase-invalid"
+                  type="email"
+                  value="invalid-email"
+                  required
+                  aria-invalid="true"
+                  aria-describedby="showcase-invalid-message"
+                >
+              </div>
+
+              <p
+                class="rm-field__message rm-field__message--error"
+                id="showcase-invalid-message"
+              >
+                Enter a valid email address.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section
+      class="rm-showcase__theme"
+      data-rm-theme="dark"
+      aria-labelledby="dark-showcase-title"
+    >
+      <div class="rm-showcase__theme-header">
+        <div>
+          <p class="rm-showcase__eyebrow">
+            Theme
+          </p>
+
+          <h2 id="dark-showcase-title">
+            Dark
+          </h2>
+        </div>
+      </div>
+
+
+      <div class="rm-showcase__grid">
+        <article class="rm-showcase__card">
+          <h3>
+            Buttons
+          </h3>
+
+          <div class="rm-showcase__row">
+            <button
+              class="rm-button rm-button--primary"
+              type="button"
+            >
+              Primary
+            </button>
+
+            <button
+              class="rm-button rm-button--secondary"
+              type="button"
+            >
+              Secondary
+            </button>
+
+            <button
+              class="rm-button rm-button--danger"
+              type="button"
+            >
+              Danger
+            </button>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Form Controls
+          </h3>
+
+          <div class="rm-showcase__stack">
+            <input
+              class="rm-input"
+              type="text"
+              aria-label="Dark input"
+              placeholder="Dark input"
+            >
+
+            <textarea
+              class="rm-textarea"
+              aria-label="Dark textarea"
+              placeholder="Dark textarea"
+            ></textarea>
+
+            <select
+              class="rm-select"
+              aria-label="Dark select"
+            >
+              <option>
+                Dark select
+              </option>
+            </select>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Choices
+          </h3>
+
+          <div class="rm-showcase__stack">
+            <label class="rm-choice">
+              <input
+                class="rm-checkbox"
+                type="checkbox"
+                checked
+              >
+
+              <span
+                class="rm-choice__control"
+                aria-hidden="true"
+              ></span>
+
+              <span class="rm-choice__label">
+                Checkbox
+              </span>
+            </label>
+
+            <label class="rm-choice">
+              <input
+                class="rm-radio"
+                type="radio"
+                name="dark-radio"
+                checked
+              >
+
+              <span
+                class="rm-choice__control"
+                aria-hidden="true"
+              ></span>
+
+              <span class="rm-choice__label">
+                Radio
+              </span>
+            </label>
+
+            <label class="rm-switch-field">
+              <input
+                class="rm-switch"
+                type="checkbox"
+                checked
+              >
+
+              <span
+                class="rm-switch__track"
+                aria-hidden="true"
+              >
+                <span
+                  class="rm-switch__thumb"
+                ></span>
+              </span>
+
+              <span class="rm-switch__label">
+                Switch
+              </span>
+            </label>
+          </div>
+        </article>
+
+
+        <article class="rm-showcase__card">
+          <h3>
+            Validation
+          </h3>
+
+          <div class="rm-field is-invalid">
+            <label
+              class="rm-field__label"
+              for="dark-validation"
+            >
+              Required field
+            </label>
+
+            <input
+              class="rm-input is-invalid"
+              id="dark-validation"
+              type="text"
+              aria-invalid="true"
+              aria-describedby="dark-validation-error"
+            >
+
+            <p
+              class="rm-field__message rm-field__message--error"
+              id="dark-validation-error"
+            >
+              This field needs attention.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

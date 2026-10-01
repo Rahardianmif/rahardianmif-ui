@@ -50,3 +50,24 @@ Namespace resmi Rahardianmif UI adalah:
 
 ```text
 rm
+
+### Components
+
+- [Button](./components/button.md)
+- [Button](./components/button.md)
+- [Form Field and Input](./components/input.md)
+- [Textarea](./components/textarea.md)
+- [Native Select](./components/select.md)
+- [Checkbox and Radio](./components/choice.md)
+- [Switch](./components/switch.md)
+- [Validation and Form States](./components/validation.md)
+
+## v0.2 Scope
+
+v0.2 provides Buttons and Basic Form Controls.
+
+Included:
+
+Button, Input, Textarea, Native Select, Checkbox, Radio, Switch, and shared Validation/Form States.
+
+Advanced interactive components are outside the v0.2 scope.
