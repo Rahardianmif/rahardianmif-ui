@@ -1,0 +1,240 @@
+/*
+ * Rahardianmif UI
+ * Sidebar Component
+ *
+ * v0.4.5
+ *
+ * Vertical application navigation.
+ * CSS-only.
+ */
+
+.rm-sidebar {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--rm-space-4);
+
+  min-inline-size: 0;
+
+  padding: var(--rm-space-4);
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface);
+
+  color:
+    var(--rm-text-primary);
+
+  font-family:
+    var(--rm-font-family-sans);
+}
+
+
+/* ========================================
+ * Header
+ * ======================================== */
+
+.rm-sidebar__header {
+  min-inline-size: 0;
+
+  padding-block-end:
+    var(--rm-space-3);
+
+  border-block-end:
+    1px solid
+    var(--rm-border-soft);
+
+  color:
+    var(--rm-text-primary);
+
+  font-size:
+    var(--rm-font-size-md);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Navigation
+ * ======================================== */
+
+.rm-sidebar__nav {
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Section
+ * ======================================== */
+
+.rm-sidebar__section {
+  display: grid;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+}
+
+.rm-sidebar__section
++
+.rm-sidebar__section {
+  margin-block-start:
+    var(--rm-space-5);
+}
+
+
+/* ========================================
+ * Section Title
+ * ======================================== */
+
+.rm-sidebar__section-title {
+  margin: 0;
+
+  color:
+    var(--rm-text-muted);
+
+  font-size:
+    var(--rm-font-size-sm);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * List
+ * ======================================== */
+
+.rm-sidebar__list {
+  display: grid;
+
+  gap: var(--rm-space-1);
+
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* ========================================
+ * Item
+ * ======================================== */
+
+.rm-sidebar__item {
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Link
+ * ======================================== */
+
+.rm-sidebar__link {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+
+  padding:
+    var(--rm-space-2)
+    var(--rm-space-3);
+
+  border-radius:
+    var(--rm-radius-md);
+
+  color:
+    var(--rm-text-secondary);
+
+  font-size:
+    var(--rm-font-size-sm);
+
+  font-weight:
+    var(--rm-font-weight-medium);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.rm-sidebar__link:hover {
+  background:
+    var(--rm-surface-secondary);
+
+  color:
+    var(--rm-text-primary);
+}
+
+.rm-sidebar__link:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Current Destination
+ * ======================================== */
+
+.rm-sidebar__link[aria-current="page"] {
+  background:
+    var(--rm-primary-soft);
+
+  color:
+    var(--rm-text-primary);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+}
+
+
+/* ========================================
+ * Footer
+ * ======================================== */
+
+.rm-sidebar__footer {
+  min-inline-size: 0;
+
+  margin-block-start: auto;
+
+  padding-block-start:
+    var(--rm-space-3);
+
+  border-block-start:
+    1px solid
+    var(--rm-border-soft);
+
+  color:
+    var(--rm-text-secondary);
+
+  overflow-wrap: anywhere;
+}

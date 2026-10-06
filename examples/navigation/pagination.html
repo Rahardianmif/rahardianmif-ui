@@ -1,0 +1,416 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Pagination
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./navigation-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Pagination
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="pagination-light-title"
+        >
+
+            <h2 id="pagination-light-title">
+                Pagination — Light Theme
+            </h2>
+
+
+            <!-- Basic -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="pagination-basic-title"
+            >
+
+                <h3 id="pagination-basic-title">
+                    Basic Pagination
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <nav
+                        id="pagination-light"
+                        class="rm-pagination"
+                        aria-label="Results pages — Light Theme"
+                    >
+
+                        <ul class="rm-pagination__list">
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    id="pagination-previous"
+                                    class="rm-pagination__previous"
+                                    href="#page-3"
+                                >
+                                    Previous
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#page-1"
+                                >
+                                    1
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#page-2"
+                                >
+                                    2
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#page-3"
+                                >
+                                    3
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    id="pagination-current"
+                                    class="rm-pagination__link"
+                                    href="#page-4"
+                                    aria-current="page"
+                                >
+                                    4
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#page-5"
+                                >
+                                    5
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <span
+                                    id="pagination-ellipsis"
+                                    class="rm-pagination__ellipsis"
+                                    aria-hidden="true"
+                                >
+                                    …
+                                </span>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#page-12"
+                                >
+                                    12
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    id="pagination-next"
+                                    class="rm-pagination__next"
+                                    href="#page-5"
+                                >
+                                    Next
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+
+            <!-- Narrow -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="pagination-narrow-title"
+            >
+
+                <h3 id="pagination-narrow-title">
+                    Narrow Container
+                </h3>
+
+
+                <div
+                    id="pagination-narrow-container"
+                    class="
+                        rm-demo__surface
+                        rm-demo__narrow
+                    "
+                >
+
+                    <nav
+                        id="pagination-narrow"
+                        class="rm-pagination"
+                        aria-label="Narrow results pages"
+                    >
+
+                        <ul class="rm-pagination__list">
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__previous"
+                                    href="#narrow-page-2"
+                                >
+                                    Previous
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#narrow-page-1"
+                                >
+                                    1
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <span
+                                    class="rm-pagination__ellipsis"
+                                    aria-hidden="true"
+                                >
+                                    …
+                                </span>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#narrow-page-3"
+                                    aria-current="page"
+                                >
+                                    3
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#narrow-page-4"
+                                >
+                                    4
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__next"
+                                    href="#narrow-page-4"
+                                >
+                                    Next
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="pagination-dark-title"
+        >
+
+            <h2 id="pagination-dark-title">
+                Pagination — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="pagination-dark-basic-title"
+            >
+
+                <h3 id="pagination-dark-basic-title">
+                    Basic Pagination — Dark Theme
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <nav
+                        id="pagination-dark"
+                        class="rm-pagination"
+                        aria-label="Results pages — Dark Theme"
+                    >
+
+                        <ul class="rm-pagination__list">
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__previous"
+                                    href="#dark-page-1"
+                                >
+                                    Previous
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#dark-page-1"
+                                >
+                                    1
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    id="pagination-dark-current"
+                                    class="rm-pagination__link"
+                                    href="#dark-page-2"
+                                    aria-current="page"
+                                >
+                                    2
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__link"
+                                    href="#dark-page-3"
+                                >
+                                    3
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-pagination__item">
+
+                                <a
+                                    class="rm-pagination__next"
+                                    href="#dark-page-3"
+                                >
+                                    Next
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

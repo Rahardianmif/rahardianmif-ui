@@ -1,0 +1,168 @@
+/*
+ * Rahardianmif UI
+ * Pagination Component
+ *
+ * v0.4.3
+ *
+ * Semantic page navigation.
+ * CSS-only.
+ */
+
+.rm-pagination {
+  box-sizing: border-box;
+
+  min-inline-size: 0;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+}
+
+
+/* ========================================
+ * List
+ * ======================================== */
+
+.rm-pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* ========================================
+ * Item
+ * ======================================== */
+
+.rm-pagination__item {
+  display: inline-flex;
+
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Links
+ * ======================================== */
+
+.rm-pagination__link,
+.rm-pagination__previous,
+.rm-pagination__next {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--rm-space-2);
+
+  padding:
+    var(--rm-space-2)
+    var(--rm-space-3);
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    var(--rm-surface);
+
+  color:
+    var(--rm-text-secondary);
+
+  font-size:
+    var(--rm-font-size-sm);
+
+  font-weight:
+    var(--rm-font-weight-medium);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  text-align: center;
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Hover
+ * ======================================== */
+
+.rm-pagination__link:hover,
+.rm-pagination__previous:hover,
+.rm-pagination__next:hover {
+  border-color:
+    var(--rm-primary);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-pagination__link:focus-visible,
+.rm-pagination__previous:focus-visible,
+.rm-pagination__next:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Current Page
+ * ======================================== */
+
+.rm-pagination__link[aria-current="page"] {
+  border-color:
+    var(--rm-primary);
+
+  background:
+    var(--rm-primary-soft);
+
+  color:
+    var(--rm-text-primary);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+}
+
+
+/* ========================================
+ * Ellipsis
+ * ======================================== */
+
+.rm-pagination__ellipsis {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    var(--rm-space-2)
+    var(--rm-space-1);
+
+  color:
+    var(--rm-text-muted);
+
+  user-select: none;
+}

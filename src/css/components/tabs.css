@@ -1,0 +1,160 @@
+/*
+ * Rahardianmif UI
+ * Tabs Component
+ *
+ * v0.4.2
+ *
+ * Horizontal Tabs.
+ * Automatic activation.
+ */
+
+.rm-tabs {
+  box-sizing: border-box;
+
+  min-inline-size: 0;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+}
+
+
+/* ========================================
+ * Tab List
+ * ======================================== */
+
+.rm-tabs__list {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: var(--rm-space-1);
+
+  min-inline-size: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border-block-end:
+    1px solid
+    var(--rm-border);
+
+  scrollbar-width: thin;
+}
+
+
+/* ========================================
+ * Tab
+ * ======================================== */
+
+.rm-tabs__tab {
+  appearance: none;
+
+  box-sizing: border-box;
+
+  flex: 0 0 auto;
+
+  margin-block-end: -1px;
+
+  padding:
+    var(--rm-space-3)
+    var(--rm-space-4);
+
+  border: 0;
+  border-block-end:
+    2px solid
+    transparent;
+
+  border-radius:
+    var(--rm-radius-md)
+    var(--rm-radius-md)
+    0
+    0;
+
+  background: transparent;
+  color: var(--rm-text-secondary);
+
+  font-family: inherit;
+  font-size: var(--rm-font-size-sm);
+  font-weight: var(--rm-font-weight-medium);
+  line-height: var(--rm-line-height-normal);
+
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+ * Selected
+ * ======================================== */
+
+.rm-tabs__tab[aria-selected="true"] {
+  border-block-end-color:
+    var(--rm-primary);
+
+  color: var(--rm-text-primary);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+}
+
+
+/* ========================================
+ * Hover
+ * ======================================== */
+
+.rm-tabs__tab:hover:not(:disabled) {
+  color: var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Focus
+ * ======================================== */
+
+.rm-tabs__tab:focus-visible {
+  position: relative;
+
+  z-index: 1;
+
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset: -2px;
+}
+
+
+/* ========================================
+ * Disabled
+ * ======================================== */
+
+.rm-tabs__tab:disabled {
+  color: var(--rm-text-muted);
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+ * Panel
+ * ======================================== */
+
+.rm-tabs__panel {
+  box-sizing: border-box;
+
+  min-inline-size: 0;
+
+  padding-block-start:
+    var(--rm-space-4);
+
+  color: var(--rm-text-primary);
+
+  overflow-wrap: anywhere;
+}
+
+.rm-tabs__panel[hidden] {
+  display: none;
+}

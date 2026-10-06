@@ -1,0 +1,115 @@
+/*
+ * Rahardianmif UI
+ * Navigation Examples
+ *
+ * Demo-only styles.
+ * Not part of the public component API.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: var(--rm-page-bg);
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  line-height: var(--rm-line-height-normal);
+}
+
+.rm-demo {
+  display: grid;
+
+  gap: var(--rm-space-8);
+
+  inline-size:
+    min(
+      calc(
+        100%
+        -
+        (
+          var(--rm-space-4)
+          *
+          2
+        )
+      ),
+      72rem
+    );
+
+  margin-inline: auto;
+
+  padding-block:
+    var(--rm-space-8)
+    var(--rm-space-12);
+}
+
+.rm-demo > h1 {
+  margin: 0;
+}
+
+.rm-demo__theme {
+  display: grid;
+
+  gap: var(--rm-space-6);
+
+  padding: var(--rm-space-6);
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-lg);
+
+  background: var(--rm-page-bg);
+  color: var(--rm-text-primary);
+}
+
+.rm-demo__theme > h2 {
+  margin: 0;
+}
+
+.rm-demo__section {
+  display: grid;
+
+  gap: var(--rm-space-4);
+}
+
+.rm-demo__section > h3 {
+  margin: 0;
+
+  font-size: var(--rm-font-size-lg);
+}
+
+.rm-demo__surface {
+  min-inline-size: 0;
+
+  padding: var(--rm-space-5);
+
+  border: 1px solid var(--rm-border-soft);
+  border-radius: var(--rm-radius-lg);
+
+  background: var(--rm-surface);
+}
+
+.rm-demo__narrow {
+  inline-size: 100%;
+  max-inline-size: 18rem;
+}
+
+@media (max-width: 32rem) {
+  .rm-demo {
+    padding-block:
+      var(--rm-space-5)
+      var(--rm-space-8);
+  }
+
+  .rm-demo__theme {
+    padding: var(--rm-space-4);
+  }
+
+  .rm-demo__surface {
+    padding: var(--rm-space-4);
+  }
+}

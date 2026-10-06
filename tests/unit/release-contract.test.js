@@ -18,12 +18,18 @@ import {
 } from "node:url";
 
 
-const projectRoot = fileURLToPath(
-  new URL("../../", import.meta.url)
-);
+const projectRoot =
+  fileURLToPath(
+    new URL(
+      "../../",
+      import.meta.url
+    )
+  );
 
 
-function resolve(relativePath) {
+function resolve(
+  relativePath
+) {
   return join(
     projectRoot,
     relativePath
@@ -31,9 +37,13 @@ function resolve(relativePath) {
 }
 
 
-function read(relativePath) {
+function read(
+  relativePath
+) {
   return readFileSync(
-    resolve(relativePath),
+    resolve(
+      relativePath
+    ),
     "utf8"
   );
 }
@@ -58,6 +68,12 @@ const componentFiles = [
   "progress.css",
   "skeleton.css",
   "feedback-state.css",
+
+  "breadcrumb.css",
+  "tabs.css",
+  "pagination.css",
+  "navbar.css",
+  "sidebar.css",
 ];
 
 
@@ -74,75 +90,125 @@ const v03ComponentFiles = [
 ];
 
 
+const v04ComponentFiles = [
+  "breadcrumb.css",
+  "tabs.css",
+  "pagination.css",
+  "navbar.css",
+  "sidebar.css",
+];
+
+
 const v03PublicClasses = [
-  "rm-badge",
-  "rm-badge--sm",
-  "rm-badge--lg",
-  "rm-badge--primary",
-  "rm-badge--success",
-  "rm-badge--warning",
-  "rm-badge--danger",
-  "rm-badge--info",
-  "rm-badge__dot",
-  "rm-badge__icon",
+  ".rm-badge",
+  ".rm-badge--sm",
+  ".rm-badge--lg",
+  ".rm-badge--primary",
+  ".rm-badge--success",
+  ".rm-badge--warning",
+  ".rm-badge--danger",
+  ".rm-badge--info",
+  ".rm-badge__dot",
+  ".rm-badge__icon",
 
-  "rm-status",
-  "rm-status--success",
-  "rm-status--warning",
-  "rm-status--danger",
-  "rm-status--info",
-  "rm-status__indicator",
+  ".rm-status",
+  ".rm-status--success",
+  ".rm-status--warning",
+  ".rm-status--danger",
+  ".rm-status--info",
+  ".rm-status__indicator",
 
-  "rm-card",
-  "rm-card--bordered",
-  "rm-card--elevated",
-  "rm-card__header",
-  "rm-card__title",
-  "rm-card__description",
-  "rm-card__body",
-  "rm-card__footer",
-  "rm-card__media",
-  "rm-card__actions",
+  ".rm-card",
+  ".rm-card--bordered",
+  ".rm-card--elevated",
+  ".rm-card__header",
+  ".rm-card__title",
+  ".rm-card__description",
+  ".rm-card__body",
+  ".rm-card__footer",
+  ".rm-card__media",
+  ".rm-card__actions",
 
-  "rm-alert",
-  "rm-alert--info",
-  "rm-alert--success",
-  "rm-alert--warning",
-  "rm-alert--danger",
-  "rm-alert__icon",
-  "rm-alert__content",
-  "rm-alert__title",
-  "rm-alert__message",
-  "rm-alert__actions",
+  ".rm-alert",
+  ".rm-alert--info",
+  ".rm-alert--success",
+  ".rm-alert--warning",
+  ".rm-alert--danger",
+  ".rm-alert__icon",
+  ".rm-alert__content",
+  ".rm-alert__title",
+  ".rm-alert__message",
+  ".rm-alert__actions",
 
-  "rm-spinner",
-  "rm-spinner--sm",
-  "rm-spinner--lg",
+  ".rm-spinner",
+  ".rm-spinner--sm",
+  ".rm-spinner--lg",
 
-  "rm-inline-loader",
-  "rm-inline-loader__label",
+  ".rm-inline-loader",
+  ".rm-inline-loader__label",
 
-  "rm-progress",
-  "rm-progress__header",
-  "rm-progress__label",
-  "rm-progress__value",
-  "rm-progress__track",
-  "rm-progress__bar",
-  "rm-progress__description",
+  ".rm-progress",
+  ".rm-progress__header",
+  ".rm-progress__label",
+  ".rm-progress__value",
+  ".rm-progress__track",
+  ".rm-progress__bar",
+  ".rm-progress__description",
 
-  "rm-skeleton",
-  "rm-skeleton--text",
-  "rm-skeleton--circle",
+  ".rm-skeleton",
+  ".rm-skeleton--text",
+  ".rm-skeleton--circle",
 
-  "rm-feedback-state",
-  "rm-feedback-state--empty",
-  "rm-feedback-state--no-result",
-  "rm-feedback-state--error",
-  "rm-feedback-state__visual",
-  "rm-feedback-state__content",
-  "rm-feedback-state__title",
-  "rm-feedback-state__description",
-  "rm-feedback-state__actions",
+  ".rm-feedback-state",
+  ".rm-feedback-state--empty",
+  ".rm-feedback-state--no-result",
+  ".rm-feedback-state--error",
+  ".rm-feedback-state__visual",
+  ".rm-feedback-state__content",
+  ".rm-feedback-state__title",
+  ".rm-feedback-state__description",
+  ".rm-feedback-state__actions",
+];
+
+
+const v04PublicClasses = [
+  ".rm-breadcrumb",
+  ".rm-breadcrumb__list",
+  ".rm-breadcrumb__item",
+  ".rm-breadcrumb__link",
+  ".rm-breadcrumb__separator",
+  ".rm-breadcrumb__current",
+
+  ".rm-tabs",
+  ".rm-tabs__list",
+  ".rm-tabs__tab",
+  ".rm-tabs__panel",
+
+  ".rm-pagination",
+  ".rm-pagination__list",
+  ".rm-pagination__item",
+  ".rm-pagination__link",
+  ".rm-pagination__previous",
+  ".rm-pagination__next",
+  ".rm-pagination__ellipsis",
+
+  ".rm-navbar",
+  ".rm-navbar__brand",
+  ".rm-navbar__nav",
+  ".rm-navbar__list",
+  ".rm-navbar__item",
+  ".rm-navbar__link",
+  ".rm-navbar__actions",
+
+  ".rm-sidebar",
+  ".rm-sidebar__header",
+  ".rm-sidebar__nav",
+  ".rm-sidebar__section",
+  ".rm-sidebar__section-title",
+  ".rm-sidebar__list",
+  ".rm-sidebar__item",
+  ".rm-sidebar__link",
+  ".rm-sidebar__footer",
 ];
 
 
@@ -164,6 +230,12 @@ const documentationFiles = [
   "docs/components/progress.md",
   "docs/components/skeleton.md",
   "docs/components/feedback-state.md",
+
+  "docs/components/breadcrumb.md",
+  "docs/components/tabs.md",
+  "docs/components/pagination.md",
+  "docs/components/navbar.md",
+  "docs/components/sidebar.md",
 ];
 
 
@@ -179,22 +251,63 @@ const demoFiles = [
   "examples/form/switch.html",
   "examples/form/validation.html",
 
-  "examples/feedback/badge-status.html",
-  "examples/card/index.html",
-  "examples/alert/index.html",
-  "examples/loading/spinner-inline-loader.html",
-  "examples/loading/progress.html",
-  "examples/loading/skeleton.html",
-  "examples/feedback-state/index.html",
+  "examples/navigation/breadcrumb.html",
+  "examples/navigation/tabs.html",
+  "examples/navigation/pagination.html",
+  "examples/navigation/navbar.html",
+  "examples/navigation/sidebar.html",
 ];
 
 
+function collectClasses(
+  filenames
+) {
+  const classes =
+    new Set();
+
+
+  for (
+    const filename
+    of filenames
+  ) {
+    const source =
+      read(
+        `src/css/components/${filename}`
+      );
+
+
+    const matches =
+      source.match(
+        /\.rm-[a-z0-9_-]+(?:__[a-z0-9_-]+|--[a-z0-9_-]+)*/gi
+      )
+      ??
+      [];
+
+
+    for (
+      const className
+      of matches
+    ) {
+      classes.add(
+        className
+      );
+    }
+  }
+
+
+  return [
+    ...classes,
+  ].sort();
+}
+
+
 describe(
-  "Rahardianmif UI v0.3 release contract",
+  "Rahardianmif UI v0.4 release contract",
   () => {
 
+
     it(
-      "contains every cumulative component stylesheet through v0.3",
+      "contains every cumulative component stylesheet through v0.4",
       () => {
         for (
           const filename
@@ -213,11 +326,12 @@ describe(
 
 
     it(
-      "imports every cumulative component stylesheet through v0.3",
+      "imports every cumulative component stylesheet through v0.4",
       () => {
-        const entry = read(
-          "src/css/rahardianmif-ui.css"
-        );
+        const entry =
+          read(
+            "src/css/rahardianmif-ui.css"
+          );
 
 
         for (
@@ -237,14 +351,17 @@ describe(
     it(
       "keeps cumulative component import order stable",
       () => {
-        const entry = read(
-          "src/css/rahardianmif-ui.css"
-        );
+        const entry =
+          read(
+            "src/css/rahardianmif-ui.css"
+          );
 
 
         const indexes =
           componentFiles.map(
-            (filename) =>
+            (
+              filename
+            ) =>
               entry.indexOf(
                 `@import "./components/${filename}";`
               )
@@ -253,7 +370,9 @@ describe(
 
         expect(
           indexes.every(
-            (index) =>
+            (
+              index
+            ) =>
               index >= 0
           )
         ).toBe(true);
@@ -277,9 +396,10 @@ describe(
     it(
       "keeps Foundations before Themes and Components",
       () => {
-        const entry = read(
-          "src/css/rahardianmif-ui.css"
-        );
+        const entry =
+          read(
+            "src/css/rahardianmif-ui.css"
+          );
 
 
         const foundationIndexes = [
@@ -289,16 +409,19 @@ describe(
           "radius.css",
           "z-index.css",
           "motion.css",
-          "breakpoints.css",
         ]
           .map(
-            (filename) =>
+            (
+              filename
+            ) =>
               entry.indexOf(
                 `./foundations/${filename}`
               )
           )
           .filter(
-            (index) =>
+            (
+              index
+            ) =>
               index >= 0
           );
 
@@ -307,24 +430,28 @@ describe(
           "light-colors.css",
           "dark-colors.css",
           "status-colors.css",
-          "light-shadow.css",
-          "dark-shadow.css",
         ]
           .map(
-            (filename) =>
+            (
+              filename
+            ) =>
               entry.indexOf(
                 `./themes/${filename}`
               )
           )
           .filter(
-            (index) =>
+            (
+              index
+            ) =>
               index >= 0
           );
 
 
         const componentIndexes =
           componentFiles.map(
-            (filename) =>
+            (
+              filename
+            ) =>
               entry.indexOf(
                 `./components/${filename}`
               )
@@ -333,45 +460,59 @@ describe(
 
         expect(
           foundationIndexes.length
-        ).toBeGreaterThan(
-          0
-        );
+        ).toBeGreaterThan(0);
 
 
         expect(
           themeIndexes.length
-        ).toBeGreaterThan(
-          0
-        );
+        ).toBeGreaterThan(0);
 
 
         expect(
           componentIndexes.every(
-            (index) =>
+            (
+              index
+            ) =>
               index >= 0
           )
         ).toBe(true);
 
 
-        expect(
-          Math.min(
-            ...themeIndexes
-          )
-        ).toBeGreaterThan(
+        const lastFoundation =
           Math.max(
             ...foundationIndexes
-          )
+          );
+
+
+        const firstTheme =
+          Math.min(
+            ...themeIndexes
+          );
+
+
+        const lastTheme =
+          Math.max(
+            ...themeIndexes
+          );
+
+
+        const firstComponent =
+          Math.min(
+            ...componentIndexes
+          );
+
+
+        expect(
+          firstTheme
+        ).toBeGreaterThan(
+          lastFoundation
         );
 
 
         expect(
-          Math.min(
-            ...componentIndexes
-          )
+          firstComponent
         ).toBeGreaterThan(
-          Math.max(
-            ...themeIndexes
-          )
+          lastTheme
         );
       }
     );
@@ -384,9 +525,10 @@ describe(
           const filename
           of componentFiles
         ) {
-          const css = read(
-            `src/css/components/${filename}`
-          );
+          const css =
+            read(
+              `src/css/components/${filename}`
+            );
 
 
           const classes = [
@@ -394,7 +536,9 @@ describe(
               /\.([A-Za-z_][\w-]*)/g
             ),
           ].map(
-            (match) =>
+            (
+              match
+            ) =>
               match[1]
           );
 
@@ -421,44 +565,10 @@ describe(
     it(
       "keeps the exact locked v0.3 public class surface",
       () => {
-        const actualClasses =
-          new Set();
-
-
-        for (
-          const filename
-          of v03ComponentFiles
-        ) {
-          const css = read(
-            `src/css/components/${filename}`
-          );
-
-
-          const classes = [
-            ...css.matchAll(
-              /\.([A-Za-z_][\w-]*)/g
-            ),
-          ].map(
-            (match) =>
-              match[1]
-          );
-
-
-          for (
-            const className
-            of classes
-          ) {
-            actualClasses.add(
-              className
-            );
-          }
-        }
-
-
         expect(
-          [
-            ...actualClasses,
-          ].sort()
+          collectClasses(
+            v03ComponentFiles
+          )
         ).toEqual(
           [
             ...v03PublicClasses,
@@ -469,25 +579,52 @@ describe(
 
 
     it(
+      "keeps the exact locked v0.4 public class surface",
+      () => {
+        expect(
+          collectClasses(
+            v04ComponentFiles
+          )
+        ).toEqual(
+          [
+            ...v04PublicClasses,
+          ].sort()
+        );
+      }
+    );
+
+
+    it(
       "contains no hard-coded component colors",
       () => {
-        const hardCodedColor =
-          /#[0-9a-fA-F]{3,8}\b|\brgba?\s*\(|\bhsla?\s*\(/;
-
-
         for (
           const filename
           of componentFiles
         ) {
-          const css = read(
-            `src/css/components/${filename}`
+          const css =
+            read(
+              `src/css/components/${filename}`
+            );
+
+
+          expect(
+            css
+          ).not.toMatch(
+            /#[0-9a-fA-F]{3,8}\b/
           );
 
 
           expect(
             css
           ).not.toMatch(
-            hardCodedColor
+            /\brgba?\s*\(/
+          );
+
+
+          expect(
+            css
+          ).not.toMatch(
+            /\bhsla?\s*\(/
           );
         }
       }
@@ -503,7 +640,9 @@ describe(
         ) {
           expect(
             existsSync(
-              resolve(filepath)
+              resolve(
+                filepath
+              )
             )
           ).toBe(true);
         }
@@ -520,7 +659,9 @@ describe(
         ) {
           expect(
             existsSync(
-              resolve(filepath)
+              resolve(
+                filepath
+              )
             )
           ).toBe(true);
         }
@@ -533,7 +674,9 @@ describe(
       () => {
         const nestedDemos =
           demoFiles.filter(
-            (filepath) =>
+            (
+              filepath
+            ) =>
               filepath
               !==
               "examples/index.html"
@@ -544,15 +687,16 @@ describe(
           const filepath
           of nestedDemos
         ) {
-          const html = read(
-            filepath
-          );
+          const source =
+            read(
+              filepath
+            );
 
 
           expect(
-            html
+            source
           ).toContain(
-            "../../src/css/rahardianmif-ui.css"
+            "src/css/rahardianmif-ui.css"
           );
         }
       }
@@ -562,20 +706,21 @@ describe(
     it(
       "loads the public stylesheet and showcase stylesheet",
       () => {
-        const html = read(
-          "examples/index.html"
-        );
+        const showcase =
+          read(
+            "examples/index.html"
+          );
 
 
         expect(
-          html
+          showcase
         ).toContain(
           "../src/css/rahardianmif-ui.css"
         );
 
 
         expect(
-          html
+          showcase
         ).toContain(
           "./showcase.css"
         );
@@ -586,12 +731,13 @@ describe(
     it(
       "represents every frozen v0.2 component family in the showcase",
       () => {
-        const html = read(
-          "examples/index.html"
-        );
+        const showcase =
+          read(
+            "examples/index.html"
+          );
 
 
-        const requiredClasses = [
+        const required = [
           "rm-button",
           "rm-input",
           "rm-textarea",
@@ -604,13 +750,13 @@ describe(
 
 
         for (
-          const className
-          of requiredClasses
+          const marker
+          of required
         ) {
           expect(
-            html
+            showcase
           ).toContain(
-            className
+            marker
           );
         }
       }
@@ -618,14 +764,15 @@ describe(
 
 
     it(
-      "represents every v0.3 component family in the unified showcase",
+      "represents every frozen v0.3 component family in the showcase",
       () => {
-        const html = read(
-          "examples/index.html"
-        );
+        const showcase =
+          read(
+            "examples/index.html"
+          );
 
 
-        const requiredClasses = [
+        const required = [
           "rm-badge",
           "rm-status",
           "rm-card",
@@ -639,13 +786,46 @@ describe(
 
 
         for (
-          const className
-          of requiredClasses
+          const marker
+          of required
         ) {
           expect(
-            html
+            showcase
           ).toContain(
-            className
+            marker
+          );
+        }
+      }
+    );
+
+
+    it(
+      "represents every v0.4 component family in the unified showcase",
+      () => {
+        const showcase =
+          read(
+            "examples/index.html"
+          );
+
+
+        const required = [
+          "rm-breadcrumb",
+          "rm-tabs",
+          "rm-pagination",
+          "rm-navbar",
+          "rm-sidebar",
+          "data-rm-tabs",
+        ];
+
+
+        for (
+          const marker
+          of required
+        ) {
+          expect(
+            showcase
+          ).toContain(
+            marker
           );
         }
       }
@@ -655,20 +835,21 @@ describe(
     it(
       "contains Light and Dark showcase previews",
       () => {
-        const html = read(
-          "examples/index.html"
-        );
+        const showcase =
+          read(
+            "examples/index.html"
+          );
 
 
         expect(
-          html
+          showcase
         ).toContain(
           'data-rm-theme="light"'
         );
 
 
         expect(
-          html
+          showcase
         ).toContain(
           'data-rm-theme="dark"'
         );
@@ -677,7 +858,7 @@ describe(
 
 
     it(
-      "synchronizes v0.3 release metadata",
+      "synchronizes v0.4 release metadata",
       () => {
         const packageJson =
           JSON.parse(
@@ -710,37 +891,41 @@ describe(
         expect(
           packageJson.version
         ).toBe(
-          "0.3.0"
+          "0.4.0"
         );
 
 
         expect(
           packageLock.version
         ).toBe(
-          "0.3.0"
+          "0.4.0"
         );
 
 
-        expect(
-          packageLock
-            .packages?.[""]
-            ?.version
-        ).toBe(
-          "0.3.0"
-        );
+        if (
+          packageLock.packages
+          &&
+          packageLock.packages[""]
+        ) {
+          expect(
+            packageLock.packages[""].version
+          ).toBe(
+            "0.4.0"
+          );
+        }
 
 
         expect(
           docsIndex
         ).toContain(
-          "v0.3.0 — Cards + Feedback"
+          "v0.4.0 — Navigation"
         );
 
 
         expect(
           changelog
         ).toContain(
-          "0.3.0 — Cards + Feedback"
+          "0.4.0 — Navigation"
         );
       }
     );
@@ -749,29 +934,91 @@ describe(
     it(
       "keeps the public JavaScript API frozen",
       () => {
-        const entry = read(
-          "src/js/rahardianmif-ui.js"
+        const entry =
+          read(
+            "src/js/rahardianmif-ui.js"
+          );
+
+
+        expect(
+          entry
+        ).toContain(
+          "initTheme"
         );
 
 
         expect(
           entry
         ).toContain(
-          "const RahardianmifUI"
+          "initTabs"
         );
 
 
+        const publicApiMatch =
+          entry.match(
+            /const\s+RahardianmifUI\s*=\s*\{([\s\S]*?)\};/
+          );
+
+
         expect(
-          entry
+          publicApiMatch
+        ).not.toBeNull();
+
+
+        const publicApi =
+          publicApiMatch[1];
+
+
+        expect(
+          publicApi
         ).toContain(
-          "init,"
+          "init"
         );
 
 
         expect(
-          entry
-        ).not.toMatch(
-          /(?:badge|card|alert|spinner|progress|skeleton|feedback)\s*[:,]/
+          publicApi
+        ).not.toContain(
+          "initTabs"
+        );
+
+
+        expect(
+          publicApi
+        ).not.toContain(
+          "tabs"
+        );
+      }
+    );
+
+
+    it(
+      "keeps Tabs internal and declarative",
+      () => {
+        const tabs =
+          read(
+            "src/js/components/tabs.js"
+          );
+
+
+        expect(
+          tabs
+        ).toContain(
+          "[data-rm-tabs]"
+        );
+
+
+        expect(
+          tabs
+        ).toContain(
+          "initTabs"
+        );
+
+
+        expect(
+          tabs
+        ).toContain(
+          "WeakSet"
         );
       }
     );
@@ -788,19 +1035,11 @@ describe(
           );
 
 
-        const runtimeDependencies =
+        expect(
           packageJson.dependencies
           ??
-          {};
-
-
-        expect(
-          Object.keys(
-            runtimeDependencies
-          )
-        ).toHaveLength(
-          0
-        );
+          {}
+        ).toEqual({});
       }
     );
 

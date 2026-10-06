@@ -1,0 +1,385 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Breadcrumb
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./navigation-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Breadcrumb
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="breadcrumb-light-theme-title"
+        >
+
+            <h2 id="breadcrumb-light-theme-title">
+                Breadcrumb — Light Theme
+            </h2>
+
+
+            <!-- Basic -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="breadcrumb-light-basic-title"
+            >
+
+                <h3 id="breadcrumb-light-basic-title">
+                    Basic Breadcrumb — Light Theme
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <nav
+                        id="breadcrumb-light"
+                        class="rm-breadcrumb"
+                        aria-label="Breadcrumb — Light Theme"
+                    >
+
+                        <ol class="rm-breadcrumb__list">
+
+                            <li class="rm-breadcrumb__item">
+
+                                <a
+                                    id="breadcrumb-home-link"
+                                    class="rm-breadcrumb__link"
+                                    href="#home"
+                                >
+                                    Home
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <a
+                                    class="rm-breadcrumb__link"
+                                    href="#students"
+                                >
+                                    Students
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <span
+                                    id="breadcrumb-current"
+                                    class="rm-breadcrumb__current"
+                                    aria-current="page"
+                                >
+                                    Student Detail
+                                </span>
+
+                            </li>
+
+                        </ol>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+
+            <!-- Short Breadcrumb -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="breadcrumb-short-title"
+            >
+
+                <h3 id="breadcrumb-short-title">
+                    Two Levels — Light Theme
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <nav
+                        id="breadcrumb-short"
+                        class="rm-breadcrumb"
+                        aria-label="Short Breadcrumb — Light Theme"
+                    >
+
+                        <ol class="rm-breadcrumb__list">
+
+                            <li class="rm-breadcrumb__item">
+
+                                <a
+                                    class="rm-breadcrumb__link"
+                                    href="#dashboard"
+                                >
+                                    Dashboard
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <span
+                                    class="rm-breadcrumb__current"
+                                    aria-current="page"
+                                >
+                                    Settings
+                                </span>
+
+                            </li>
+
+                        </ol>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="breadcrumb-long-title"
+            >
+
+                <h3 id="breadcrumb-long-title">
+                    Long Content — Light Theme
+                </h3>
+
+
+                <div
+                    id="breadcrumb-narrow-container"
+                    class="
+                        rm-demo__surface
+                        rm-demo__narrow
+                    "
+                >
+
+                    <nav
+                        id="breadcrumb-long"
+                        class="rm-breadcrumb"
+                        aria-label="Long Breadcrumb — Light Theme"
+                    >
+
+                        <ol class="rm-breadcrumb__list">
+
+                            <li class="rm-breadcrumb__item">
+
+                                <a
+                                    class="rm-breadcrumb__link"
+                                    href="#administration"
+                                >
+                                    Administration
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <a
+                                    class="rm-breadcrumb__link"
+                                    href="#management"
+                                >
+                                    User Management
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <span
+                                    id="breadcrumb-long-current"
+                                    class="rm-breadcrumb__current"
+                                    aria-current="page"
+                                >
+                                    Pengaturan Administrasi dan
+                                    Manajemen Pengguna
+                                </span>
+
+                            </li>
+
+                        </ol>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="breadcrumb-dark-theme-title"
+        >
+
+            <h2 id="breadcrumb-dark-theme-title">
+                Breadcrumb — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="breadcrumb-dark-basic-title"
+            >
+
+                <h3 id="breadcrumb-dark-basic-title">
+                    Basic Breadcrumb — Dark Theme
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <nav
+                        id="breadcrumb-dark"
+                        class="rm-breadcrumb"
+                        aria-label="Breadcrumb — Dark Theme"
+                    >
+
+                        <ol class="rm-breadcrumb__list">
+
+                            <li class="rm-breadcrumb__item">
+
+                                <a
+                                    id="breadcrumb-dark-home"
+                                    class="rm-breadcrumb__link"
+                                    href="#dark-home"
+                                >
+                                    Home
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <a
+                                    class="rm-breadcrumb__link"
+                                    href="#dark-library"
+                                >
+                                    Library
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-breadcrumb__item">
+
+                                <span
+                                    class="rm-breadcrumb__separator"
+                                    aria-hidden="true"
+                                >
+                                    /
+                                </span>
+
+                                <span
+                                    id="breadcrumb-dark-current"
+                                    class="rm-breadcrumb__current"
+                                    aria-current="page"
+                                >
+                                    Components
+                                </span>
+
+                            </li>
+
+                        </ol>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

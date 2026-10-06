@@ -1,0 +1,431 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Sidebar
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./navigation-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Sidebar
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="sidebar-light-title"
+        >
+
+            <h2 id="sidebar-light-title">
+                Sidebar — Light Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="sidebar-basic-title"
+            >
+
+                <h3 id="sidebar-basic-title">
+                    Application Navigation
+                </h3>
+
+
+                <div
+                    class="rm-demo__surface"
+                    style="max-inline-size: 18rem;"
+                >
+
+                    <aside
+                        id="sidebar-light"
+                        class="rm-sidebar"
+                    >
+
+                        <div class="rm-sidebar__header">
+                            Administration
+                        </div>
+
+
+                        <nav
+                            class="rm-sidebar__nav"
+                            aria-label="Administration navigation — Light Theme"
+                        >
+
+                            <!-- Main -->
+
+                            <section class="rm-sidebar__section">
+
+                                <h4 class="rm-sidebar__section-title">
+                                    Main
+                                </h4>
+
+
+                                <ul class="rm-sidebar__list">
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            id="sidebar-current"
+                                            class="rm-sidebar__link"
+                                            href="#dashboard"
+                                            aria-current="page"
+                                        >
+                                            Dashboard
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#analytics"
+                                        >
+                                            Analytics
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+
+                            <!-- Management -->
+
+                            <section class="rm-sidebar__section">
+
+                                <h4 class="rm-sidebar__section-title">
+                                    Management
+                                </h4>
+
+
+                                <ul class="rm-sidebar__list">
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            id="sidebar-users-link"
+                                            class="rm-sidebar__link"
+                                            href="#users"
+                                        >
+                                            Users
+
+                                            <span
+                                                class="
+                                                    rm-badge
+                                                    rm-badge--info
+                                                    rm-badge--sm
+                                                "
+                                            >
+                                                24
+                                            </span>
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#roles"
+                                        >
+                                            Roles and Permissions
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#settings"
+                                        >
+                                            Settings
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+                        </nav>
+
+
+                        <div class="rm-sidebar__footer">
+
+                            <span
+                                class="
+                                    rm-status
+                                    rm-status--success
+                                "
+                            >
+
+                                <span
+                                    class="rm-status__indicator"
+                                    aria-hidden="true"
+                                ></span>
+
+                                System Operational
+
+                            </span>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="sidebar-long-title"
+            >
+
+                <h3 id="sidebar-long-title">
+                    Long Content
+                </h3>
+
+
+                <div
+                    id="sidebar-narrow-container"
+                    class="
+                        rm-demo__surface
+                        rm-demo__narrow
+                    "
+                >
+
+                    <aside
+                        id="sidebar-narrow"
+                        class="rm-sidebar"
+                    >
+
+                        <div class="rm-sidebar__header">
+                            Administration Management Portal
+                        </div>
+
+
+                        <nav
+                            class="rm-sidebar__nav"
+                            aria-label="Long administration navigation"
+                        >
+
+                            <section class="rm-sidebar__section">
+
+                                <h4 class="rm-sidebar__section-title">
+                                    Administration
+                                </h4>
+
+
+                                <ul class="rm-sidebar__list">
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#user-management"
+                                            aria-current="page"
+                                        >
+                                            User Management and Administration
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            id="sidebar-long-link"
+                                            class="rm-sidebar__link"
+                                            href="#security-permissions"
+                                        >
+                                            Security Roles, Permissions,
+                                            and Access Management
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#configuration"
+                                        >
+                                            Application Configuration
+                                            and System Preferences
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+                        </nav>
+
+
+                        <div class="rm-sidebar__footer">
+                            Administration Workspace
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="sidebar-dark-title"
+        >
+
+            <h2 id="sidebar-dark-title">
+                Sidebar — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="sidebar-dark-basic-title"
+            >
+
+                <h3 id="sidebar-dark-basic-title">
+                    Application Navigation — Dark Theme
+                </h3>
+
+
+                <div
+                    class="rm-demo__surface"
+                    style="max-inline-size: 18rem;"
+                >
+
+                    <aside
+                        id="sidebar-dark"
+                        class="rm-sidebar"
+                    >
+
+                        <div class="rm-sidebar__header">
+                            Workspace
+                        </div>
+
+
+                        <nav
+                            class="rm-sidebar__nav"
+                            aria-label="Workspace navigation — Dark Theme"
+                        >
+
+                            <section class="rm-sidebar__section">
+
+                                <h4 class="rm-sidebar__section-title">
+                                    Workspace
+                                </h4>
+
+
+                                <ul class="rm-sidebar__list">
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            id="sidebar-dark-current"
+                                            class="rm-sidebar__link"
+                                            href="#dark-overview"
+                                            aria-current="page"
+                                        >
+                                            Overview
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#dark-projects"
+                                        >
+                                            Projects
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#dark-members"
+                                        >
+                                            Members
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+                        </nav>
+
+
+                        <div class="rm-sidebar__footer">
+                            Rahardianmif UI
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

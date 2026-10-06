@@ -1,0 +1,432 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Tabs
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./navigation-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Tabs
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="tabs-light-theme-title"
+        >
+
+            <h2 id="tabs-light-theme-title">
+                Tabs — Light Theme
+            </h2>
+
+
+            <!-- Basic -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tabs-light-basic-title"
+            >
+
+                <h3 id="tabs-light-basic-title">
+                    Basic Tabs — Light Theme
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <div
+                        id="tabs-basic"
+                        class="rm-tabs"
+                        data-rm-tabs
+                    >
+
+                        <div
+                            class="rm-tabs__list"
+                            role="tablist"
+                            aria-label="Account sections"
+                        >
+
+                            <button
+                                id="tab-profile"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="true"
+                                aria-controls="panel-profile"
+                                tabindex="0"
+                            >
+                                Profile
+                            </button>
+
+
+                            <button
+                                id="tab-security"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="panel-security"
+                                tabindex="-1"
+                            >
+                                Security
+                            </button>
+
+
+                            <button
+                                id="tab-notifications"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="panel-notifications"
+                                tabindex="-1"
+                            >
+                                Notifications
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="panel-profile"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-profile"
+                        >
+
+                            <h4>
+                                Profile
+                            </h4>
+
+                            <p>
+                                Manage your personal account
+                                information.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="panel-security"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-security"
+                            hidden
+                        >
+
+                            <h4>
+                                Security
+                            </h4>
+
+                            <p>
+                                Manage passwords and account
+                                protection settings.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="panel-notifications"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-notifications"
+                            hidden
+                        >
+
+                            <h4>
+                                Notifications
+                            </h4>
+
+                            <p>
+                                Configure email and application
+                                notifications.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Long Labels -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tabs-long-title"
+            >
+
+                <h3 id="tabs-long-title">
+                    Long Labels — Light Theme
+                </h3>
+
+
+                <div
+                    id="tabs-narrow-container"
+                    class="
+                        rm-demo__surface
+                        rm-demo__narrow
+                    "
+                >
+
+                    <div
+                        id="tabs-long"
+                        class="rm-tabs"
+                        data-rm-tabs
+                    >
+
+                        <div
+                            id="tabs-long-list"
+                            class="rm-tabs__list"
+                            role="tablist"
+                            aria-label="Administration sections"
+                        >
+
+                            <button
+                                id="tab-user-management"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="true"
+                                aria-controls="panel-user-management"
+                                tabindex="0"
+                            >
+                                User Management
+                            </button>
+
+
+                            <button
+                                id="tab-administration-settings"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="panel-administration-settings"
+                                tabindex="-1"
+                            >
+                                Administration Settings
+                            </button>
+
+
+                            <button
+                                id="tab-permissions"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="panel-permissions"
+                                tabindex="-1"
+                            >
+                                Roles and Permissions
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="panel-user-management"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-user-management"
+                        >
+                            Manage system users.
+                        </div>
+
+
+                        <div
+                            id="panel-administration-settings"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-administration-settings"
+                            hidden
+                        >
+                            Configure administrative settings.
+                        </div>
+
+
+                        <div
+                            id="panel-permissions"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-permissions"
+                            hidden
+                        >
+                            Configure roles and permissions.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="tabs-dark-theme-title"
+        >
+
+            <h2 id="tabs-dark-theme-title">
+                Tabs — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tabs-dark-basic-title"
+            >
+
+                <h3 id="tabs-dark-basic-title">
+                    Basic Tabs — Dark Theme
+                </h3>
+
+
+                <div class="rm-demo__surface">
+
+                    <div
+                        id="tabs-dark"
+                        class="rm-tabs"
+                        data-rm-tabs
+                    >
+
+                        <div
+                            class="rm-tabs__list"
+                            role="tablist"
+                            aria-label="Project sections"
+                        >
+
+                            <button
+                                id="tab-dark-overview"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="true"
+                                aria-controls="panel-dark-overview"
+                                tabindex="0"
+                            >
+                                Overview
+                            </button>
+
+
+                            <button
+                                id="tab-dark-activity"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="panel-dark-activity"
+                                tabindex="-1"
+                            >
+                                Activity
+                            </button>
+
+
+                            <button
+                                id="tab-dark-settings"
+                                class="rm-tabs__tab"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="panel-dark-settings"
+                                tabindex="-1"
+                            >
+                                Settings
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="panel-dark-overview"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-dark-overview"
+                        >
+                            Project overview content.
+                        </div>
+
+
+                        <div
+                            id="panel-dark-activity"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-dark-activity"
+                            hidden
+                        >
+                            Project activity content.
+                        </div>
+
+
+                        <div
+                            id="panel-dark-settings"
+                            class="rm-tabs__panel"
+                            role="tabpanel"
+                            aria-labelledby="tab-dark-settings"
+                            hidden
+                        >
+                            Project settings content.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script type="module">
+
+        import RahardianmifUI
+            from "../../src/js/rahardianmif-ui.js";
+
+
+        RahardianmifUI.init();
+
+    </script>
+
+</body>
+
+</html>

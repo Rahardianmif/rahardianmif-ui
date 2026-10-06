@@ -1,24 +1,22 @@
 # Rahardianmif UI
 
-Rahardianmif UI adalah reusable frontend UI system yang dibangun dengan:
+Rahardianmif UI adalah reusable frontend UI system berbasis:
 
 - HTML
-- native CSS
+- CSS
 - Vanilla JavaScript
 
-Core Rahardianmif UI tetap framework-agnostic dan tidak membutuhkan runtime framework.
+Core tetap framework-agnostic.
 
 ## Current Version
 
-**v0.3.0 — Cards + Feedback**
+**v0.4.0 — Navigation**
 
-Rahardianmif UI v0.3.0 bersifat cumulative.
+v0.4 merupakan cumulative release.
 
-Current library terdiri dari:
+Contract versi sebelumnya tetap frozen:
 
 ```text
 v0.1 Foundations + Tokens
-+
 v0.2 Buttons + Basic Forms
-+
 v0.3 Cards + Feedback

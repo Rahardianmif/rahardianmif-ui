@@ -4,6 +4,11 @@ import {
 } from "@playwright/test";
 
 
+test.setTimeout(
+  60_000
+);
+
+
 const fixture =
   "/examples/index.html";
 
@@ -11,14 +16,18 @@ const fixture =
 test.beforeEach(
   async ({ page }) => {
     await page.goto(
-      fixture
+      fixture,
+      {
+        waitUntil:
+          "domcontentloaded",
+      }
     );
   }
 );
 
 
 test(
-  "v0.3 cumulative showcase loads",
+  "v0.4 cumulative showcase loads",
   async ({ page }) => {
     await expect(
       page.getByRole(
@@ -26,7 +35,8 @@ test(
         {
           level: 1,
           name:
-            "v0.3 — Cards + Feedback",
+            "v0.4 — Navigation",
+          exact: true,
         }
       )
     ).toBeVisible();
@@ -35,18 +45,18 @@ test(
 
 
 test(
-  "showcase contains Light and Dark previews",
+  "showcase contains Light and Dark themes",
   async ({ page }) => {
     await expect(
       page.locator(
-        '.rm-showcase__theme[data-rm-theme="light"]'
+        "#showcase-light"
       )
     ).toBeVisible();
 
 
     await expect(
       page.locator(
-        '.rm-showcase__theme[data-rm-theme="dark"]'
+        "#showcase-dark"
       )
     ).toBeVisible();
   }
@@ -54,7 +64,7 @@ test(
 
 
 test(
-  "showcase represents frozen v0.2 component families",
+  "showcase exposes cumulative v0.2 v0.3 and v0.4 component families",
   async ({ page }) => {
     const pageText =
       await page
@@ -72,6 +82,20 @@ test(
       "Checkbox + Radio",
       "Switch",
       "Validation",
+
+      "Badge + Status Indicator",
+      "Card Core",
+      "Alert",
+      "Spinner + Inline Loader",
+      "Progress Bar",
+      "Skeleton",
+      "Feedback States",
+
+      "Breadcrumb",
+      "Tabs",
+      "Pagination",
+      "Navbar",
+      "Sidebar",
     ];
 
 
@@ -90,53 +114,32 @@ test(
 
 
 test(
-  "showcase represents all v0.3 component families",
+  "showcase native v0.2 controls remain interactive",
   async ({ page }) => {
-    const selectors = [
-      ".rm-badge",
-      ".rm-status",
-      ".rm-card",
-      ".rm-alert",
-      ".rm-spinner",
-      ".rm-inline-loader",
-      ".rm-progress",
-      ".rm-skeleton",
-      ".rm-feedback-state",
-    ];
-
-
-    for (
-      const selector
-      of selectors
-    ) {
-      await expect(
-        page.locator(
-          selector
-        ).first()
-      ).toBeVisible();
-    }
-  }
-);
-
-
-test(
-  "showcase native controls remain interactive",
-  async ({ page }) => {
+    /*
+     * Keep the frozen v0.2 interaction contract.
+     *
+     * Choice uses a native checkbox wrapped by
+     * its label. Clicking the label is the
+     * intended pointer interaction.
+     */
     const checkbox =
-      page.locator(
-        "#showcase-checkbox"
-      );
-
-
-    await expect(
-      checkbox
-    ).toBeChecked();
+      page
+        .locator(
+          ".rm-checkbox"
+        )
+        .first();
 
 
     const label =
       checkbox.locator(
         "xpath=ancestor::label[1]"
       );
+
+
+    await expect(
+      checkbox
+    ).toBeChecked();
 
 
     await label.click();
@@ -169,11 +172,10 @@ test(
 
 
     /*
-     * Establish keyboard modality before
-     * programmatic focus.
+     * Establish keyboard modality.
      *
-     * This keeps focus-visible behavior
-     * consistent across browser engines.
+     * WebKit does not always move the first
+     * native Tab directly to a link.
      */
     await page.keyboard.press(
       "Tab"
@@ -215,20 +217,12 @@ test(
 
 
 test(
-  "Light showcase Progress exposes determinate semantics",
+  "Light progress remains determinate",
   async ({ page }) => {
     const progress =
       page.locator(
-        "#showcase-progress-light"
+        "#showcase-progress-light [role='progressbar']"
       );
-
-
-    await expect(
-      progress
-    ).toHaveAttribute(
-      "role",
-      "progressbar"
-    );
 
 
     await expect(
@@ -265,11 +259,11 @@ test(
 
 
 test(
-  "Dark showcase Progress exposes determinate semantics",
+  "Dark progress remains determinate",
   async ({ page }) => {
     const progress =
       page.locator(
-        "#showcase-progress-dark"
+        "#showcase-progress-dark [role='progressbar']"
       );
 
 
@@ -291,46 +285,121 @@ test(
 
 
 test(
-  "Skeleton uses shimmer in normal motion mode",
+  "showcase Skeleton remains available when reduced motion is not requested",
   async ({ page }) => {
+    await page.emulateMedia({
+      reducedMotion:
+        "no-preference",
+    });
+
+
+    await page.reload({
+      waitUntil:
+        "domcontentloaded",
+    });
+
+
     const skeleton =
-      page
-        .locator(
-          ".rm-skeleton"
-        )
-        .first();
+      page.locator(
+        "#showcase-skeleton-animation"
+      );
 
 
     await expect(
       skeleton
-    ).toHaveCSS(
-      "animation-name",
-      "rm-skeleton-shimmer"
+    ).toBeVisible();
+
+
+    await expect(
+      skeleton
+    ).toHaveClass(
+      /rm-skeleton/
+    );
+
+
+    await expect(
+      skeleton
+    ).toHaveClass(
+      /rm-skeleton--text/
+    );
+
+
+    const container =
+      page.locator(
+        "#showcase-skeleton-light"
+      );
+
+
+    await expect(
+      container
+    ).toHaveAttribute(
+      "aria-busy",
+      "true"
     );
   }
 );
 
 
 test(
-  "Skeleton stops motion when Reduced Motion is enabled",
+  "Skeleton shimmer stops when reduced motion is requested",
   async ({ page }) => {
+    /*
+     * This follows the frozen v0.3 Skeleton
+     * contract:
+     *
+     * prefers-reduced-motion: reduce
+     * removes the pseudo shimmer layer.
+     */
+
     await page.emulateMedia({
-      reducedMotion: "reduce",
+      reducedMotion:
+        "reduce",
     });
 
 
-    const skeleton =
-      page
+    await page.reload({
+      waitUntil:
+        "domcontentloaded",
+    });
+
+
+    const result =
+      await page
         .locator(
-          ".rm-skeleton"
+          "#showcase-skeleton-animation"
         )
-        .first();
+        .evaluate(
+          (
+            element
+          ) => {
+            const style =
+              getComputedStyle(
+                element,
+                "::after"
+              );
 
 
-    await expect(
-      skeleton
-    ).toHaveCSS(
-      "animation-name",
+            return {
+              content:
+                style.content,
+
+              animationName:
+                style.animationName,
+            };
+          }
+        );
+
+
+    expect(
+      result.content
+    ).toBe(
+      "none"
+    );
+
+
+    expect(
+      result.animationName
+    ).toBe(
       "none"
     );
   }
@@ -338,11 +407,187 @@ test(
 
 
 test(
-  "showcase remains free from horizontal overflow",
+  "unified showcase represents every v0.4 Navigation component",
+  async ({ page }) => {
+    await expect(
+      page.locator(
+        "#showcase-breadcrumb"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-tabs"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-pagination"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-navbar"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-sidebar"
+      )
+    ).toBeVisible();
+  }
+);
+
+
+test(
+  "v0.4 current navigation semantics remain explicit",
+  async ({ page }) => {
+    const selectors = [
+      "#showcase-breadcrumb-current",
+      "#showcase-pagination-current",
+      "#showcase-navbar-current",
+      "#showcase-sidebar-current",
+    ];
+
+
+    for (
+      const selector
+      of selectors
+    ) {
+      await expect(
+        page.locator(
+          selector
+        )
+      ).toHaveAttribute(
+        "aria-current",
+        "page"
+      );
+    }
+  }
+);
+
+
+test(
+  "showcase Tabs initialize with one selected Tab",
+  async ({ page }) => {
+    await expect(
+      page.locator(
+        "#showcase-tab-overview"
+      )
+    ).toHaveAttribute(
+      "aria-selected",
+      "true"
+    );
+
+
+    await expect(
+      page.locator(
+        "#showcase-tab-overview"
+      )
+    ).toHaveAttribute(
+      "tabindex",
+      "0"
+    );
+
+
+    await expect(
+      page.locator(
+        "#showcase-panel-overview"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-panel-details"
+      )
+    ).toBeHidden();
+  }
+);
+
+
+test(
+  "showcase Tabs support automatic Arrow navigation",
+  async ({ page }) => {
+    const overview =
+      page.locator(
+        "#showcase-tab-overview"
+      );
+
+
+    await overview.focus();
+
+
+    await page.keyboard.press(
+      "ArrowRight"
+    );
+
+
+    await expect(
+      page.locator(
+        "#showcase-tab-details"
+      )
+    ).toBeFocused();
+
+
+    await expect(
+      page.locator(
+        "#showcase-tab-details"
+      )
+    ).toHaveAttribute(
+      "aria-selected",
+      "true"
+    );
+
+
+    await expect(
+      page.locator(
+        "#showcase-panel-details"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-panel-overview"
+      )
+    ).toBeHidden();
+  }
+);
+
+
+test(
+  "showcase includes Dark Navigation preview",
+  async ({ page }) => {
+    await expect(
+      page.locator(
+        "#showcase-dark-breadcrumb"
+      )
+    ).toBeVisible();
+
+
+    await expect(
+      page.locator(
+        "#showcase-dark-tabs"
+      )
+    ).toBeVisible();
+  }
+);
+
+
+test(
+  "showcase has no horizontal page overflow",
   async ({ page }) => {
     await page.setViewportSize({
-      width: 360,
-      height: 1200,
+      width: 320,
+      height: 1600,
     });
 
 

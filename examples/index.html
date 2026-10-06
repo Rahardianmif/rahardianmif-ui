@@ -1,8 +1,12 @@
 <!doctype html>
 
-<html lang="en" data-rm-theme="light">
+<html
+    lang="en"
+    data-rm-theme="light"
+>
 
 <head>
+
     <meta charset="utf-8">
 
     <meta
@@ -11,7 +15,7 @@
     >
 
     <title>
-        Rahardianmif UI — v0.3 Showcase
+        Rahardianmif UI — v0.4 Navigation
     </title>
 
     <link
@@ -23,976 +27,387 @@
         rel="stylesheet"
         href="./showcase.css"
     >
+
 </head>
+
 
 <body>
 
-    <main class="rm-showcase">
-
-        <header class="rm-showcase__header">
-
-            <p class="rm-showcase__eyebrow">
-                Rahardianmif UI
-            </p>
-
-            <h1 class="rm-showcase__title">
-                v0.3 — Cards + Feedback
-            </h1>
-
-            <p class="rm-showcase__intro">
-                Cumulative showcase for the frozen v0.1 Foundations,
-                v0.2 Buttons + Basic Forms, and v0.3 Cards + Feedback
-                contracts.
-            </p>
+<main class="rm-showcase">
 
 
-            <nav
-                class="rm-showcase__nav"
-                aria-label="Component demos"
-            >
-                <a href="#controls">
-                    v0.2 Controls
-                </a>
+    <!-- ========================================
+     * Header
+     * ======================================== -->
 
-                <a href="#badge-status">
-                    Badge + Status
-                </a>
+    <header class="rm-showcase__header">
 
-                <a href="#card">
-                    Card
-                </a>
+        <p class="rm-showcase__eyebrow">
+            Rahardianmif UI
+        </p>
 
-                <a href="#alert">
-                    Alert
-                </a>
+        <h1 class="rm-showcase__title">
+            v0.4 — Navigation
+        </h1>
 
-                <a href="#loading">
-                    Loading
-                </a>
+        <p class="rm-showcase__intro">
+            Cumulative showcase for the frozen
+            v0.1 Foundations + Tokens,
+            v0.2 Buttons + Basic Forms,
+            v0.3 Cards + Feedback,
+            and v0.4 Navigation contracts.
+        </p>
 
-                <a href="#feedback">
-                    Feedback States
-                </a>
-            </nav>
-
-        </header>
-
-
-        <!-- ========================================
-         * Light Theme
-         * ======================================== -->
-
-        <section
-            class="rm-showcase__theme"
-            data-rm-theme="light"
-            aria-labelledby="showcase-light-title"
+        <nav
+            class="rm-showcase__nav"
+            aria-label="Showcase sections"
         >
 
-            <div class="rm-showcase__theme-header">
+            <a href="#v02">
+                v0.2 Controls
+            </a>
+
+            <a href="#v03">
+                v0.3 Cards + Feedback
+            </a>
+
+            <a href="#v04">
+                v0.4 Navigation
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================
+     * Light Theme
+     * ======================================== -->
+
+    <section
+        id="showcase-light"
+        class="rm-showcase__theme"
+        data-rm-theme="light"
+        aria-labelledby="showcase-light-title"
+    >
+
+        <div class="rm-showcase__theme-header">
+
+            <div>
 
                 <p class="rm-showcase__eyebrow">
                     Theme
                 </p>
 
                 <h2 id="showcase-light-title">
-                    Light Theme
+                    Light
                 </h2>
 
             </div>
+
+        </div>
+
+
+        <!-- ========================================
+         * v0.2
+         * ======================================== -->
+
+        <section
+            id="v02"
+            class="rm-showcase__section"
+            aria-labelledby="v02-title"
+        >
+
+            <header class="rm-showcase__section-header">
+
+                <p class="rm-showcase__eyebrow">
+                    v0.2
+                </p>
+
+                <h2 id="v02-title">
+                    Buttons + Basic Forms
+                </h2>
+
+            </header>
 
 
             <div class="rm-showcase__grid">
 
 
-                <!-- ===================================
-                 * v0.2 Controls
-                 * =================================== -->
+                <!-- Button -->
 
-                <article
-                    id="controls"
-                    class="rm-showcase__card"
-                >
+                <article class="rm-showcase__card">
+
                     <h3>
-                        v0.2 Controls
+                        Button
                     </h3>
 
+                    <div class="rm-showcase__row">
+
+                        <button
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            type="button"
+                        >
+                            Primary
+                        </button>
+
+                        <button
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            type="button"
+                        >
+                            Outline
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Input -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Input
+                    </h3>
+
+                    <div class="rm-field">
+
+                        <label
+                            class="rm-field__label"
+                            for="showcase-input"
+                        >
+                            Name
+                        </label>
+
+                        <div class="rm-field__control">
+
+                            <input
+                                id="showcase-input"
+                                class="rm-input"
+                                type="text"
+                                value="Rahardianmif UI"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Textarea -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Textarea
+                    </h3>
+
+                    <div class="rm-field">
+
+                        <label
+                            class="rm-field__label"
+                            for="showcase-textarea"
+                        >
+                            Description
+                        </label>
+
+                        <div class="rm-field__control">
+
+                            <textarea
+                                id="showcase-textarea"
+                                class="rm-textarea"
+                            >Reusable UI system.</textarea>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Select -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Native Select
+                    </h3>
+
+                    <div class="rm-field">
+
+                        <label
+                            class="rm-field__label"
+                            for="showcase-select"
+                        >
+                            Category
+                        </label>
+
+                        <div class="rm-field__control">
+
+                            <select
+                                id="showcase-select"
+                                class="rm-select"
+                            >
+
+                                <option>
+                                    Navigation
+                                </option>
+
+                                <option>
+                                    Feedback
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Choice -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Checkbox + Radio
+                    </h3>
 
                     <div class="rm-showcase__stack">
 
-
-                        <!-- Button -->
-
-                        <div class="rm-showcase__row">
-
-                            <button
-                                type="button"
-                                class="
-                                    rm-button
-                                    rm-button--primary
-                                "
-                            >
-                                Primary
-                            </button>
-
-                            <button
-                                type="button"
-                                class="
-                                    rm-button
-                                    rm-button--outline
-                                "
-                            >
-                                Outline
-                            </button>
-
-                        </div>
-
-
-                        <!-- Input -->
-
-                        <div class="rm-field">
-
-                            <label
-                                class="rm-field__label"
-                                for="showcase-input"
-                            >
-                                Input
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <input
-                                    id="showcase-input"
-                                    class="rm-input"
-                                    type="text"
-                                    value="Rahardianmif UI"
-                                >
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Textarea -->
-
-                        <div class="rm-field">
-
-                            <label
-                                class="rm-field__label"
-                                for="showcase-textarea"
-                            >
-                                Textarea
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <textarea
-                                    id="showcase-textarea"
-                                    class="rm-textarea"
-                                >Reusable textarea</textarea>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Select -->
-
-                        <div class="rm-field">
-
-                            <label
-                                class="rm-field__label"
-                                for="showcase-select"
-                            >
-                                Native Select
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <select
-                                    id="showcase-select"
-                                    class="rm-select"
-                                >
-                                    <option>
-                                        Option one
-                                    </option>
-
-                                    <option>
-                                        Option two
-                                    </option>
-                                </select>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Checkbox + Radio -->
-
-                        <fieldset class="rm-showcase__fieldset">
-
-                            <legend>
-                                Checkbox + Radio
-                            </legend>
-
-
-                            <label class="rm-choice">
-
-                                <input
-                                    id="showcase-checkbox"
-                                    class="rm-checkbox"
-                                    type="checkbox"
-                                    checked
-                                >
-
-                                <span
-                                    class="rm-choice__control"
-                                    aria-hidden="true"
-                                ></span>
-
-                                <span class="rm-choice__label">
-                                    Checkbox
-                                </span>
-
-                            </label>
-
-
-                            <label class="rm-choice">
-
-                                <input
-                                    class="rm-radio"
-                                    type="radio"
-                                    name="showcase-radio"
-                                    checked
-                                >
-
-                                <span
-                                    class="rm-choice__control"
-                                    aria-hidden="true"
-                                ></span>
-
-                                <span class="rm-choice__label">
-                                    Radio
-                                </span>
-
-                            </label>
-
-                        </fieldset>
-
-
-                        <!-- Switch -->
-
-                        <label class="rm-switch-field">
+                        <label class="rm-choice">
 
                             <input
-                                class="rm-switch"
+                                id="showcase-checkbox"
+                                class="rm-checkbox"
                                 type="checkbox"
                                 checked
                             >
 
                             <span
-                                class="rm-switch__track"
+                                class="rm-choice__control"
                                 aria-hidden="true"
-                            >
-                                <span
-                                    class="rm-switch__thumb"
-                                ></span>
-                            </span>
+                            ></span>
 
-                            <span class="rm-switch__label">
-                                Switch
-                            </span>
-
-                            <span class="rm-switch__description">
-                                Automatic updates.
+                            <span class="rm-choice__label">
+                                Checkbox
                             </span>
 
                         </label>
 
 
-                        <!-- Validation -->
+                        <label class="rm-choice">
 
-                        <div class="rm-field is-invalid">
-
-                            <label
-                                class="rm-field__label"
-                                for="showcase-validation"
+                            <input
+                                class="rm-radio"
+                                type="radio"
+                                name="showcase-radio"
+                                checked
                             >
-                                Validation
-                            </label>
 
-                            <div class="rm-field__control">
-
-                                <input
-                                    id="showcase-validation"
-                                    class="
-                                        rm-input
-                                        is-invalid
-                                    "
-                                    type="email"
-                                    value="invalid-email"
-                                    aria-invalid="true"
-                                    aria-describedby="showcase-validation-message"
-                                >
-
-                            </div>
-
-                            <p
-                                id="showcase-validation-message"
-                                class="
-                                    rm-field__message
-                                    rm-field__message--error
-                                "
-                            >
-                                Enter a valid email address.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ===================================
-                 * Badge + Status
-                 * =================================== -->
-
-                <article
-                    id="badge-status"
-                    class="rm-showcase__card"
-                >
-                    <h3>
-                        Badge + Status Indicator
-                    </h3>
-
-
-                    <div class="rm-showcase__row">
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--sm
-                            "
-                        >
-                            Small
-                        </span>
-
-                        <span class="rm-badge">
-                            Default
-                        </span>
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--primary
-                            "
-                        >
-                            Primary
-                        </span>
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--success
-                            "
-                        >
                             <span
-                                class="rm-badge__dot"
+                                class="rm-choice__control"
                                 aria-hidden="true"
                             ></span>
 
-                            Success
-                        </span>
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--warning
-                            "
-                        >
-                            Warning
-                        </span>
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--danger
-                            "
-                        >
-                            Danger
-                        </span>
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--info
-                            "
-                        >
-                            Info
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        class="
-                            rm-showcase__stack
-                            rm-showcase__spaced
-                        "
-                    >
-
-                        <span
-                            class="
-                                rm-status
-                                rm-status--success
-                            "
-                        >
-                            <span
-                                class="rm-status__indicator"
-                                aria-hidden="true"
-                            ></span>
-
-                            Operational
-                        </span>
-
-
-                        <span
-                            class="
-                                rm-status
-                                rm-status--warning
-                            "
-                        >
-                            <span
-                                class="rm-status__indicator"
-                                aria-hidden="true"
-                            ></span>
-
-                            Pending
-                        </span>
-
-
-                        <span
-                            class="
-                                rm-status
-                                rm-status--danger
-                            "
-                        >
-                            <span
-                                class="rm-status__indicator"
-                                aria-hidden="true"
-                            ></span>
-
-                            Offline
-                        </span>
-
-
-                        <span
-                            class="
-                                rm-status
-                                rm-status--info
-                            "
-                        >
-                            <span
-                                class="rm-status__indicator"
-                                aria-hidden="true"
-                            ></span>
-
-                            Processing
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ===================================
-                 * Card
-                 * =================================== -->
-
-                <article
-                    id="card"
-                    class="rm-showcase__card"
-                >
-                    <h3>
-                        Card Core
-                    </h3>
-
-
-                    <div class="rm-showcase__stack">
-
-
-                        <article
-                            class="
-                                rm-card
-                                rm-card--bordered
-                            "
-                        >
-
-                            <header class="rm-card__header">
-
-                                <div>
-
-                                    <h4 class="rm-card__title">
-                                        Student Registration
-                                    </h4>
-
-                                    <p class="rm-card__description">
-                                        Current registration summary.
-                                    </p>
-
-                                </div>
-
-
-                                <span
-                                    class="
-                                        rm-badge
-                                        rm-badge--success
-                                    "
-                                >
-                                    Active
-                                </span>
-
-                            </header>
-
-
-                            <div class="rm-card__body">
-
-                                Card Core remains non-interactive
-                                and composable.
-
-                            </div>
-
-
-                            <footer class="rm-card__footer">
-
-                                <div class="rm-card__actions">
-
-                                    <button
-                                        type="button"
-                                        class="
-                                            rm-button
-                                            rm-button--primary
-                                            rm-button--sm
-                                        "
-                                    >
-                                        View detail
-                                    </button>
-
-                                </div>
-
-                            </footer>
-
-                        </article>
-
-
-                        <div
-                            class="
-                                rm-card
-                                rm-card--elevated
-                            "
-                        >
-                            <div class="rm-card__body">
-                                Elevated Card
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ===================================
-                 * Alert
-                 * =================================== -->
-
-                <article
-                    id="alert"
-                    class="rm-showcase__card"
-                >
-                    <h3>
-                        Alert
-                    </h3>
-
-
-                    <div class="rm-showcase__stack">
-
-
-                        <div class="rm-alert">
-
-                            <div class="rm-alert__content">
-
-                                <p class="rm-alert__message">
-                                    Neutral contextual notice.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-alert
-                                rm-alert--info
-                            "
-                        >
-
-                            <div class="rm-alert__content">
-
-                                <p class="rm-alert__title">
-                                    Information
-                                </p>
-
-                                <p class="rm-alert__message">
-                                    Registration opens on Monday.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-alert
-                                rm-alert--success
-                            "
-                        >
-
-                            <div class="rm-alert__content">
-
-                                <p class="rm-alert__title">
-                                    Changes saved
-                                </p>
-
-                                <p class="rm-alert__message">
-                                    Your changes were saved successfully.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-alert
-                                rm-alert--warning
-                            "
-                        >
-
-                            <div class="rm-alert__content">
-
-                                <p class="rm-alert__title">
-                                    Verification required
-                                </p>
-
-                                <p class="rm-alert__message">
-                                    Verify your email before continuing.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-alert
-                                rm-alert--danger
-                            "
-                        >
-
-                            <div class="rm-alert__content">
-
-                                <p class="rm-alert__title">
-                                    Unable to submit
-                                </p>
-
-                                <p class="rm-alert__message">
-                                    Review the form and try again.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ===================================
-                 * Spinner + Inline Loader
-                 * =================================== -->
-
-                <article
-                    id="loading"
-                    class="rm-showcase__card"
-                >
-                    <h3>
-                        Spinner + Inline Loader
-                    </h3>
-
-
-                    <div class="rm-showcase__row">
-
-                        <span
-                            class="
-                                rm-spinner
-                                rm-spinner--sm
-                            "
-                            aria-hidden="true"
-                        ></span>
-
-                        <span
-                            class="rm-spinner"
-                            aria-hidden="true"
-                        ></span>
-
-                        <span
-                            class="
-                                rm-spinner
-                                rm-spinner--lg
-                            "
-                            aria-hidden="true"
-                        ></span>
-
-                    </div>
-
-
-                    <div class="rm-showcase__spaced">
-
-                        <span class="rm-inline-loader">
-
-                            <span
-                                class="
-                                    rm-spinner
-                                    rm-spinner--sm
-                                "
-                                aria-hidden="true"
-                            ></span>
-
-                            <span class="rm-inline-loader__label">
-                                Loading data...
+                            <span class="rm-choice__label">
+                                Radio
                             </span>
 
-                        </span>
+                        </label>
 
                     </div>
 
                 </article>
 
 
-                <!-- ===================================
-                 * Progress
-                 * =================================== -->
+                <!-- Switch -->
 
                 <article class="rm-showcase__card">
 
                     <h3>
-                        Progress Bar
+                        Switch
                     </h3>
 
+                    <label class="rm-switch-field">
 
-                    <div
-                        id="showcase-progress-light"
-                        class="rm-progress"
-                        role="progressbar"
-                        aria-labelledby="showcase-progress-light-label"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        aria-valuenow="65"
-                    >
+                        <input
+                            class="rm-switch"
+                            type="checkbox"
+                            checked
+                        >
 
-                        <div class="rm-progress__header">
-
-                            <span
-                                id="showcase-progress-light-label"
-                                class="rm-progress__label"
-                            >
-                                Uploading documents
-                            </span>
-
-                            <span class="rm-progress__value">
-                                65%
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="rm-progress__track"
+                        <span
+                            class="rm-switch__track"
                             aria-hidden="true"
                         >
-                            <div
-                                class="rm-progress__bar"
-                                style="inline-size: 65%;"
-                            ></div>
+
+                            <span
+                                class="rm-switch__thumb"
+                            ></span>
+
+                        </span>
+
+                        <span class="rm-switch__label">
+                            Notifications enabled
+                        </span>
+
+                    </label>
+
+                </article>
+
+
+                <!-- Validation -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Validation
+                    </h3>
+
+                    <div class="rm-field is-invalid">
+
+                        <label
+                            class="rm-field__label"
+                            for="showcase-validation"
+                        >
+                            Email
+                        </label>
+
+                        <div class="rm-field__control">
+
+                            <input
+                                id="showcase-validation"
+                                class="
+                                    rm-input
+                                    is-invalid
+                                "
+                                type="email"
+                                value="invalid-email"
+                                aria-invalid="true"
+                                aria-describedby="showcase-validation-message"
+                            >
+
                         </div>
 
-
-                        <p class="rm-progress__description">
-                            13 of 20 files uploaded.
+                        <p
+                            id="showcase-validation-message"
+                            class="
+                                rm-field__message
+                                rm-field__message--error
+                            "
+                        >
+                            Enter a valid email address.
                         </p>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ===================================
-                 * Skeleton
-                 * =================================== -->
-
-                <article class="rm-showcase__card">
-
-                    <h3>
-                        Skeleton
-                    </h3>
-
-
-                    <div
-                        class="rm-showcase__skeleton-layout"
-                        aria-busy="true"
-                    >
-
-                        <span
-                            class="
-                                rm-skeleton
-                                rm-skeleton--circle
-                                rm-showcase__skeleton-avatar
-                            "
-                            aria-hidden="true"
-                        ></span>
-
-
-                        <div class="rm-showcase__stack">
-
-                            <span
-                                class="
-                                    rm-skeleton
-                                    rm-skeleton--text
-                                "
-                                aria-hidden="true"
-                            ></span>
-
-                            <span
-                                class="
-                                    rm-skeleton
-                                    rm-skeleton--text
-                                    rm-showcase__skeleton-short
-                                "
-                                aria-hidden="true"
-                            ></span>
-
-                        </div>
-
-                    </div>
-
-
-                    <span
-                        class="
-                            rm-skeleton
-                            rm-showcase__skeleton-rect
-                        "
-                        aria-hidden="true"
-                    ></span>
-
-                </article>
-
-
-                <!-- ===================================
-                 * Feedback States
-                 * =================================== -->
-
-                <article
-                    id="feedback"
-                    class="
-                        rm-showcase__card
-                        rm-showcase__wide
-                    "
-                >
-                    <h3>
-                        Feedback States
-                    </h3>
-
-
-                    <div class="rm-showcase__feedback-grid">
-
-
-                        <div
-                            class="
-                                rm-feedback-state
-                                rm-feedback-state--empty
-                            "
-                        >
-
-                            <div class="rm-feedback-state__content">
-
-                                <h4 class="rm-feedback-state__title">
-                                    No projects yet
-                                </h4>
-
-                                <p class="rm-feedback-state__description">
-                                    Create your first project to begin.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-feedback-state
-                                rm-feedback-state--no-result
-                            "
-                        >
-
-                            <div class="rm-feedback-state__content">
-
-                                <h4 class="rm-feedback-state__title">
-                                    No matching results
-                                </h4>
-
-                                <p class="rm-feedback-state__description">
-                                    Change or clear the active filters.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-feedback-state
-                                rm-feedback-state--error
-                            "
-                        >
-
-                            <div
-                                class="rm-feedback-state__visual"
-                                aria-hidden="true"
-                            >
-                                !
-                            </div>
-
-
-                            <div class="rm-feedback-state__content">
-
-                                <h4 class="rm-feedback-state__title">
-                                    Unable to load data
-                                </h4>
-
-                                <p class="rm-feedback-state__description">
-                                    Check your connection and try again.
-                                </p>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
@@ -1004,26 +419,26 @@
 
 
         <!-- ========================================
-         * Dark Theme
+         * v0.3
          * ======================================== -->
 
         <section
-            class="rm-showcase__theme"
-            data-rm-theme="dark"
-            aria-labelledby="showcase-dark-title"
+            id="v03"
+            class="rm-showcase__section"
+            aria-labelledby="v03-title"
         >
 
-            <div class="rm-showcase__theme-header">
+            <header class="rm-showcase__section-header">
 
                 <p class="rm-showcase__eyebrow">
-                    Theme
+                    v0.3
                 </p>
 
-                <h2 id="showcase-dark-title">
-                    Dark Theme
+                <h2 id="v03-title">
+                    Cards + Feedback
                 </h2>
 
-            </div>
+            </header>
 
 
             <div class="rm-showcase__grid">
@@ -1037,7 +452,6 @@
                         Badge + Status Indicator
                     </h3>
 
-
                     <div class="rm-showcase__row">
 
                         <span
@@ -1055,25 +469,14 @@
                                 rm-badge--success
                             "
                         >
+
+                            <span
+                                class="rm-badge__dot"
+                                aria-hidden="true"
+                            ></span>
+
                             Success
-                        </span>
 
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--warning
-                            "
-                        >
-                            Warning
-                        </span>
-
-                        <span
-                            class="
-                                rm-badge
-                                rm-badge--danger
-                            "
-                        >
-                            Danger
                         </span>
 
                     </div>
@@ -1087,12 +490,14 @@
                                 rm-status--success
                             "
                         >
+
                             <span
                                 class="rm-status__indicator"
                                 aria-hidden="true"
                             ></span>
 
                             Operational
+
                         </span>
 
                     </div>
@@ -1108,11 +513,10 @@
                         Card Core
                     </h3>
 
-
-                    <div
+                    <article
                         class="
                             rm-card
-                            rm-card--elevated
+                            rm-card--bordered
                         "
                     >
 
@@ -1121,23 +525,22 @@
                             <div>
 
                                 <h4 class="rm-card__title">
-                                    Dark Card
+                                    Navigation Release
                                 </h4>
 
                                 <p class="rm-card__description">
-                                    Theme-aware semantic surface.
+                                    Cumulative library showcase.
                                 </p>
 
                             </div>
 
                         </header>
 
-
                         <div class="rm-card__body">
-                            Card Core remains non-interactive.
+                            Rahardianmif UI v0.4.
                         </div>
 
-                    </div>
+                    </article>
 
                 </article>
 
@@ -1150,49 +553,30 @@
                         Alert
                     </h3>
 
+                    <div
+                        id="showcase-alert"
+                        class="
+                            rm-alert
+                            rm-alert--info
+                        "
+                    >
 
-                    <div class="rm-showcase__stack">
-
-                        <div
-                            class="
-                                rm-alert
-                                rm-alert--info
-                            "
+                        <span
+                            class="rm-alert__icon"
+                            aria-hidden="true"
                         >
+                            i
+                        </span>
 
-                            <div class="rm-alert__content">
+                        <div class="rm-alert__content">
 
-                                <p class="rm-alert__title">
-                                    Information
-                                </p>
+                            <p class="rm-alert__title">
+                                Information
+                            </p>
 
-                                <p class="rm-alert__message">
-                                    Dark theme Alert.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                rm-alert
-                                rm-alert--danger
-                            "
-                        >
-
-                            <div class="rm-alert__content">
-
-                                <p class="rm-alert__title">
-                                    Unable to save
-                                </p>
-
-                                <p class="rm-alert__message">
-                                    Try again after checking the data.
-                                </p>
-
-                            </div>
+                            <p class="rm-alert__message">
+                                Navigation release candidate.
+                            </p>
 
                         </div>
 
@@ -1201,14 +585,13 @@
                 </article>
 
 
-                <!-- Spinner + Inline Loader -->
+                <!-- Loading -->
 
                 <article class="rm-showcase__card">
 
                     <h3>
                         Spinner + Inline Loader
                     </h3>
-
 
                     <span class="rm-inline-loader">
 
@@ -1221,7 +604,7 @@
                         ></span>
 
                         <span class="rm-inline-loader__label">
-                            Loading dark theme data...
+                            Loading navigation data...
                         </span>
 
                     </span>
@@ -1237,28 +620,19 @@
                         Progress Bar
                     </h3>
 
-
                     <div
-                        id="showcase-progress-dark"
+                        id="showcase-progress-light"
                         class="rm-progress"
-                        role="progressbar"
-                        aria-labelledby="showcase-progress-dark-label"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        aria-valuenow="50"
                     >
 
                         <div class="rm-progress__header">
 
-                            <span
-                                id="showcase-progress-dark-label"
-                                class="rm-progress__label"
-                            >
-                                Processing dark theme data
+                            <span class="rm-progress__label">
+                                Uploading documents
                             </span>
 
                             <span class="rm-progress__value">
-                                50%
+                                65%
                             </span>
 
                         </div>
@@ -1266,13 +640,23 @@
 
                         <div
                             class="rm-progress__track"
-                            aria-hidden="true"
+                            role="progressbar"
+                            aria-label="Uploading documents"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="65"
                         >
+
                             <div
                                 class="rm-progress__bar"
-                                style="inline-size: 50%;"
+                                style="width: 65%"
                             ></div>
+
                         </div>
+
+                        <p class="rm-progress__description">
+                            13 of 20 files uploaded.
+                        </p>
 
                     </div>
 
@@ -1287,8 +671,8 @@
                         Skeleton
                     </h3>
 
-
                     <div
+                        id="showcase-skeleton-light"
                         class="rm-showcase__skeleton-layout"
                         aria-busy="true"
                     >
@@ -1302,10 +686,10 @@
                             aria-hidden="true"
                         ></span>
 
-
                         <div class="rm-showcase__stack">
 
                             <span
+                                id="showcase-skeleton-animation"
                                 class="
                                     rm-skeleton
                                     rm-skeleton--text
@@ -1329,246 +713,106 @@
                 </article>
 
 
-                <!-- Feedback State -->
+                <!-- Feedback -->
 
-                <article class="rm-showcase__card">
+                <article
+                    class="
+                        rm-showcase__card
+                        rm-showcase__wide
+                    "
+                >
 
                     <h3>
                         Feedback States
                     </h3>
 
+                    <div class="rm-showcase__feedback-grid">
 
-                    <div
-                        class="
-                            rm-feedback-state
-                            rm-feedback-state--error
-                        "
-                    >
 
                         <div
-                            class="rm-feedback-state__visual"
-                            aria-hidden="true"
-                        >
-                            !
-                        </div>
-
-
-                        <div class="rm-feedback-state__content">
-
-                            <h4 class="rm-feedback-state__title">
-                                Unable to load records
-                            </h4>
-
-                            <p class="rm-feedback-state__description">
-                                The server could not complete the request.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- v0.2 Regression -->
-
-                <article class="rm-showcase__card">
-
-                    <h3>
-                        v0.2 Controls
-                    </h3>
-
-
-                    <div class="rm-showcase__stack">
-
-
-                        <button
-                            type="button"
                             class="
-                                rm-button
-                                rm-button--primary
+                                rm-feedback-state
+                                rm-feedback-state--empty
                             "
                         >
-                            Button
-                        </button>
 
-
-                        <div class="rm-field">
-
-                            <label
-                                class="rm-field__label"
-                                for="dark-input"
-                            >
-                                Input
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <input
-                                    id="dark-input"
-                                    class="rm-input"
-                                    type="text"
-                                    value="Dark theme"
-                                >
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="rm-field">
-
-                            <label
-                                class="rm-field__label"
-                                for="dark-textarea"
-                            >
-                                Textarea
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <textarea
-                                    id="dark-textarea"
-                                    class="rm-textarea"
-                                >Textarea</textarea>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="rm-field">
-
-                            <label
-                                class="rm-field__label"
-                                for="dark-select"
-                            >
-                                Native Select
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <select
-                                    id="dark-select"
-                                    class="rm-select"
-                                >
-                                    <option>
-                                        Option one
-                                    </option>
-                                </select>
-
-                            </div>
-
-                        </div>
-
-
-                        <fieldset class="rm-showcase__fieldset">
-
-                            <legend>
-                                Checkbox + Radio
-                            </legend>
-
-
-                            <label class="rm-choice">
-
-                                <input
-                                    class="rm-checkbox"
-                                    type="checkbox"
-                                    checked
-                                >
-
-                                <span
-                                    class="rm-choice__control"
-                                    aria-hidden="true"
-                                ></span>
-
-                                <span class="rm-choice__label">
-                                    Checkbox
-                                </span>
-
-                            </label>
-
-
-                            <label class="rm-choice">
-
-                                <input
-                                    class="rm-radio"
-                                    type="radio"
-                                    name="dark-radio"
-                                    checked
-                                >
-
-                                <span
-                                    class="rm-choice__control"
-                                    aria-hidden="true"
-                                ></span>
-
-                                <span class="rm-choice__label">
-                                    Radio
-                                </span>
-
-                            </label>
-
-                        </fieldset>
-
-
-                        <label class="rm-switch-field">
-
-                            <input
-                                class="rm-switch"
-                                type="checkbox"
-                                checked
-                            >
-
-                            <span
-                                class="rm-switch__track"
+                            <div
+                                class="rm-feedback-state__visual"
                                 aria-hidden="true"
                             >
-                                <span
-                                    class="rm-switch__thumb"
-                                ></span>
-                            </span>
+                                0
+                            </div>
 
-                            <span class="rm-switch__label">
-                                Switch
-                            </span>
+                            <div class="rm-feedback-state__content">
 
-                        </label>
+                                <h4 class="rm-feedback-state__title">
+                                    No items yet
+                                </h4>
 
-
-                        <div class="rm-field is-invalid">
-
-                            <label
-                                class="rm-field__label"
-                                for="dark-validation"
-                            >
-                                Validation
-                            </label>
-
-                            <div class="rm-field__control">
-
-                                <input
-                                    id="dark-validation"
-                                    class="
-                                        rm-input
-                                        is-invalid
-                                    "
-                                    type="text"
-                                    aria-invalid="true"
-                                    aria-describedby="dark-validation-message"
-                                >
+                                <p class="rm-feedback-state__description">
+                                    Items will appear here.
+                                </p>
 
                             </div>
 
-                            <p
-                                id="dark-validation-message"
-                                class="
-                                    rm-field__message
-                                    rm-field__message--error
-                                "
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-feedback-state
+                                rm-feedback-state--no-result
+                            "
+                        >
+
+                            <div
+                                class="rm-feedback-state__visual"
+                                aria-hidden="true"
                             >
-                                This field needs attention.
-                            </p>
+                                ?
+                            </div>
+
+                            <div class="rm-feedback-state__content">
+
+                                <h4 class="rm-feedback-state__title">
+                                    No matching results
+                                </h4>
+
+                                <p class="rm-feedback-state__description">
+                                    Change the current filters.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="showcase-feedback-error"
+                            class="
+                                rm-feedback-state
+                                rm-feedback-state--error
+                            "
+                        >
+
+                            <div
+                                class="rm-feedback-state__visual"
+                                aria-hidden="true"
+                            >
+                                !
+                            </div>
+
+                            <div class="rm-feedback-state__content">
+
+                                <h4 class="rm-feedback-state__title">
+                                    Unable to load data
+                                </h4>
+
+                                <p class="rm-feedback-state__description">
+                                    Try again later.
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -1580,7 +824,972 @@
 
         </section>
 
-    </main>
+
+        <!-- ========================================
+         * v0.4
+         * ======================================== -->
+
+        <section
+            id="v04"
+            class="rm-showcase__section"
+            aria-labelledby="v04-title"
+        >
+
+            <header class="rm-showcase__section-header">
+
+                <p class="rm-showcase__eyebrow">
+                    v0.4
+                </p>
+
+                <h2 id="v04-title">
+                    Navigation
+                </h2>
+
+                <p>
+                    Breadcrumb, Tabs, Pagination,
+                    Navbar, and Sidebar.
+                </p>
+
+            </header>
+
+
+            <div class="rm-showcase__navigation-stack">
+
+
+                <!-- Navbar -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Navbar
+                    </h3>
+
+                    <nav
+                        id="showcase-navbar"
+                        class="rm-navbar"
+                        aria-label="Showcase primary navigation"
+                    >
+
+                        <a
+                            class="rm-navbar__brand"
+                            href="#v04"
+                        >
+                            Rahardianmif UI
+                        </a>
+
+
+                        <div class="rm-navbar__nav">
+
+                            <ul class="rm-navbar__list">
+
+                                <li class="rm-navbar__item">
+
+                                    <a
+                                        id="showcase-navbar-current"
+                                        class="rm-navbar__link"
+                                        href="#v04"
+                                        aria-current="page"
+                                    >
+                                        Overview
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-navbar__item">
+
+                                    <a
+                                        class="rm-navbar__link"
+                                        href="#showcase-breadcrumb"
+                                    >
+                                        Components
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <div class="rm-navbar__actions">
+
+                            <span
+                                class="
+                                    rm-badge
+                                    rm-badge--info
+                                "
+                            >
+                                v0.4
+                            </span>
+
+                        </div>
+
+                    </nav>
+
+                </article>
+
+
+                <div class="rm-showcase__navigation-grid">
+
+
+                    <!-- Breadcrumb -->
+
+                    <article class="rm-showcase__card">
+
+                        <h3>
+                            Breadcrumb
+                        </h3>
+
+                        <nav
+                            id="showcase-breadcrumb"
+                            class="rm-breadcrumb"
+                            aria-label="Showcase Breadcrumb"
+                        >
+
+                            <ol class="rm-breadcrumb__list">
+
+                                <li class="rm-breadcrumb__item">
+
+                                    <a
+                                        class="rm-breadcrumb__link"
+                                        href="#v04"
+                                    >
+                                        Home
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-breadcrumb__item">
+
+                                    <span
+                                        class="rm-breadcrumb__separator"
+                                        aria-hidden="true"
+                                    >
+                                        /
+                                    </span>
+
+                                    <a
+                                        class="rm-breadcrumb__link"
+                                        href="#showcase-breadcrumb"
+                                    >
+                                        Components
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-breadcrumb__item">
+
+                                    <span
+                                        class="rm-breadcrumb__separator"
+                                        aria-hidden="true"
+                                    >
+                                        /
+                                    </span>
+
+                                    <span
+                                        id="showcase-breadcrumb-current"
+                                        class="rm-breadcrumb__current"
+                                        aria-current="page"
+                                    >
+                                        Navigation
+                                    </span>
+
+                                </li>
+
+                            </ol>
+
+                        </nav>
+
+                    </article>
+
+
+                    <!-- Pagination -->
+
+                    <article class="rm-showcase__card">
+
+                        <h3>
+                            Pagination
+                        </h3>
+
+                        <nav
+                            id="showcase-pagination"
+                            class="rm-pagination"
+                            aria-label="Showcase pagination"
+                        >
+
+                            <ul class="rm-pagination__list">
+
+                                <li class="rm-pagination__item">
+
+                                    <a
+                                        class="rm-pagination__previous"
+                                        href="#page-1"
+                                    >
+                                        Previous
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-pagination__item">
+
+                                    <a
+                                        class="rm-pagination__link"
+                                        href="#page-1"
+                                    >
+                                        1
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-pagination__item">
+
+                                    <a
+                                        id="showcase-pagination-current"
+                                        class="rm-pagination__link"
+                                        href="#page-2"
+                                        aria-current="page"
+                                    >
+                                        2
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-pagination__item">
+
+                                    <a
+                                        class="rm-pagination__link"
+                                        href="#page-3"
+                                    >
+                                        3
+                                    </a>
+
+                                </li>
+
+
+                                <li class="rm-pagination__item">
+
+                                    <a
+                                        class="rm-pagination__next"
+                                        href="#page-3"
+                                    >
+                                        Next
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </article>
+
+
+                    <!-- Tabs -->
+
+                    <article class="rm-showcase__card">
+
+                        <h3>
+                            Tabs
+                        </h3>
+
+                        <div
+                            id="showcase-tabs"
+                            class="rm-tabs"
+                            data-rm-tabs
+                        >
+
+                            <div
+                                class="rm-tabs__list"
+                                role="tablist"
+                                aria-label="Showcase sections"
+                            >
+
+                                <button
+                                    id="showcase-tab-overview"
+                                    class="rm-tabs__tab"
+                                    type="button"
+                                    role="tab"
+                                    aria-selected="true"
+                                    aria-controls="showcase-panel-overview"
+                                    tabindex="0"
+                                >
+                                    Overview
+                                </button>
+
+
+                                <button
+                                    id="showcase-tab-details"
+                                    class="rm-tabs__tab"
+                                    type="button"
+                                    role="tab"
+                                    aria-selected="false"
+                                    aria-controls="showcase-panel-details"
+                                    tabindex="-1"
+                                >
+                                    Details
+                                </button>
+
+
+                                <button
+                                    id="showcase-tab-settings"
+                                    class="rm-tabs__tab"
+                                    type="button"
+                                    role="tab"
+                                    aria-selected="false"
+                                    aria-controls="showcase-panel-settings"
+                                    tabindex="-1"
+                                >
+                                    Settings
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                id="showcase-panel-overview"
+                                class="rm-tabs__panel"
+                                role="tabpanel"
+                                aria-labelledby="showcase-tab-overview"
+                            >
+                                Navigation component overview.
+                            </div>
+
+
+                            <div
+                                id="showcase-panel-details"
+                                class="rm-tabs__panel"
+                                role="tabpanel"
+                                aria-labelledby="showcase-tab-details"
+                                hidden
+                            >
+                                Navigation component details.
+                            </div>
+
+
+                            <div
+                                id="showcase-panel-settings"
+                                class="rm-tabs__panel"
+                                role="tabpanel"
+                                aria-labelledby="showcase-tab-settings"
+                                hidden
+                            >
+                                Navigation settings.
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Sidebar -->
+
+                    <article class="rm-showcase__card">
+
+                        <h3>
+                            Sidebar
+                        </h3>
+
+                        <div class="rm-showcase__sidebar-preview">
+
+                            <div
+                                id="showcase-sidebar"
+                                class="rm-sidebar"
+                            >
+
+                                <div class="rm-sidebar__header">
+                                    Workspace
+                                </div>
+
+
+                                <nav
+                                    class="rm-sidebar__nav"
+                                    aria-label="Showcase Sidebar navigation"
+                                >
+
+                                    <section class="rm-sidebar__section">
+
+                                        <h4 class="rm-sidebar__section-title">
+                                            Main
+                                        </h4>
+
+
+                                        <ul class="rm-sidebar__list">
+
+                                            <li class="rm-sidebar__item">
+
+                                                <a
+                                                    id="showcase-sidebar-current"
+                                                    class="rm-sidebar__link"
+                                                    href="#v04"
+                                                    aria-current="page"
+                                                >
+                                                    Overview
+                                                </a>
+
+                                            </li>
+
+
+                                            <li class="rm-sidebar__item">
+
+                                                <a
+                                                    class="rm-sidebar__link"
+                                                    href="#showcase-breadcrumb"
+                                                >
+                                                    Components
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </section>
+
+                                </nav>
+
+
+                                <div class="rm-sidebar__footer">
+
+                                    <span
+                                        class="
+                                            rm-status
+                                            rm-status--success
+                                        "
+                                    >
+
+                                        <span
+                                            class="rm-status__indicator"
+                                            aria-hidden="true"
+                                        ></span>
+
+                                        Ready
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- ========================================
+     * Dark Theme
+     * ======================================== -->
+
+    <section
+        id="showcase-dark"
+        class="rm-showcase__theme"
+        data-rm-theme="dark"
+        aria-labelledby="showcase-dark-title"
+    >
+
+        <div class="rm-showcase__theme-header">
+
+            <div>
+
+                <p class="rm-showcase__eyebrow">
+                    Theme
+                </p>
+
+                <h2 id="showcase-dark-title">
+                    Dark
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="rm-showcase__grid">
+
+
+            <!-- Dark v0.3 -->
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Badge + Status Indicator
+                </h3>
+
+                <div class="rm-showcase__row">
+
+                    <span
+                        class="
+                            rm-badge
+                            rm-badge--primary
+                        "
+                    >
+                        Primary
+                    </span>
+
+                    <span
+                        class="
+                            rm-status
+                            rm-status--success
+                        "
+                    >
+
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Operational
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Alert
+                </h3>
+
+                <div
+                    class="
+                        rm-alert
+                        rm-alert--info
+                    "
+                >
+
+                    <div class="rm-alert__content">
+
+                        <p class="rm-alert__title">
+                            Dark Theme
+                        </p>
+
+                        <p class="rm-alert__message">
+                            Semantic colors remain theme-aware.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Progress Bar
+                </h3>
+
+                <div
+                    id="showcase-progress-dark"
+                    class="rm-progress"
+                >
+
+                    <div class="rm-progress__header">
+
+                        <span class="rm-progress__label">
+                            Processing dark theme data
+                        </span>
+
+                        <span class="rm-progress__value">
+                            50%
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="rm-progress__track"
+                        role="progressbar"
+                        aria-label="Processing dark theme data"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="50"
+                    >
+
+                        <div
+                            class="rm-progress__bar"
+                            style="width: 50%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Skeleton
+                </h3>
+
+                <div
+                    aria-busy="true"
+                    class="rm-showcase__stack"
+                >
+
+                    <span
+                        class="
+                            rm-skeleton
+                            rm-skeleton--text
+                        "
+                        aria-hidden="true"
+                    ></span>
+
+                    <span
+                        class="
+                            rm-skeleton
+                            rm-skeleton--text
+                            rm-showcase__skeleton-short
+                        "
+                        aria-hidden="true"
+                    ></span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dark Breadcrumb -->
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Breadcrumb
+                </h3>
+
+                <nav
+                    id="showcase-dark-breadcrumb"
+                    class="rm-breadcrumb"
+                    aria-label="Showcase Dark Breadcrumb"
+                >
+
+                    <ol class="rm-breadcrumb__list">
+
+                        <li class="rm-breadcrumb__item">
+
+                            <a
+                                class="rm-breadcrumb__link"
+                                href="#v04"
+                            >
+                                Home
+                            </a>
+
+                        </li>
+
+
+                        <li class="rm-breadcrumb__item">
+
+                            <span
+                                class="rm-breadcrumb__separator"
+                                aria-hidden="true"
+                            >
+                                /
+                            </span>
+
+                            <span
+                                class="rm-breadcrumb__current"
+                                aria-current="page"
+                            >
+                                Navigation
+                            </span>
+
+                        </li>
+
+                    </ol>
+
+                </nav>
+
+            </article>
+
+
+            <!-- Dark Tabs -->
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Tabs
+                </h3>
+
+                <div
+                    id="showcase-dark-tabs"
+                    class="rm-tabs"
+                    data-rm-tabs
+                >
+
+                    <div
+                        class="rm-tabs__list"
+                        role="tablist"
+                        aria-label="Dark showcase sections"
+                    >
+
+                        <button
+                            id="showcase-dark-tab-overview"
+                            class="rm-tabs__tab"
+                            type="button"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="showcase-dark-panel-overview"
+                            tabindex="0"
+                        >
+                            Overview
+                        </button>
+
+
+                        <button
+                            id="showcase-dark-tab-settings"
+                            class="rm-tabs__tab"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="showcase-dark-panel-settings"
+                            tabindex="-1"
+                        >
+                            Settings
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="showcase-dark-panel-overview"
+                        class="rm-tabs__panel"
+                        role="tabpanel"
+                        aria-labelledby="showcase-dark-tab-overview"
+                    >
+                        Dark theme navigation preview.
+                    </div>
+
+
+                    <div
+                        id="showcase-dark-panel-settings"
+                        class="rm-tabs__panel"
+                        role="tabpanel"
+                        aria-labelledby="showcase-dark-tab-settings"
+                        hidden
+                    >
+                        Dark theme settings.
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dark Pagination -->
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Pagination
+                </h3>
+
+                <nav
+                    class="rm-pagination"
+                    aria-label="Dark showcase pagination"
+                >
+
+                    <ul class="rm-pagination__list">
+
+                        <li class="rm-pagination__item">
+
+                            <a
+                                class="rm-pagination__link"
+                                href="#dark-page-1"
+                            >
+                                1
+                            </a>
+
+                        </li>
+
+
+                        <li class="rm-pagination__item">
+
+                            <a
+                                class="rm-pagination__link"
+                                href="#dark-page-2"
+                                aria-current="page"
+                            >
+                                2
+                            </a>
+
+                        </li>
+
+
+                        <li class="rm-pagination__item">
+
+                            <a
+                                class="rm-pagination__next"
+                                href="#dark-page-3"
+                            >
+                                Next
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </article>
+
+
+            <!-- Dark Navbar -->
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Navbar
+                </h3>
+
+                <nav
+                    class="rm-navbar"
+                    aria-label="Dark showcase primary navigation"
+                >
+
+                    <a
+                        class="rm-navbar__brand"
+                        href="#v04"
+                    >
+                        RMUI
+                    </a>
+
+
+                    <div class="rm-navbar__nav">
+
+                        <ul class="rm-navbar__list">
+
+                            <li class="rm-navbar__item">
+
+                                <a
+                                    class="rm-navbar__link"
+                                    href="#v04"
+                                    aria-current="page"
+                                >
+                                    Overview
+                                </a>
+
+                            </li>
+
+
+                            <li class="rm-navbar__item">
+
+                                <a
+                                    class="rm-navbar__link"
+                                    href="#showcase-dark-breadcrumb"
+                                >
+                                    Navigation
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+            </article>
+
+
+            <!-- Dark Sidebar -->
+
+            <article class="rm-showcase__card">
+
+                <h3>
+                    Sidebar
+                </h3>
+
+                <div class="rm-showcase__sidebar-preview">
+
+                    <div class="rm-sidebar">
+
+                        <div class="rm-sidebar__header">
+                            Workspace
+                        </div>
+
+                        <nav
+                            class="rm-sidebar__nav"
+                            aria-label="Dark showcase Sidebar navigation"
+                        >
+
+                            <section class="rm-sidebar__section">
+
+                                <h4 class="rm-sidebar__section-title">
+                                    Main
+                                </h4>
+
+                                <ul class="rm-sidebar__list">
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#v04"
+                                            aria-current="page"
+                                        >
+                                            Overview
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="rm-sidebar__item">
+
+                                        <a
+                                            class="rm-sidebar__link"
+                                            href="#showcase-dark-breadcrumb"
+                                        >
+                                            Components
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script type="module">
+
+    import RahardianmifUI
+        from "../src/js/rahardianmif-ui.js";
+
+
+    RahardianmifUI.init();
+
+</script>
 
 </body>
 

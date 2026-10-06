@@ -1,0 +1,243 @@
+/*
+ * Rahardianmif UI
+ * Navbar Component
+ *
+ * v0.4.4
+ *
+ * Horizontal primary navigation.
+ * CSS-only.
+ */
+
+.rm-navbar {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap:
+    var(--rm-space-3)
+    var(--rm-space-5);
+
+  min-inline-size: 0;
+
+  padding:
+    var(--rm-space-3)
+    var(--rm-space-4);
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface);
+
+  color:
+    var(--rm-text-primary);
+
+  font-family:
+    var(--rm-font-family-sans);
+}
+
+
+/* ========================================
+ * Brand
+ * ======================================== */
+
+.rm-navbar__brand {
+  display: inline-flex;
+
+  align-items: center;
+
+  flex: 0 1 auto;
+
+  min-inline-size: 0;
+
+  color:
+    var(--rm-text-primary);
+
+  font-size:
+    var(--rm-font-size-md);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.rm-navbar__brand:hover {
+  color:
+    var(--rm-primary);
+}
+
+.rm-navbar__brand:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset: 2px;
+
+  border-radius:
+    var(--rm-radius-md);
+}
+
+
+/* ========================================
+ * Navigation Region
+ * ======================================== */
+
+.rm-navbar__nav {
+  flex: 1 1 auto;
+
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * List
+ * ======================================== */
+
+.rm-navbar__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: var(--rm-space-1);
+
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* ========================================
+ * Item
+ * ======================================== */
+
+.rm-navbar__item {
+  display: inline-flex;
+
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Link
+ * ======================================== */
+
+.rm-navbar__link {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-inline-size: 0;
+
+  padding:
+    var(--rm-space-2)
+    var(--rm-space-3);
+
+  border-radius:
+    var(--rm-radius-md);
+
+  color:
+    var(--rm-text-secondary);
+
+  font-size:
+    var(--rm-font-size-sm);
+
+  font-weight:
+    var(--rm-font-weight-medium);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  text-align: center;
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.rm-navbar__link:hover {
+  background:
+    var(--rm-surface-secondary);
+
+  color:
+    var(--rm-text-primary);
+}
+
+.rm-navbar__link:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Current Destination
+ * ======================================== */
+
+.rm-navbar__link[aria-current="page"] {
+  background:
+    var(--rm-primary-soft);
+
+  color:
+    var(--rm-text-primary);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+}
+
+
+/* ========================================
+ * Actions
+ * ======================================== */
+
+.rm-navbar__actions {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Narrow Layout
+ * ======================================== */
+
+@media (max-width: 48rem) {
+  .rm-navbar__nav {
+    flex-basis: 100%;
+  }
+
+  .rm-navbar__list {
+    align-items: stretch;
+  }
+
+  .rm-navbar__link {
+    justify-content: flex-start;
+  }
+}

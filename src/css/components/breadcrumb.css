@@ -1,0 +1,118 @@
+/*
+ * Rahardianmif UI
+ * Breadcrumb Component
+ *
+ * v0.4.1
+ *
+ * Semantic hierarchical navigation.
+ * CSS-only.
+ */
+
+.rm-breadcrumb {
+  box-sizing: border-box;
+
+  min-inline-size: 0;
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+}
+
+
+/* ========================================
+ * List
+ * ======================================== */
+
+.rm-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap:
+    var(--rm-space-1)
+    var(--rm-space-2);
+
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* ========================================
+ * Item
+ * ======================================== */
+
+.rm-breadcrumb__item {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+
+/* ========================================
+ * Link
+ * ======================================== */
+
+.rm-breadcrumb__link {
+  min-inline-size: 0;
+
+  color: var(--rm-text-secondary);
+
+  font-weight: var(--rm-font-weight-medium);
+
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+
+  overflow-wrap: anywhere;
+}
+
+.rm-breadcrumb__link:hover {
+  color: var(--rm-text-primary);
+}
+
+.rm-breadcrumb__link:focus-visible {
+  border-radius: var(--rm-radius-sm);
+
+  outline: 2px solid var(--rm-primary);
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+ * Separator
+ * ======================================== */
+
+.rm-breadcrumb__separator {
+  flex: 0 0 auto;
+
+  color: var(--rm-text-muted);
+
+  user-select: none;
+}
+
+
+/* ========================================
+ * Current Page
+ * ======================================== */
+
+.rm-breadcrumb__current {
+  min-inline-size: 0;
+
+  color: var(--rm-text-primary);
+
+  font-weight: var(--rm-font-weight-semibold);
+
+  overflow-wrap: anywhere;
+}
