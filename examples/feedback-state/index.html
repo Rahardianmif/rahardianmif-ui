@@ -1,0 +1,559 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Feedback States
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./feedback-state-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Feedback States
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="feedback-light-theme-title"
+        >
+            <h2 id="feedback-light-theme-title">
+                Feedback States — Light Theme
+            </h2>
+
+
+            <!-- Empty -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-empty-section-title"
+            >
+                <h3 id="feedback-empty-section-title">
+                    Empty State — Light Theme
+                </h3>
+
+                <div
+                    id="feedback-empty"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--empty
+                    "
+                >
+
+                    <div
+                        class="rm-feedback-state__visual"
+                        aria-hidden="true"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.75"
+                            focusable="false"
+                        >
+                            <path
+                                d="M4 5h16v14H4z"
+                            ></path>
+
+                            <path
+                                d="M8 9h8"
+                            ></path>
+
+                            <path
+                                d="M8 13h5"
+                            ></path>
+                        </svg>
+                    </div>
+
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            No projects yet
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            Create your first project to start
+                            organizing your work.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rm-feedback-state__actions">
+
+                        <button
+                            id="feedback-empty-action"
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                        >
+                            Create project
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Empty Without Action -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-empty-no-action-title"
+            >
+                <h3 id="feedback-empty-no-action-title">
+                    Empty State Without Action — Light Theme
+                </h3>
+
+                <div
+                    id="feedback-empty-no-action"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--empty
+                    "
+                >
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            No activity yet
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            Activity will appear here when changes
+                            are made to this account.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- No Result -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-no-result-section-title"
+            >
+                <h3 id="feedback-no-result-section-title">
+                    No Result — Light Theme
+                </h3>
+
+                <div
+                    id="feedback-no-result"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--no-result
+                    "
+                >
+
+                    <div
+                        class="rm-feedback-state__visual"
+                        aria-hidden="true"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.75"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="10.5"
+                                cy="10.5"
+                                r="6.5"
+                            ></circle>
+
+                            <path
+                                d="m15.5 15.5 4 4"
+                            ></path>
+                        </svg>
+                    </div>
+
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            No matching results
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            Try changing your search terms or
+                            clearing the active filters.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rm-feedback-state__actions">
+
+                        <button
+                            id="feedback-clear-filter"
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--secondary
+                            "
+                        >
+                            Clear filters
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Error -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-error-section-title"
+            >
+                <h3 id="feedback-error-section-title">
+                    Error State — Light Theme
+                </h3>
+
+                <div
+                    id="feedback-error"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--error
+                    "
+                >
+
+                    <div
+                        class="rm-feedback-state__visual"
+                        aria-hidden="true"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.75"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path
+                                d="M12 7v6"
+                            ></path>
+
+                            <path
+                                d="M12 17h.01"
+                            ></path>
+                        </svg>
+                    </div>
+
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            Unable to load data
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            The data for this section could not be loaded.
+                            Check your connection and try again.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rm-feedback-state__actions">
+
+                        <button
+                            id="feedback-error-retry"
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                        >
+                            Try again
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-long-section-title"
+            >
+                <h3 id="feedback-long-section-title">
+                    Long Content — Light Theme
+                </h3>
+
+                <div
+                    id="feedback-narrow-container"
+                    class="rm-demo__narrow"
+                >
+
+                    <div
+                        id="feedback-long"
+                        class="
+                            rm-feedback-state
+                            rm-feedback-state--no-result
+                        "
+                    >
+
+                        <div class="rm-feedback-state__content">
+
+                            <h4 class="rm-feedback-state__title">
+                                Tidak ditemukan data yang sesuai
+                                dengan pencarian dan filter aktif
+                            </h4>
+
+                            <p class="rm-feedback-state__description">
+                                Ubah kata kunci pencarian atau hapus
+                                beberapa filter untuk memperluas hasil
+                                data yang dapat ditampilkan pada bagian ini.
+                            </p>
+
+                        </div>
+
+
+                        <div class="rm-feedback-state__actions">
+
+                            <button
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--secondary
+                                "
+                            >
+                                Hapus Semua Filter
+                            </button>
+
+                            <button
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--primary
+                                "
+                            >
+                                Ubah Pencarian
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="feedback-dark-theme-title"
+        >
+            <h2 id="feedback-dark-theme-title">
+                Feedback States — Dark Theme
+            </h2>
+
+
+            <!-- Empty -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-dark-empty-title"
+            >
+                <h3 id="feedback-dark-empty-title">
+                    Empty State — Dark Theme
+                </h3>
+
+                <div
+                    id="feedback-dark-empty"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--empty
+                    "
+                >
+
+                    <div
+                        class="rm-feedback-state__visual"
+                        aria-hidden="true"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.75"
+                            focusable="false"
+                        >
+                            <path
+                                d="M4 5h16v14H4z"
+                            ></path>
+
+                            <path
+                                d="M8 9h8"
+                            ></path>
+                        </svg>
+                    </div>
+
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            No projects yet
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            Create your first project to begin.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- No Result -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-dark-no-result-title"
+            >
+                <h3 id="feedback-dark-no-result-title">
+                    No Result — Dark Theme
+                </h3>
+
+                <div
+                    id="feedback-dark-no-result"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--no-result
+                    "
+                >
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            No matching results
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            Change the filters and try again.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Error -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="feedback-dark-error-title"
+            >
+                <h3 id="feedback-dark-error-title">
+                    Error State — Dark Theme
+                </h3>
+
+                <div
+                    id="feedback-dark-error"
+                    class="
+                        rm-feedback-state
+                        rm-feedback-state--error
+                    "
+                >
+
+                    <div
+                        class="rm-feedback-state__visual"
+                        aria-hidden="true"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.75"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path
+                                d="M12 7v6"
+                            ></path>
+
+                            <path
+                                d="M12 17h.01"
+                            ></path>
+                        </svg>
+                    </div>
+
+
+                    <div class="rm-feedback-state__content">
+
+                        <h4 class="rm-feedback-state__title">
+                            Unable to load data
+                        </h4>
+
+                        <p class="rm-feedback-state__description">
+                            This section is temporarily unavailable.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

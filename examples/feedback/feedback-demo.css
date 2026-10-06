@@ -1,0 +1,100 @@
+/*
+ * Rahardianmif UI
+ * Feedback Demo Styles
+ *
+ * Demo-only styles.
+ * Not part of the public component API.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: var(--rm-font-family-sans);
+
+  color: var(--rm-text-primary);
+  background: var(--rm-page-bg);
+}
+
+.rm-demo {
+  display: grid;
+
+  gap: var(--rm-space-6);
+
+  padding: var(--rm-space-6);
+}
+
+.rm-demo > h1 {
+  margin: 0;
+}
+
+.rm-demo__theme {
+  display: grid;
+
+  gap: var(--rm-space-5);
+
+  padding: var(--rm-space-6);
+
+  color: var(--rm-text-primary);
+  background: var(--rm-page-bg);
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-lg);
+}
+
+.rm-demo__theme > h2 {
+  margin: 0;
+}
+
+.rm-demo__section {
+  display: grid;
+
+  gap: var(--rm-space-3);
+}
+
+.rm-demo__section h3 {
+  margin: 0;
+
+  font-size: var(--rm-font-size-lg);
+}
+
+.rm-demo__section p {
+  margin: 0;
+
+  color: var(--rm-text-secondary);
+}
+
+.rm-demo__group {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: var(--rm-space-3);
+}
+
+.rm-demo__stack {
+  display: grid;
+
+  gap: var(--rm-space-4);
+}
+
+.rm-demo__long-content {
+  inline-size: 100%;
+  max-inline-size: 20rem;
+}
+
+@media (max-width: 32rem) {
+  .rm-demo {
+    padding: var(--rm-space-4);
+  }
+
+  .rm-demo__theme {
+    padding: var(--rm-space-4);
+  }
+}

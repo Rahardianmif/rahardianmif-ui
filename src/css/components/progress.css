@@ -1,0 +1,147 @@
+/*
+ * Rahardianmif UI
+ * Progress Bar Component
+ *
+ * v0.3.5
+ *
+ * Determinate progress only.
+ *
+ * Application owns:
+ * - current value
+ * - min/max values
+ * - visual percentage calculation
+ *
+ * No JavaScript.
+ */
+
+.rm-progress {
+  box-sizing: border-box;
+
+  display: grid;
+
+  gap: var(--rm-space-2);
+
+  inline-size: 100%;
+  min-inline-size: 0;
+
+  color: var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Header
+ * ======================================== */
+
+.rm-progress__header {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap:
+    var(--rm-space-1)
+    var(--rm-space-3);
+
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Label
+ * ======================================== */
+
+.rm-progress__label {
+  min-inline-size: 0;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  font-weight: var(--rm-font-weight-medium);
+  line-height: var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Value
+ * ======================================== */
+
+.rm-progress__value {
+  flex: 0 0 auto;
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  font-weight: var(--rm-font-weight-medium);
+  line-height: var(--rm-line-height-normal);
+}
+
+
+/* ========================================
+ * Track
+ * ======================================== */
+
+.rm-progress__track {
+  position: relative;
+
+  inline-size: 100%;
+  block-size: var(--rm-space-2);
+
+  overflow: hidden;
+
+  border-radius: var(--rm-radius-pill);
+
+  background: var(--rm-surface-strong);
+}
+
+
+/* ========================================
+ * Bar
+ * ======================================== */
+
+.rm-progress__bar {
+  block-size: 100%;
+  inline-size: 0%;
+  max-inline-size: 100%;
+
+  border-radius: inherit;
+
+  background: var(--rm-primary);
+
+  transition:
+    inline-size
+    var(--rm-motion-normal)
+    ease;
+}
+
+
+/* ========================================
+ * Description
+ * ======================================== */
+
+.rm-progress__description {
+  margin: 0;
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-progress__bar {
+    transition: none;
+  }
+}

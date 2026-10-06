@@ -1,0 +1,173 @@
+/*
+ * Rahardianmif UI
+ * Card Core Component
+ *
+ * v0.3.2
+ *
+ * Structural, non-interactive content container.
+ *
+ * Presentation:
+ * - Default
+ * - Bordered
+ * - Elevated
+ *
+ * Density:
+ * - Medium only
+ *
+ * No JavaScript.
+ */
+
+.rm-card {
+  box-sizing: border-box;
+
+  min-inline-size: 0;
+
+  border: 1px solid var(--rm-border-soft);
+  border-radius: var(--rm-radius-lg);
+
+  background: var(--rm-surface);
+  color: var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Presentation
+ * ======================================== */
+
+.rm-card--bordered {
+  border-color: var(--rm-border);
+}
+
+.rm-card--elevated {
+  box-shadow: var(--rm-shadow-sm);
+}
+
+
+/* ========================================
+ * Header
+ * ======================================== */
+
+.rm-card__header {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--rm-space-4);
+
+  min-inline-size: 0;
+
+  padding: var(--rm-space-5);
+}
+
+
+/* ========================================
+ * Title
+ * ======================================== */
+
+.rm-card__title {
+  margin: 0;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-lg);
+  font-weight: var(--rm-font-weight-semibold);
+  line-height: var(--rm-line-height-snug);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Description
+ * ======================================== */
+
+.rm-card__description {
+  margin:
+    var(--rm-space-1)
+    0
+    0;
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Body
+ * ======================================== */
+
+.rm-card__body {
+  min-inline-size: 0;
+
+  padding: var(--rm-space-5);
+
+  overflow-wrap: anywhere;
+}
+
+
+/*
+ * Avoid duplicated vertical spacing when
+ * Header + Body are composed together.
+ */
+
+.rm-card__header + .rm-card__body {
+  padding-block-start: 0;
+}
+
+
+/* ========================================
+ * Footer
+ * ======================================== */
+
+.rm-card__footer {
+  min-inline-size: 0;
+
+  padding: var(--rm-space-5);
+}
+
+.rm-card__body + .rm-card__footer {
+  padding-block-start: 0;
+}
+
+
+/* ========================================
+ * Media
+ * ======================================== */
+
+.rm-card__media {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.rm-card__media img,
+.rm-card__media picture,
+.rm-card__media video,
+.rm-card__media svg {
+  display: block;
+
+  max-inline-size: 100%;
+}
+
+
+/* ========================================
+ * Actions
+ * ======================================== */
+
+.rm-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+}

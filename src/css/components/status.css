@@ -1,0 +1,69 @@
+/*
+ * Rahardianmif UI
+ * Status Indicator Component
+ *
+ * v0.3.1
+ *
+ * Displays an explicit operational
+ * or entity state.
+ *
+ * No JavaScript.
+ */
+
+.rm-status {
+  --rm-status-accent: var(--rm-text-muted);
+
+  display: inline-flex;
+
+  align-items: center;
+
+  max-inline-size: 100%;
+
+  gap: var(--rm-space-2);
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  font-weight: var(--rm-font-weight-medium);
+  line-height: var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Semantic Variants
+ * ======================================== */
+
+.rm-status--success {
+  --rm-status-accent: var(--rm-success);
+}
+
+.rm-status--warning {
+  --rm-status-accent: var(--rm-warning);
+}
+
+.rm-status--danger {
+  --rm-status-accent: var(--rm-danger);
+}
+
+.rm-status--info {
+  --rm-status-accent: var(--rm-info);
+}
+
+
+/* ========================================
+ * Indicator
+ * ======================================== */
+
+.rm-status__indicator {
+  flex: 0 0 auto;
+
+  inline-size: var(--rm-space-2);
+  block-size: var(--rm-space-2);
+
+  border-radius: var(--rm-radius-circle);
+
+  background: var(--rm-status-accent);
+}

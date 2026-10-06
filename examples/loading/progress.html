@@ -1,0 +1,487 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Progress Bar
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./loading-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Progress Bar
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="progress-light-theme-title"
+        >
+            <h2 id="progress-light-theme-title">
+                Progress Bar — Light Theme
+            </h2>
+
+
+            <!-- Basic -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="progress-light-basic-title"
+            >
+                <h3 id="progress-light-basic-title">
+                    Basic Determinate Progress — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="progress-upload"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="progress-upload-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="65"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="progress-upload-label"
+                                class="rm-progress__label"
+                            >
+                                Upload progress
+                            </span>
+
+                            <span class="rm-progress__value">
+                                65%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                id="progress-upload-bar"
+                                class="rm-progress__bar"
+                                style="inline-size: 65%;"
+                            ></div>
+                        </div>
+
+
+                        <p class="rm-progress__description">
+                            Uploading project files.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Different Values -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="progress-light-values-title"
+            >
+                <h3 id="progress-light-values-title">
+                    Different Values — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="progress-quarter"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="progress-quarter-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="25"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="progress-quarter-label"
+                                class="rm-progress__label"
+                            >
+                                Data processing
+                            </span>
+
+                            <span class="rm-progress__value">
+                                25%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="rm-progress__bar"
+                                style="inline-size: 25%;"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="progress-half"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="progress-half-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="50"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="progress-half-label"
+                                class="rm-progress__label"
+                            >
+                                Importing records
+                            </span>
+
+                            <span class="rm-progress__value">
+                                50%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="rm-progress__bar"
+                                style="inline-size: 50%;"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="progress-complete"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="progress-complete-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="100"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="progress-complete-label"
+                                class="rm-progress__label"
+                            >
+                                File transfer
+                            </span>
+
+                            <span class="rm-progress__value">
+                                100%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                id="progress-complete-bar"
+                                class="rm-progress__bar"
+                                style="inline-size: 100%;"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Custom Range -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="progress-light-range-title"
+            >
+                <h3 id="progress-light-range-title">
+                    Custom Range — Light Theme
+                </h3>
+
+                <div
+                    id="progress-custom-range"
+                    class="rm-progress"
+                    role="progressbar"
+                    aria-labelledby="progress-custom-range-label"
+                    aria-valuemin="10"
+                    aria-valuemax="30"
+                    aria-valuenow="20"
+                >
+
+                    <div class="rm-progress__header">
+
+                        <span
+                            id="progress-custom-range-label"
+                            class="rm-progress__label"
+                        >
+                            Batch processing
+                        </span>
+
+                        <span class="rm-progress__value">
+                            20 of 30
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="rm-progress__track"
+                        aria-hidden="true"
+                    >
+                        <div
+                            id="progress-custom-range-bar"
+                            class="rm-progress__bar"
+                            style="inline-size: 50%;"
+                        ></div>
+                    </div>
+
+
+                    <p class="rm-progress__description">
+                        Range starts at 10 and ends at 30.
+                    </p>
+
+                </div>
+            </section>
+
+
+            <!-- Without Visible Percentage -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="progress-light-no-value-title"
+            >
+                <h3 id="progress-light-no-value-title">
+                    Optional Visible Value — Light Theme
+                </h3>
+
+                <div
+                    id="progress-no-visible-value"
+                    class="rm-progress"
+                    role="progressbar"
+                    aria-labelledby="progress-no-value-label"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="40"
+                >
+
+                    <div class="rm-progress__header">
+
+                        <span
+                            id="progress-no-value-label"
+                            class="rm-progress__label"
+                        >
+                            Synchronizing account
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="rm-progress__track"
+                        aria-hidden="true"
+                    >
+                        <div
+                            class="rm-progress__bar"
+                            style="inline-size: 40%;"
+                        ></div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="progress-light-long-title"
+            >
+                <h3 id="progress-light-long-title">
+                    Long Content — Light Theme
+                </h3>
+
+                <div
+                    id="progress-narrow-container"
+                    class="rm-demo__narrow"
+                >
+
+                    <div
+                        id="progress-long"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="progress-long-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="72"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="progress-long-label"
+                                class="rm-progress__label"
+                            >
+                                Memproses dan memvalidasi seluruh
+                                data administrasi mahasiswa
+                            </span>
+
+                            <span class="rm-progress__value">
+                                72%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="rm-progress__bar"
+                                style="inline-size: 72%;"
+                            ></div>
+                        </div>
+
+
+                        <p class="rm-progress__description">
+                            Proses dapat membutuhkan waktu lebih lama
+                            ketika jumlah data yang diperiksa cukup besar.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="progress-dark-theme-title"
+        >
+            <h2 id="progress-dark-theme-title">
+                Progress Bar — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="progress-dark-basic-title"
+            >
+                <h3 id="progress-dark-basic-title">
+                    Determinate Progress — Dark Theme
+                </h3>
+
+                <div
+                    id="progress-dark"
+                    class="rm-progress"
+                    role="progressbar"
+                    aria-labelledby="progress-dark-label"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="65"
+                >
+
+                    <div class="rm-progress__header">
+
+                        <span
+                            id="progress-dark-label"
+                            class="rm-progress__label"
+                        >
+                            Upload progress
+                        </span>
+
+                        <span class="rm-progress__value">
+                            65%
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="progress-dark-track"
+                        class="rm-progress__track"
+                        aria-hidden="true"
+                    >
+                        <div
+                            id="progress-dark-bar"
+                            class="rm-progress__bar"
+                            style="inline-size: 65%;"
+                        ></div>
+                    </div>
+
+
+                    <p class="rm-progress__description">
+                        Uploading project files.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

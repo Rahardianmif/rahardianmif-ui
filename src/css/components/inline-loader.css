@@ -1,0 +1,42 @@
+/*
+ * Rahardianmif UI
+ * Inline Loader Component
+ *
+ * v0.3.4
+ *
+ * Spinner + contextual loading message.
+ *
+ * No JavaScript.
+ */
+
+.rm-inline-loader {
+  box-sizing: border-box;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  max-inline-size: 100%;
+  min-inline-size: 0;
+
+  gap: var(--rm-space-2);
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+
+  vertical-align: middle;
+}
+
+
+/* ========================================
+ * Label
+ * ======================================== */
+
+.rm-inline-loader__label {
+  min-inline-size: 0;
+
+  overflow-wrap: anywhere;
+}

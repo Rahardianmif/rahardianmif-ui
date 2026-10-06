@@ -1,591 +1,1587 @@
 <!doctype html>
 
-<html
-  lang="en"
-  data-rm-theme="light"
->
+<html lang="en" data-rm-theme="light">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
 
-  <title>
-    Rahardianmif UI — v0.2 Showcase
-  </title>
+    <title>
+        Rahardianmif UI — v0.3 Showcase
+    </title>
 
-  <link
-    rel="stylesheet"
-    href="../src/css/rahardianmif-ui.css"
-  >
+    <link
+        rel="stylesheet"
+        href="../src/css/rahardianmif-ui.css"
+    >
 
-  <link
-    rel="stylesheet"
-    href="./showcase.css"
-  >
+    <link
+        rel="stylesheet"
+        href="./showcase.css"
+    >
 </head>
 
 <body>
-  <main class="rm-showcase">
-    <header class="rm-showcase__header">
-      <p class="rm-showcase__eyebrow">
-        Rahardianmif UI
-      </p>
 
-      <h1 class="rm-showcase__title">
-        v0.2 — Buttons + Basic Forms
-      </h1>
+    <main class="rm-showcase">
 
-      <p class="rm-showcase__intro">
-        Component showcase for Button, Input, Textarea,
-        Native Select, Checkbox, Radio, Switch,
-        and Validation states.
-      </p>
+        <header class="rm-showcase__header">
 
-      <nav
-        class="rm-showcase__nav"
-        aria-label="Component demos"
-      >
-        <a href="./button/index.html">
-          Button
-        </a>
-
-        <a href="./form/index.html">
-          Input
-        </a>
-
-        <a href="./form/textarea.html">
-          Textarea
-        </a>
-
-        <a href="./form/select.html">
-          Select
-        </a>
-
-        <a href="./form/choice.html">
-          Checkbox + Radio
-        </a>
-
-        <a href="./form/switch.html">
-          Switch
-        </a>
-
-        <a href="./form/validation.html">
-          Validation
-        </a>
-      </nav>
-    </header>
-
-
-    <section
-      class="rm-showcase__theme"
-      data-rm-theme="light"
-      aria-labelledby="light-showcase-title"
-    >
-      <div class="rm-showcase__theme-header">
-        <div>
-          <p class="rm-showcase__eyebrow">
-            Theme
-          </p>
-
-          <h2 id="light-showcase-title">
-            Light
-          </h2>
-        </div>
-      </div>
-
-
-      <div class="rm-showcase__grid">
-        <article class="rm-showcase__card">
-          <h3>
-            Button
-          </h3>
-
-          <div class="rm-showcase__row">
-            <button
-              class="rm-button rm-button--primary rm-button--md"
-              type="button"
-            >
-              Primary
-            </button>
-
-            <button
-              class="rm-button rm-button--secondary rm-button--md"
-              type="button"
-            >
-              Secondary
-            </button>
-
-            <button
-              class="rm-button rm-button--outline rm-button--md"
-              type="button"
-            >
-              Outline
-            </button>
-
-            <button
-              class="rm-button rm-button--ghost rm-button--md"
-              type="button"
-            >
-              Ghost
-            </button>
-
-            <button
-              class="rm-button rm-button--danger rm-button--md"
-              type="button"
-            >
-              Danger
-            </button>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Input
-          </h3>
-
-          <div class="rm-field">
-            <label
-              class="rm-field__label"
-              for="showcase-name"
-            >
-              Name
-            </label>
-
-            <div class="rm-field__control">
-              <input
-                class="rm-input"
-                id="showcase-name"
-                type="text"
-                placeholder="Rahardian"
-              >
-            </div>
-
-            <p class="rm-field__description">
-              Standard MD input.
+            <p class="rm-showcase__eyebrow">
+                Rahardianmif UI
             </p>
-          </div>
-        </article>
 
-
-        <article class="rm-showcase__card">
-          <h3>
-            Textarea
-          </h3>
-
-          <div class="rm-field">
-            <label
-              class="rm-field__label"
-              for="showcase-message"
-            >
-              Message
-            </label>
-
-            <div class="rm-field__control">
-              <textarea
-                class="rm-textarea"
-                id="showcase-message"
-                placeholder="Write a message"
-              ></textarea>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Native Select
-          </h3>
-
-          <div class="rm-field">
-            <label
-              class="rm-field__label"
-              for="showcase-country"
-            >
-              Country
-            </label>
-
-            <div class="rm-field__control">
-              <select
-                class="rm-select"
-                id="showcase-country"
-              >
-                <option value="">
-                  Select country
-                </option>
-
-                <option value="id">
-                  Indonesia
-                </option>
-
-                <option value="my">
-                  Malaysia
-                </option>
-
-                <option value="sg">
-                  Singapore
-                </option>
-              </select>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Checkbox + Radio
-          </h3>
-
-          <div class="rm-showcase__stack">
-            <label class="rm-choice">
-              <input
-                class="rm-checkbox"
-                type="checkbox"
-                checked
-              >
-
-              <span
-                class="rm-choice__control"
-                aria-hidden="true"
-              ></span>
-
-              <span class="rm-choice__label">
-                Enable notifications
-              </span>
-            </label>
-
-
-            <fieldset class="rm-showcase__fieldset">
-              <legend>
-                Delivery
-              </legend>
-
-              <label class="rm-choice">
-                <input
-                  class="rm-radio"
-                  type="radio"
-                  name="showcase-delivery"
-                  value="email"
-                  checked
-                >
-
-                <span
-                  class="rm-choice__control"
-                  aria-hidden="true"
-                ></span>
-
-                <span class="rm-choice__label">
-                  Email
-                </span>
-              </label>
-
-              <label class="rm-choice">
-                <input
-                  class="rm-radio"
-                  type="radio"
-                  name="showcase-delivery"
-                  value="sms"
-                >
-
-                <span
-                  class="rm-choice__control"
-                  aria-hidden="true"
-                ></span>
-
-                <span class="rm-choice__label">
-                  SMS
-                </span>
-              </label>
-            </fieldset>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Switch
-          </h3>
-
-          <label class="rm-switch-field">
-            <input
-              class="rm-switch"
-              type="checkbox"
-              checked
-            >
-
-            <span
-              class="rm-switch__track"
-              aria-hidden="true"
-            >
-              <span
-                class="rm-switch__thumb"
-              ></span>
-            </span>
-
-            <span class="rm-switch__label">
-              Automatic updates
-            </span>
-
-            <span class="rm-switch__description">
-              Install updates automatically.
-            </span>
-          </label>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Validation
-          </h3>
-
-          <div class="rm-showcase__stack">
-            <div class="rm-field is-valid">
-              <label
-                class="rm-field__label"
-                for="showcase-valid"
-              >
-                Username
-              </label>
-
-              <div class="rm-field__control">
-                <input
-                  class="rm-input is-valid"
-                  id="showcase-valid"
-                  type="text"
-                  value="rahardian"
-                  aria-describedby="showcase-valid-message"
-                >
-              </div>
-
-              <p
-                class="rm-field__message rm-field__message--success"
-                id="showcase-valid-message"
-              >
-                Username is available.
-              </p>
-            </div>
-
-
-            <div class="rm-field is-invalid">
-              <label
-                class="rm-field__label"
-                for="showcase-invalid"
-              >
-                Email
-
-                <span
-                  class="rm-field__required"
-                  aria-hidden="true"
-                >
-                  *
-                </span>
-              </label>
-
-              <div class="rm-field__control">
-                <input
-                  class="rm-input is-invalid"
-                  id="showcase-invalid"
-                  type="email"
-                  value="invalid-email"
-                  required
-                  aria-invalid="true"
-                  aria-describedby="showcase-invalid-message"
-                >
-              </div>
-
-              <p
-                class="rm-field__message rm-field__message--error"
-                id="showcase-invalid-message"
-              >
-                Enter a valid email address.
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-
-    <section
-      class="rm-showcase__theme"
-      data-rm-theme="dark"
-      aria-labelledby="dark-showcase-title"
-    >
-      <div class="rm-showcase__theme-header">
-        <div>
-          <p class="rm-showcase__eyebrow">
-            Theme
-          </p>
-
-          <h2 id="dark-showcase-title">
-            Dark
-          </h2>
-        </div>
-      </div>
-
-
-      <div class="rm-showcase__grid">
-        <article class="rm-showcase__card">
-          <h3>
-            Buttons
-          </h3>
-
-          <div class="rm-showcase__row">
-            <button
-              class="rm-button rm-button--primary"
-              type="button"
-            >
-              Primary
-            </button>
-
-            <button
-              class="rm-button rm-button--secondary"
-              type="button"
-            >
-              Secondary
-            </button>
-
-            <button
-              class="rm-button rm-button--danger"
-              type="button"
-            >
-              Danger
-            </button>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Form Controls
-          </h3>
-
-          <div class="rm-showcase__stack">
-            <input
-              class="rm-input"
-              type="text"
-              aria-label="Dark input"
-              placeholder="Dark input"
-            >
-
-            <textarea
-              class="rm-textarea"
-              aria-label="Dark textarea"
-              placeholder="Dark textarea"
-            ></textarea>
-
-            <select
-              class="rm-select"
-              aria-label="Dark select"
-            >
-              <option>
-                Dark select
-              </option>
-            </select>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Choices
-          </h3>
-
-          <div class="rm-showcase__stack">
-            <label class="rm-choice">
-              <input
-                class="rm-checkbox"
-                type="checkbox"
-                checked
-              >
-
-              <span
-                class="rm-choice__control"
-                aria-hidden="true"
-              ></span>
-
-              <span class="rm-choice__label">
-                Checkbox
-              </span>
-            </label>
-
-            <label class="rm-choice">
-              <input
-                class="rm-radio"
-                type="radio"
-                name="dark-radio"
-                checked
-              >
-
-              <span
-                class="rm-choice__control"
-                aria-hidden="true"
-              ></span>
-
-              <span class="rm-choice__label">
-                Radio
-              </span>
-            </label>
-
-            <label class="rm-switch-field">
-              <input
-                class="rm-switch"
-                type="checkbox"
-                checked
-              >
-
-              <span
-                class="rm-switch__track"
-                aria-hidden="true"
-              >
-                <span
-                  class="rm-switch__thumb"
-                ></span>
-              </span>
-
-              <span class="rm-switch__label">
-                Switch
-              </span>
-            </label>
-          </div>
-        </article>
-
-
-        <article class="rm-showcase__card">
-          <h3>
-            Validation
-          </h3>
-
-          <div class="rm-field is-invalid">
-            <label
-              class="rm-field__label"
-              for="dark-validation"
-            >
-              Required field
-            </label>
-
-            <input
-              class="rm-input is-invalid"
-              id="dark-validation"
-              type="text"
-              aria-invalid="true"
-              aria-describedby="dark-validation-error"
-            >
-
-            <p
-              class="rm-field__message rm-field__message--error"
-              id="dark-validation-error"
-            >
-              This field needs attention.
+            <h1 class="rm-showcase__title">
+                v0.3 — Cards + Feedback
+            </h1>
+
+            <p class="rm-showcase__intro">
+                Cumulative showcase for the frozen v0.1 Foundations,
+                v0.2 Buttons + Basic Forms, and v0.3 Cards + Feedback
+                contracts.
             </p>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+
+
+            <nav
+                class="rm-showcase__nav"
+                aria-label="Component demos"
+            >
+                <a href="#controls">
+                    v0.2 Controls
+                </a>
+
+                <a href="#badge-status">
+                    Badge + Status
+                </a>
+
+                <a href="#card">
+                    Card
+                </a>
+
+                <a href="#alert">
+                    Alert
+                </a>
+
+                <a href="#loading">
+                    Loading
+                </a>
+
+                <a href="#feedback">
+                    Feedback States
+                </a>
+            </nav>
+
+        </header>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-showcase__theme"
+            data-rm-theme="light"
+            aria-labelledby="showcase-light-title"
+        >
+
+            <div class="rm-showcase__theme-header">
+
+                <p class="rm-showcase__eyebrow">
+                    Theme
+                </p>
+
+                <h2 id="showcase-light-title">
+                    Light Theme
+                </h2>
+
+            </div>
+
+
+            <div class="rm-showcase__grid">
+
+
+                <!-- ===================================
+                 * v0.2 Controls
+                 * =================================== -->
+
+                <article
+                    id="controls"
+                    class="rm-showcase__card"
+                >
+                    <h3>
+                        v0.2 Controls
+                    </h3>
+
+
+                    <div class="rm-showcase__stack">
+
+
+                        <!-- Button -->
+
+                        <div class="rm-showcase__row">
+
+                            <button
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--primary
+                                "
+                            >
+                                Primary
+                            </button>
+
+                            <button
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--outline
+                                "
+                            >
+                                Outline
+                            </button>
+
+                        </div>
+
+
+                        <!-- Input -->
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="showcase-input"
+                            >
+                                Input
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <input
+                                    id="showcase-input"
+                                    class="rm-input"
+                                    type="text"
+                                    value="Rahardianmif UI"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Textarea -->
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="showcase-textarea"
+                            >
+                                Textarea
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <textarea
+                                    id="showcase-textarea"
+                                    class="rm-textarea"
+                                >Reusable textarea</textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Select -->
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="showcase-select"
+                            >
+                                Native Select
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <select
+                                    id="showcase-select"
+                                    class="rm-select"
+                                >
+                                    <option>
+                                        Option one
+                                    </option>
+
+                                    <option>
+                                        Option two
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Checkbox + Radio -->
+
+                        <fieldset class="rm-showcase__fieldset">
+
+                            <legend>
+                                Checkbox + Radio
+                            </legend>
+
+
+                            <label class="rm-choice">
+
+                                <input
+                                    id="showcase-checkbox"
+                                    class="rm-checkbox"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span
+                                    class="rm-choice__control"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="rm-choice__label">
+                                    Checkbox
+                                </span>
+
+                            </label>
+
+
+                            <label class="rm-choice">
+
+                                <input
+                                    class="rm-radio"
+                                    type="radio"
+                                    name="showcase-radio"
+                                    checked
+                                >
+
+                                <span
+                                    class="rm-choice__control"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="rm-choice__label">
+                                    Radio
+                                </span>
+
+                            </label>
+
+                        </fieldset>
+
+
+                        <!-- Switch -->
+
+                        <label class="rm-switch-field">
+
+                            <input
+                                class="rm-switch"
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span
+                                class="rm-switch__track"
+                                aria-hidden="true"
+                            >
+                                <span
+                                    class="rm-switch__thumb"
+                                ></span>
+                            </span>
+
+                            <span class="rm-switch__label">
+                                Switch
+                            </span>
+
+                            <span class="rm-switch__description">
+                                Automatic updates.
+                            </span>
+
+                        </label>
+
+
+                        <!-- Validation -->
+
+                        <div class="rm-field is-invalid">
+
+                            <label
+                                class="rm-field__label"
+                                for="showcase-validation"
+                            >
+                                Validation
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <input
+                                    id="showcase-validation"
+                                    class="
+                                        rm-input
+                                        is-invalid
+                                    "
+                                    type="email"
+                                    value="invalid-email"
+                                    aria-invalid="true"
+                                    aria-describedby="showcase-validation-message"
+                                >
+
+                            </div>
+
+                            <p
+                                id="showcase-validation-message"
+                                class="
+                                    rm-field__message
+                                    rm-field__message--error
+                                "
+                            >
+                                Enter a valid email address.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Badge + Status
+                 * =================================== -->
+
+                <article
+                    id="badge-status"
+                    class="rm-showcase__card"
+                >
+                    <h3>
+                        Badge + Status Indicator
+                    </h3>
+
+
+                    <div class="rm-showcase__row">
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--sm
+                            "
+                        >
+                            Small
+                        </span>
+
+                        <span class="rm-badge">
+                            Default
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--primary
+                            "
+                        >
+                            Primary
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--success
+                            "
+                        >
+                            <span
+                                class="rm-badge__dot"
+                                aria-hidden="true"
+                            ></span>
+
+                            Success
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--warning
+                            "
+                        >
+                            Warning
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--danger
+                            "
+                        >
+                            Danger
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--info
+                            "
+                        >
+                            Info
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="
+                            rm-showcase__stack
+                            rm-showcase__spaced
+                        "
+                    >
+
+                        <span
+                            class="
+                                rm-status
+                                rm-status--success
+                            "
+                        >
+                            <span
+                                class="rm-status__indicator"
+                                aria-hidden="true"
+                            ></span>
+
+                            Operational
+                        </span>
+
+
+                        <span
+                            class="
+                                rm-status
+                                rm-status--warning
+                            "
+                        >
+                            <span
+                                class="rm-status__indicator"
+                                aria-hidden="true"
+                            ></span>
+
+                            Pending
+                        </span>
+
+
+                        <span
+                            class="
+                                rm-status
+                                rm-status--danger
+                            "
+                        >
+                            <span
+                                class="rm-status__indicator"
+                                aria-hidden="true"
+                            ></span>
+
+                            Offline
+                        </span>
+
+
+                        <span
+                            class="
+                                rm-status
+                                rm-status--info
+                            "
+                        >
+                            <span
+                                class="rm-status__indicator"
+                                aria-hidden="true"
+                            ></span>
+
+                            Processing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Card
+                 * =================================== -->
+
+                <article
+                    id="card"
+                    class="rm-showcase__card"
+                >
+                    <h3>
+                        Card Core
+                    </h3>
+
+
+                    <div class="rm-showcase__stack">
+
+
+                        <article
+                            class="
+                                rm-card
+                                rm-card--bordered
+                            "
+                        >
+
+                            <header class="rm-card__header">
+
+                                <div>
+
+                                    <h4 class="rm-card__title">
+                                        Student Registration
+                                    </h4>
+
+                                    <p class="rm-card__description">
+                                        Current registration summary.
+                                    </p>
+
+                                </div>
+
+
+                                <span
+                                    class="
+                                        rm-badge
+                                        rm-badge--success
+                                    "
+                                >
+                                    Active
+                                </span>
+
+                            </header>
+
+
+                            <div class="rm-card__body">
+
+                                Card Core remains non-interactive
+                                and composable.
+
+                            </div>
+
+
+                            <footer class="rm-card__footer">
+
+                                <div class="rm-card__actions">
+
+                                    <button
+                                        type="button"
+                                        class="
+                                            rm-button
+                                            rm-button--primary
+                                            rm-button--sm
+                                        "
+                                    >
+                                        View detail
+                                    </button>
+
+                                </div>
+
+                            </footer>
+
+                        </article>
+
+
+                        <div
+                            class="
+                                rm-card
+                                rm-card--elevated
+                            "
+                        >
+                            <div class="rm-card__body">
+                                Elevated Card
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Alert
+                 * =================================== -->
+
+                <article
+                    id="alert"
+                    class="rm-showcase__card"
+                >
+                    <h3>
+                        Alert
+                    </h3>
+
+
+                    <div class="rm-showcase__stack">
+
+
+                        <div class="rm-alert">
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__message">
+                                    Neutral contextual notice.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-alert
+                                rm-alert--info
+                            "
+                        >
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__title">
+                                    Information
+                                </p>
+
+                                <p class="rm-alert__message">
+                                    Registration opens on Monday.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-alert
+                                rm-alert--success
+                            "
+                        >
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__title">
+                                    Changes saved
+                                </p>
+
+                                <p class="rm-alert__message">
+                                    Your changes were saved successfully.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-alert
+                                rm-alert--warning
+                            "
+                        >
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__title">
+                                    Verification required
+                                </p>
+
+                                <p class="rm-alert__message">
+                                    Verify your email before continuing.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-alert
+                                rm-alert--danger
+                            "
+                        >
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__title">
+                                    Unable to submit
+                                </p>
+
+                                <p class="rm-alert__message">
+                                    Review the form and try again.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Spinner + Inline Loader
+                 * =================================== -->
+
+                <article
+                    id="loading"
+                    class="rm-showcase__card"
+                >
+                    <h3>
+                        Spinner + Inline Loader
+                    </h3>
+
+
+                    <div class="rm-showcase__row">
+
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span
+                            class="rm-spinner"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--lg
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                    </div>
+
+
+                    <div class="rm-showcase__spaced">
+
+                        <span class="rm-inline-loader">
+
+                            <span
+                                class="
+                                    rm-spinner
+                                    rm-spinner--sm
+                                "
+                                aria-hidden="true"
+                            ></span>
+
+                            <span class="rm-inline-loader__label">
+                                Loading data...
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Progress
+                 * =================================== -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Progress Bar
+                    </h3>
+
+
+                    <div
+                        id="showcase-progress-light"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="showcase-progress-light-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="65"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="showcase-progress-light-label"
+                                class="rm-progress__label"
+                            >
+                                Uploading documents
+                            </span>
+
+                            <span class="rm-progress__value">
+                                65%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="rm-progress__bar"
+                                style="inline-size: 65%;"
+                            ></div>
+                        </div>
+
+
+                        <p class="rm-progress__description">
+                            13 of 20 files uploaded.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Skeleton
+                 * =================================== -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Skeleton
+                    </h3>
+
+
+                    <div
+                        class="rm-showcase__skeleton-layout"
+                        aria-busy="true"
+                    >
+
+                        <span
+                            class="
+                                rm-skeleton
+                                rm-skeleton--circle
+                                rm-showcase__skeleton-avatar
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+
+                        <div class="rm-showcase__stack">
+
+                            <span
+                                class="
+                                    rm-skeleton
+                                    rm-skeleton--text
+                                "
+                                aria-hidden="true"
+                            ></span>
+
+                            <span
+                                class="
+                                    rm-skeleton
+                                    rm-skeleton--text
+                                    rm-showcase__skeleton-short
+                                "
+                                aria-hidden="true"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <span
+                        class="
+                            rm-skeleton
+                            rm-showcase__skeleton-rect
+                        "
+                        aria-hidden="true"
+                    ></span>
+
+                </article>
+
+
+                <!-- ===================================
+                 * Feedback States
+                 * =================================== -->
+
+                <article
+                    id="feedback"
+                    class="
+                        rm-showcase__card
+                        rm-showcase__wide
+                    "
+                >
+                    <h3>
+                        Feedback States
+                    </h3>
+
+
+                    <div class="rm-showcase__feedback-grid">
+
+
+                        <div
+                            class="
+                                rm-feedback-state
+                                rm-feedback-state--empty
+                            "
+                        >
+
+                            <div class="rm-feedback-state__content">
+
+                                <h4 class="rm-feedback-state__title">
+                                    No projects yet
+                                </h4>
+
+                                <p class="rm-feedback-state__description">
+                                    Create your first project to begin.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-feedback-state
+                                rm-feedback-state--no-result
+                            "
+                        >
+
+                            <div class="rm-feedback-state__content">
+
+                                <h4 class="rm-feedback-state__title">
+                                    No matching results
+                                </h4>
+
+                                <p class="rm-feedback-state__description">
+                                    Change or clear the active filters.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-feedback-state
+                                rm-feedback-state--error
+                            "
+                        >
+
+                            <div
+                                class="rm-feedback-state__visual"
+                                aria-hidden="true"
+                            >
+                                !
+                            </div>
+
+
+                            <div class="rm-feedback-state__content">
+
+                                <h4 class="rm-feedback-state__title">
+                                    Unable to load data
+                                </h4>
+
+                                <p class="rm-feedback-state__description">
+                                    Check your connection and try again.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-showcase__theme"
+            data-rm-theme="dark"
+            aria-labelledby="showcase-dark-title"
+        >
+
+            <div class="rm-showcase__theme-header">
+
+                <p class="rm-showcase__eyebrow">
+                    Theme
+                </p>
+
+                <h2 id="showcase-dark-title">
+                    Dark Theme
+                </h2>
+
+            </div>
+
+
+            <div class="rm-showcase__grid">
+
+
+                <!-- Badge + Status -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Badge + Status Indicator
+                    </h3>
+
+
+                    <div class="rm-showcase__row">
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--primary
+                            "
+                        >
+                            Primary
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--success
+                            "
+                        >
+                            Success
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--warning
+                            "
+                        >
+                            Warning
+                        </span>
+
+                        <span
+                            class="
+                                rm-badge
+                                rm-badge--danger
+                            "
+                        >
+                            Danger
+                        </span>
+
+                    </div>
+
+
+                    <div class="rm-showcase__spaced">
+
+                        <span
+                            class="
+                                rm-status
+                                rm-status--success
+                            "
+                        >
+                            <span
+                                class="rm-status__indicator"
+                                aria-hidden="true"
+                            ></span>
+
+                            Operational
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Card Core
+                    </h3>
+
+
+                    <div
+                        class="
+                            rm-card
+                            rm-card--elevated
+                        "
+                    >
+
+                        <header class="rm-card__header">
+
+                            <div>
+
+                                <h4 class="rm-card__title">
+                                    Dark Card
+                                </h4>
+
+                                <p class="rm-card__description">
+                                    Theme-aware semantic surface.
+                                </p>
+
+                            </div>
+
+                        </header>
+
+
+                        <div class="rm-card__body">
+                            Card Core remains non-interactive.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Alert -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Alert
+                    </h3>
+
+
+                    <div class="rm-showcase__stack">
+
+                        <div
+                            class="
+                                rm-alert
+                                rm-alert--info
+                            "
+                        >
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__title">
+                                    Information
+                                </p>
+
+                                <p class="rm-alert__message">
+                                    Dark theme Alert.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                rm-alert
+                                rm-alert--danger
+                            "
+                        >
+
+                            <div class="rm-alert__content">
+
+                                <p class="rm-alert__title">
+                                    Unable to save
+                                </p>
+
+                                <p class="rm-alert__message">
+                                    Try again after checking the data.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Spinner + Inline Loader -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Spinner + Inline Loader
+                    </h3>
+
+
+                    <span class="rm-inline-loader">
+
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-inline-loader__label">
+                            Loading dark theme data...
+                        </span>
+
+                    </span>
+
+                </article>
+
+
+                <!-- Progress -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Progress Bar
+                    </h3>
+
+
+                    <div
+                        id="showcase-progress-dark"
+                        class="rm-progress"
+                        role="progressbar"
+                        aria-labelledby="showcase-progress-dark-label"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="50"
+                    >
+
+                        <div class="rm-progress__header">
+
+                            <span
+                                id="showcase-progress-dark-label"
+                                class="rm-progress__label"
+                            >
+                                Processing dark theme data
+                            </span>
+
+                            <span class="rm-progress__value">
+                                50%
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rm-progress__track"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="rm-progress__bar"
+                                style="inline-size: 50%;"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Skeleton -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Skeleton
+                    </h3>
+
+
+                    <div
+                        class="rm-showcase__skeleton-layout"
+                        aria-busy="true"
+                    >
+
+                        <span
+                            class="
+                                rm-skeleton
+                                rm-skeleton--circle
+                                rm-showcase__skeleton-avatar
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+
+                        <div class="rm-showcase__stack">
+
+                            <span
+                                class="
+                                    rm-skeleton
+                                    rm-skeleton--text
+                                "
+                                aria-hidden="true"
+                            ></span>
+
+                            <span
+                                class="
+                                    rm-skeleton
+                                    rm-skeleton--text
+                                    rm-showcase__skeleton-short
+                                "
+                                aria-hidden="true"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Feedback State -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        Feedback States
+                    </h3>
+
+
+                    <div
+                        class="
+                            rm-feedback-state
+                            rm-feedback-state--error
+                        "
+                    >
+
+                        <div
+                            class="rm-feedback-state__visual"
+                            aria-hidden="true"
+                        >
+                            !
+                        </div>
+
+
+                        <div class="rm-feedback-state__content">
+
+                            <h4 class="rm-feedback-state__title">
+                                Unable to load records
+                            </h4>
+
+                            <p class="rm-feedback-state__description">
+                                The server could not complete the request.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- v0.2 Regression -->
+
+                <article class="rm-showcase__card">
+
+                    <h3>
+                        v0.2 Controls
+                    </h3>
+
+
+                    <div class="rm-showcase__stack">
+
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                        >
+                            Button
+                        </button>
+
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="dark-input"
+                            >
+                                Input
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <input
+                                    id="dark-input"
+                                    class="rm-input"
+                                    type="text"
+                                    value="Dark theme"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="dark-textarea"
+                            >
+                                Textarea
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <textarea
+                                    id="dark-textarea"
+                                    class="rm-textarea"
+                                >Textarea</textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="dark-select"
+                            >
+                                Native Select
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <select
+                                    id="dark-select"
+                                    class="rm-select"
+                                >
+                                    <option>
+                                        Option one
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <fieldset class="rm-showcase__fieldset">
+
+                            <legend>
+                                Checkbox + Radio
+                            </legend>
+
+
+                            <label class="rm-choice">
+
+                                <input
+                                    class="rm-checkbox"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span
+                                    class="rm-choice__control"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="rm-choice__label">
+                                    Checkbox
+                                </span>
+
+                            </label>
+
+
+                            <label class="rm-choice">
+
+                                <input
+                                    class="rm-radio"
+                                    type="radio"
+                                    name="dark-radio"
+                                    checked
+                                >
+
+                                <span
+                                    class="rm-choice__control"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="rm-choice__label">
+                                    Radio
+                                </span>
+
+                            </label>
+
+                        </fieldset>
+
+
+                        <label class="rm-switch-field">
+
+                            <input
+                                class="rm-switch"
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span
+                                class="rm-switch__track"
+                                aria-hidden="true"
+                            >
+                                <span
+                                    class="rm-switch__thumb"
+                                ></span>
+                            </span>
+
+                            <span class="rm-switch__label">
+                                Switch
+                            </span>
+
+                        </label>
+
+
+                        <div class="rm-field is-invalid">
+
+                            <label
+                                class="rm-field__label"
+                                for="dark-validation"
+                            >
+                                Validation
+                            </label>
+
+                            <div class="rm-field__control">
+
+                                <input
+                                    id="dark-validation"
+                                    class="
+                                        rm-input
+                                        is-invalid
+                                    "
+                                    type="text"
+                                    aria-invalid="true"
+                                    aria-describedby="dark-validation-message"
+                                >
+
+                            </div>
+
+                            <p
+                                id="dark-validation-message"
+                                class="
+                                    rm-field__message
+                                    rm-field__message--error
+                                "
+                            >
+                                This field needs attention.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
 </body>
 
 </html>

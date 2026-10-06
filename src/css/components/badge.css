@@ -1,0 +1,126 @@
+/*
+ * Rahardianmif UI
+ * Badge Component
+ *
+ * v0.3.1
+ *
+ * Non-interactive label for category,
+ * metadata, role, or concise state.
+ *
+ * Sizes:
+ * - SM
+ * - MD: default
+ * - LG
+ *
+ * No JavaScript.
+ */
+
+.rm-badge {
+  --rm-badge-accent: var(--rm-border);
+  --rm-badge-background: var(--rm-surface-secondary);
+  --rm-badge-font-size: var(--rm-font-size-sm);
+  --rm-badge-min-height: var(--rm-space-6);
+  --rm-badge-padding-x: var(--rm-space-2);
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-block-size: var(--rm-badge-min-height);
+  max-inline-size: 100%;
+
+  padding-inline: var(--rm-badge-padding-x);
+
+  gap: var(--rm-space-1);
+
+  border: 1px solid var(--rm-badge-accent);
+  border-radius: var(--rm-radius-pill);
+
+  background: var(--rm-badge-background);
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-badge-font-size);
+  font-weight: var(--rm-font-weight-medium);
+  line-height: var(--rm-line-height-normal);
+
+  vertical-align: middle;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-badge--sm {
+  --rm-badge-font-size: var(--rm-font-size-xs);
+  --rm-badge-min-height: var(--rm-space-5);
+  --rm-badge-padding-x: var(--rm-space-2);
+}
+
+.rm-badge--lg {
+  --rm-badge-font-size: var(--rm-font-size-base);
+  --rm-badge-min-height: var(--rm-space-8);
+  --rm-badge-padding-x: var(--rm-space-3);
+}
+
+
+/* ========================================
+ * Semantic Variants
+ * ======================================== */
+
+.rm-badge--primary {
+  --rm-badge-accent: var(--rm-primary);
+  --rm-badge-background: var(--rm-primary-soft);
+}
+
+.rm-badge--success {
+  --rm-badge-accent: var(--rm-success);
+}
+
+.rm-badge--warning {
+  --rm-badge-accent: var(--rm-warning);
+}
+
+.rm-badge--danger {
+  --rm-badge-accent: var(--rm-danger);
+}
+
+.rm-badge--info {
+  --rm-badge-accent: var(--rm-info);
+}
+
+
+/* ========================================
+ * Dot
+ * ======================================== */
+
+.rm-badge__dot {
+  flex: 0 0 auto;
+
+  inline-size: var(--rm-space-2);
+  block-size: var(--rm-space-2);
+
+  border-radius: var(--rm-radius-circle);
+
+  background: var(--rm-badge-accent);
+}
+
+
+/* ========================================
+ * Icon
+ * ======================================== */
+
+.rm-badge__icon {
+  flex: 0 0 auto;
+
+  inline-size: 1em;
+  block-size: 1em;
+
+  color: var(--rm-badge-accent);
+}

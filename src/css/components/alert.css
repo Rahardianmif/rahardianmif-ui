@@ -1,0 +1,148 @@
+/*
+ * Rahardianmif UI
+ * Alert Component
+ *
+ * v0.3.3
+ *
+ * Static contextual feedback.
+ *
+ * Variants:
+ * - Neutral
+ * - Info
+ * - Success
+ * - Warning
+ * - Danger
+ *
+ * No JavaScript.
+ */
+
+.rm-alert {
+  --rm-alert-accent: var(--rm-border);
+  --rm-alert-background: var(--rm-surface);
+  --rm-alert-icon-color: var(--rm-text-secondary);
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: var(--rm-space-3);
+
+  min-inline-size: 0;
+
+  padding: var(--rm-space-4);
+
+  border: 1px solid var(--rm-alert-accent);
+  border-radius: var(--rm-radius-md);
+
+  background: var(--rm-alert-background);
+  color: var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Semantic Variants
+ * ======================================== */
+
+.rm-alert--info {
+  --rm-alert-accent: var(--rm-info);
+  --rm-alert-icon-color: var(--rm-info);
+}
+
+.rm-alert--success {
+  --rm-alert-accent: var(--rm-success);
+  --rm-alert-icon-color: var(--rm-success);
+}
+
+.rm-alert--warning {
+  --rm-alert-accent: var(--rm-warning);
+  --rm-alert-icon-color: var(--rm-warning);
+}
+
+.rm-alert--danger {
+  --rm-alert-accent: var(--rm-danger);
+  --rm-alert-icon-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Icon
+ * ======================================== */
+
+.rm-alert__icon {
+  flex: 0 0 auto;
+
+  inline-size: var(--rm-space-5);
+  block-size: var(--rm-space-5);
+
+  color: var(--rm-alert-icon-color);
+}
+
+
+/* ========================================
+ * Content
+ * ======================================== */
+
+.rm-alert__content {
+  flex: 1 1 auto;
+
+  min-inline-size: 0;
+}
+
+
+/* ========================================
+ * Title
+ * ======================================== */
+
+.rm-alert__title {
+  margin: 0;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-base);
+  font-weight: var(--rm-font-weight-semibold);
+  line-height: var(--rm-line-height-snug);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Message
+ * ======================================== */
+
+.rm-alert__message {
+  margin: 0;
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+.rm-alert__title + .rm-alert__message {
+  margin-block-start: var(--rm-space-1);
+}
+
+
+/* ========================================
+ * Actions
+ * ======================================== */
+
+.rm-alert__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: var(--rm-space-2);
+
+  margin-block-start: var(--rm-space-3);
+
+  min-inline-size: 0;
+}

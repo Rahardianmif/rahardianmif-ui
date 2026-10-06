@@ -1,0 +1,85 @@
+/*
+ * Rahardianmif UI
+ * Spinner Component
+ *
+ * v0.3.4
+ *
+ * Indeterminate visual loading primitive.
+ *
+ * Sizes:
+ * - SM
+ * - MD: default
+ * - LG
+ *
+ * No JavaScript.
+ */
+
+.rm-spinner {
+  --rm-spinner-size: var(--rm-space-5);
+
+  box-sizing: border-box;
+
+  display: inline-block;
+
+  inline-size: var(--rm-spinner-size);
+  block-size: var(--rm-spinner-size);
+
+  flex: 0 0 auto;
+
+  border: 0.125em solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: var(--rm-radius-circle);
+
+  color: currentColor;
+
+  vertical-align: middle;
+
+  animation:
+    rm-spinner-rotate
+    var(--rm-motion-extended)
+    linear
+    infinite;
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-spinner--sm {
+  --rm-spinner-size: var(--rm-space-4);
+}
+
+.rm-spinner--lg {
+  --rm-spinner-size: var(--rm-space-6);
+}
+
+
+/* ========================================
+ * Animation
+ * ======================================== */
+
+@keyframes rm-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ *
+ * Spinner still needs to communicate that
+ * processing is active. Motion is therefore
+ * reduced rather than completely removed.
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-spinner {
+    animation-duration:
+      calc(
+        var(--rm-motion-extended)
+        * 4
+      );
+  }
+}

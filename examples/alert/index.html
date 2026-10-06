@@ -1,0 +1,499 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Alert
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./alert-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Alert
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="alert-light-theme-title"
+        >
+            <h2 id="alert-light-theme-title">
+                Alert — Light Theme
+            </h2>
+
+
+            <!-- Variants -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="alert-light-variants-title"
+            >
+                <h3 id="alert-light-variants-title">
+                    Variants — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="alert-neutral"
+                        class="rm-alert"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                General notice
+                            </p>
+
+                            <p class="rm-alert__message">
+                                This is a neutral contextual message.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        id="alert-info"
+                        class="rm-alert rm-alert--info"
+                    >
+                        <svg
+                            class="rm-alert__icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path d="M12 10v6"></path>
+                            <path d="M12 7h.01"></path>
+                        </svg>
+
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Registration information
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Registration opens on Monday.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        id="alert-success"
+                        class="rm-alert rm-alert--success"
+                    >
+                        <svg
+                            class="rm-alert__icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path
+                                d="m8 12 3 3 5-6"
+                            ></path>
+                        </svg>
+
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Changes saved
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Your profile information was updated successfully.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        id="alert-warning"
+                        class="rm-alert rm-alert--warning"
+                    >
+                        <svg
+                            class="rm-alert__icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path
+                                d="M12 3 2.5 20h19L12 3Z"
+                            ></path>
+
+                            <path d="M12 9v4"></path>
+                            <path d="M12 17h.01"></path>
+                        </svg>
+
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Verification required
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Please verify your email before continuing.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        id="alert-danger"
+                        class="rm-alert rm-alert--danger"
+                    >
+                        <svg
+                            class="rm-alert__icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path d="m9 9 6 6"></path>
+                            <path d="m15 9-6 6"></path>
+                        </svg>
+
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Unable to save
+                            </p>
+
+                            <p class="rm-alert__message">
+                                We could not save your changes.
+                                Please try again.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Actions -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="alert-light-actions-title"
+            >
+                <h3 id="alert-light-actions-title">
+                    Alert Actions — Light Theme
+                </h3>
+
+                <div
+                    id="alert-actions"
+                    class="rm-alert rm-alert--danger"
+                >
+                    <div class="rm-alert__content">
+
+                        <p class="rm-alert__title">
+                            Submission failed
+                        </p>
+
+                        <p class="rm-alert__message">
+                            The form could not be submitted.
+                        </p>
+
+                        <div class="rm-alert__actions">
+
+                            <button
+                                id="alert-retry"
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--primary
+                                "
+                            >
+                                Try again
+                            </button>
+
+                            <button
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--secondary
+                                "
+                            >
+                                Review form
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Form Summary -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="alert-light-form-title"
+            >
+                <h3 id="alert-light-form-title">
+                    Form-level Summary — Light Theme
+                </h3>
+
+                <div
+                    id="alert-form-summary"
+                    class="rm-alert rm-alert--danger"
+                >
+                    <div class="rm-alert__content">
+
+                        <p class="rm-alert__title">
+                            Please review the form
+                        </p>
+
+                        <p class="rm-alert__message">
+                            Some fields need your attention.
+                            Individual errors remain displayed
+                            near their related fields.
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="alert-light-long-title"
+            >
+                <h3 id="alert-light-long-title">
+                    Long Content — Light Theme
+                </h3>
+
+                <div
+                    id="alert-narrow-container"
+                    class="rm-demo__narrow"
+                >
+                    <div
+                        id="alert-long"
+                        class="rm-alert rm-alert--warning"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Verifikasi tambahan diperlukan
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Sebelum melanjutkan proses administrasi,
+                                silakan periksa kembali seluruh dokumen
+                                yang sudah diunggah dan pastikan informasi
+                                yang diberikan sesuai dengan data resmi.
+                            </p>
+
+                            <div class="rm-alert__actions">
+
+                                <button
+                                    type="button"
+                                    class="
+                                        rm-button
+                                        rm-button--primary
+                                    "
+                                >
+                                    Periksa Dokumen
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="
+                                        rm-button
+                                        rm-button--secondary
+                                    "
+                                >
+                                    Nanti
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="alert-dark-theme-title"
+        >
+            <h2 id="alert-dark-theme-title">
+                Alert — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="alert-dark-variants-title"
+            >
+                <h3 id="alert-dark-variants-title">
+                    Variants — Dark Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="alert-dark-neutral"
+                        class="rm-alert"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                General notice
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Neutral contextual information.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        id="alert-dark-info"
+                        class="rm-alert rm-alert--info"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Information
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Registration opens on Monday.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="rm-alert rm-alert--success"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Changes saved
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Your changes were saved successfully.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="rm-alert rm-alert--warning"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Attention required
+                            </p>
+
+                            <p class="rm-alert__message">
+                                Please verify your information.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="rm-alert rm-alert--danger"
+                    >
+                        <div class="rm-alert__content">
+
+                            <p class="rm-alert__title">
+                                Unable to load
+                            </p>
+
+                            <p class="rm-alert__message">
+                                The requested information is unavailable.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

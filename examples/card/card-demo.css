@@ -1,0 +1,126 @@
+/*
+ * Rahardianmif UI
+ * Card Demo Styles
+ *
+ * Demo-only styles.
+ * Not part of the public component API.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: var(--rm-font-family-sans);
+
+  color: var(--rm-text-primary);
+  background: var(--rm-page-bg);
+}
+
+.rm-demo {
+  display: grid;
+
+  gap: var(--rm-space-8);
+
+  padding: var(--rm-space-6);
+}
+
+.rm-demo > h1 {
+  margin: 0;
+}
+
+.rm-demo__theme {
+  display: grid;
+
+  gap: var(--rm-space-6);
+
+  padding: var(--rm-space-6);
+
+  border: 1px solid var(--rm-border);
+  border-radius: var(--rm-radius-lg);
+
+  background: var(--rm-page-bg);
+  color: var(--rm-text-primary);
+}
+
+.rm-demo__theme > h2 {
+  margin: 0;
+}
+
+.rm-demo__section {
+  display: grid;
+
+  gap: var(--rm-space-4);
+}
+
+.rm-demo__section > h3 {
+  margin: 0;
+
+  font-size: var(--rm-font-size-lg);
+}
+
+.rm-demo__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        min(100%, 18rem),
+        1fr
+      )
+    );
+
+  gap: var(--rm-space-5);
+}
+
+.rm-demo__narrow {
+  inline-size: 100%;
+  max-inline-size: 18rem;
+}
+
+.rm-demo__media {
+  display: grid;
+
+  place-items: center;
+
+  min-block-size: 10rem;
+
+  padding: var(--rm-space-6);
+
+  background: var(--rm-surface-secondary);
+
+  color: var(--rm-text-secondary);
+
+  font-weight: var(--rm-font-weight-semibold);
+}
+
+.rm-demo__body-copy {
+  margin: 0;
+
+  color: var(--rm-text-secondary);
+
+  line-height: var(--rm-line-height-normal);
+}
+
+.rm-demo__metadata {
+  margin: 0;
+
+  color: var(--rm-text-muted);
+
+  font-size: var(--rm-font-size-sm);
+}
+
+@media (max-width: 32rem) {
+  .rm-demo {
+    padding: var(--rm-space-4);
+  }
+
+  .rm-demo__theme {
+    padding: var(--rm-space-4);
+  }
+}

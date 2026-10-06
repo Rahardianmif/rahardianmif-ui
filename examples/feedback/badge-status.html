@@ -1,0 +1,569 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Badge + Status Indicator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./feedback-demo.css"
+    >
+</head>
+
+<body>
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Badge + Status Indicator
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="light-theme-title"
+        >
+            <h2 id="light-theme-title">
+                Light Theme
+            </h2>
+
+
+            <!-- Badge Variants -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="light-badge-variants-title"
+            >
+                <h3 id="light-badge-variants-title">
+                    Badge Variants — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        id="badge-default"
+                        class="rm-badge"
+                    >
+                        Default
+                    </span>
+
+                    <span
+                        id="badge-primary"
+                        class="rm-badge rm-badge--primary"
+                    >
+                        Primary
+                    </span>
+
+                    <span
+                        id="badge-success"
+                        class="rm-badge rm-badge--success"
+                    >
+                        Success
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--warning"
+                    >
+                        Warning
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--danger"
+                    >
+                        Danger
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--info"
+                    >
+                        Info
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Badge Sizes -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="light-badge-sizes-title"
+            >
+                <h3 id="light-badge-sizes-title">
+                    Badge Sizes — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        id="badge-sm"
+                        class="rm-badge rm-badge--sm"
+                    >
+                        Small
+                    </span>
+
+                    <span
+                        id="badge-md"
+                        class="rm-badge"
+                    >
+                        Medium
+                    </span>
+
+                    <span
+                        id="badge-lg"
+                        class="rm-badge rm-badge--lg"
+                    >
+                        Large
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Badge with Dot -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="light-badge-dot-title"
+            >
+                <h3 id="light-badge-dot-title">
+                    Badge with Dot — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        class="rm-badge rm-badge--success"
+                    >
+                        <span
+                            class="rm-badge__dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Active
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--warning"
+                    >
+                        <span
+                            class="rm-badge__dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Pending
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--danger"
+                    >
+                        <span
+                            class="rm-badge__dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Failed
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Badge with Icon -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="light-badge-icon-title"
+            >
+                <h3 id="light-badge-icon-title">
+                    Badge with Icon — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        class="rm-badge rm-badge--info"
+                    >
+                        <svg
+                            class="rm-badge__icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path
+                                d="M12 10v6"
+                            ></path>
+
+                            <path
+                                d="M12 7h.01"
+                            ></path>
+                        </svg>
+
+                        Information
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="light-badge-long-title"
+            >
+                <h3 id="light-badge-long-title">
+                    Long Badge Content — Light Theme
+                </h3>
+
+                <div
+                    id="badge-long-container"
+                    class="rm-demo__long-content"
+                >
+                    <span
+                        id="badge-long"
+                        class="rm-badge rm-badge--primary"
+                    >
+                        Menunggu Persetujuan Ketua Program Studi
+                    </span>
+                </div>
+            </section>
+
+
+            <!-- Status Indicator -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="status-light-title"
+            >
+                <h3 id="status-light-title">
+                    Status Indicator — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <span
+                        id="status-success"
+                        class="rm-status rm-status--success"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Operational
+                    </span>
+
+                    <span
+                        class="rm-status rm-status--warning"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Pending
+                    </span>
+
+                    <span
+                        id="status-danger"
+                        class="rm-status rm-status--danger"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Offline
+                    </span>
+
+                    <span
+                        class="rm-status rm-status--info"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Processing
+                    </span>
+
+                    <span
+                        class="rm-status"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Unknown
+                    </span>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="dark-theme-title"
+        >
+            <h2 id="dark-theme-title">
+                Dark Theme
+            </h2>
+
+
+            <!-- Badge Variants -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="dark-badge-variants-title"
+            >
+                <h3 id="dark-badge-variants-title">
+                    Badge Variants — Dark Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span class="rm-badge">
+                        Default
+                    </span>
+
+                    <span
+                        id="dark-badge-primary"
+                        class="rm-badge rm-badge--primary"
+                    >
+                        Primary
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--success"
+                    >
+                        Success
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--warning"
+                    >
+                        Warning
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--danger"
+                    >
+                        Danger
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--info"
+                    >
+                        Info
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Badge with Dot -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="dark-badge-dot-title"
+            >
+                <h3 id="dark-badge-dot-title">
+                    Badge with Dot — Dark Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        class="rm-badge rm-badge--success"
+                    >
+                        <span
+                            class="rm-badge__dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Active
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--warning"
+                    >
+                        <span
+                            class="rm-badge__dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Pending
+                    </span>
+
+                    <span
+                        class="rm-badge rm-badge--danger"
+                    >
+                        <span
+                            class="rm-badge__dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Failed
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Badge with Icon -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="dark-badge-icon-title"
+            >
+                <h3 id="dark-badge-icon-title">
+                    Badge with Icon — Dark Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        class="rm-badge rm-badge--info"
+                    >
+                        <svg
+                            class="rm-badge__icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path
+                                d="M12 10v6"
+                            ></path>
+
+                            <path
+                                d="M12 7h.01"
+                            ></path>
+                        </svg>
+
+                        Information
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Status Indicator -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="status-dark-title"
+            >
+                <h3 id="status-dark-title">
+                    Status Indicator — Dark Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <span
+                        class="rm-status rm-status--success"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Operational
+                    </span>
+
+                    <span
+                        class="rm-status rm-status--warning"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Pending
+                    </span>
+
+                    <span
+                        class="rm-status rm-status--danger"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Offline
+                    </span>
+
+                    <span
+                        class="rm-status rm-status--info"
+                    >
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Processing
+                    </span>
+
+                    <span class="rm-status">
+                        <span
+                            class="rm-status__indicator"
+                            aria-hidden="true"
+                        ></span>
+
+                        Unknown
+                    </span>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+</body>
+
+</html>

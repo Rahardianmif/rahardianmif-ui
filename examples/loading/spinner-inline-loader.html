@@ -1,0 +1,340 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Spinner + Inline Loader
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./loading-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Spinner + Inline Loader
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="spinner-light-theme-title"
+        >
+            <h2 id="spinner-light-theme-title">
+                Spinner + Inline Loader — Light Theme
+            </h2>
+
+
+            <!-- Spinner Sizes -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="spinner-light-sizes-title"
+            >
+                <h3 id="spinner-light-sizes-title">
+                    Spinner Sizes — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span>
+                        <span
+                            id="spinner-sm"
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-demo__sr-only">
+                            Loading
+                        </span>
+                    </span>
+
+
+                    <span>
+                        <span
+                            id="spinner-md"
+                            class="rm-spinner"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-demo__sr-only">
+                            Loading
+                        </span>
+                    </span>
+
+
+                    <span>
+                        <span
+                            id="spinner-lg"
+                            class="
+                                rm-spinner
+                                rm-spinner--lg
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-demo__sr-only">
+                            Loading
+                        </span>
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Inline Loader -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="inline-light-title"
+            >
+                <h3 id="inline-light-title">
+                    Inline Loader — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <span
+                        id="inline-loading"
+                        class="rm-inline-loader"
+                    >
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-inline-loader__label">
+                            Loading...
+                        </span>
+                    </span>
+
+
+                    <span
+                        id="inline-saving"
+                        class="rm-inline-loader"
+                    >
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-inline-loader__label">
+                            Saving changes...
+                        </span>
+                    </span>
+
+
+                    <span
+                        class="rm-inline-loader"
+                    >
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-inline-loader__label">
+                            Memuat data...
+                        </span>
+                    </span>
+
+                </div>
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="inline-light-long-title"
+            >
+                <h3 id="inline-light-long-title">
+                    Long Content — Light Theme
+                </h3>
+
+                <div
+                    id="inline-narrow-container"
+                    class="rm-demo__narrow"
+                >
+                    <span
+                        id="inline-long"
+                        class="rm-inline-loader"
+                    >
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-inline-loader__label">
+                            Sedang memproses data pendaftaran mahasiswa
+                            dan menyiapkan informasi yang diperlukan...
+                        </span>
+                    </span>
+                </div>
+            </section>
+
+
+            <!-- Button Composition -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="spinner-button-title"
+            >
+                <h3 id="spinner-button-title">
+                    Button Composition — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <button
+                        id="spinner-button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                            is-loading
+                        "
+                        type="button"
+                        aria-busy="true"
+                    >
+                        <span
+                            id="spinner-button-icon"
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        Saving...
+                    </button>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="spinner-dark-theme-title"
+        >
+            <h2 id="spinner-dark-theme-title">
+                Spinner + Inline Loader — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="spinner-dark-sizes-title"
+            >
+                <h3 id="spinner-dark-sizes-title">
+                    Spinner Sizes — Dark Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <span
+                        class="
+                            rm-spinner
+                            rm-spinner--sm
+                        "
+                        aria-hidden="true"
+                    ></span>
+
+                    <span
+                        id="spinner-dark-md"
+                        class="rm-spinner"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span
+                        class="
+                            rm-spinner
+                            rm-spinner--lg
+                        "
+                        aria-hidden="true"
+                    ></span>
+
+                </div>
+            </section>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="inline-dark-title"
+            >
+                <h3 id="inline-dark-title">
+                    Inline Loader — Dark Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <span
+                        id="inline-dark"
+                        class="rm-inline-loader"
+                    >
+                        <span
+                            class="
+                                rm-spinner
+                                rm-spinner--sm
+                            "
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="rm-inline-loader__label">
+                            Loading account information...
+                        </span>
+                    </span>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

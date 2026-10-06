@@ -1,0 +1,354 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Skeleton
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./loading-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Skeleton
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="skeleton-light-theme-title"
+        >
+            <h2 id="skeleton-light-theme-title">
+                Skeleton — Light Theme
+            </h2>
+
+
+            <!-- Rectangle -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-light-rectangle-title"
+            >
+                <h3 id="skeleton-light-rectangle-title">
+                    Rectangle — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="skeleton-rectangle"
+                        class="rm-skeleton"
+                        style="
+                            inline-size: 100%;
+                            block-size: 8rem;
+                        "
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+            </section>
+
+
+            <!-- Text -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-light-text-title"
+            >
+                <h3 id="skeleton-light-text-title">
+                    Text — Light Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="skeleton-text-full"
+                        class="rm-skeleton rm-skeleton--text"
+                        style="inline-size: 100%;"
+                        aria-hidden="true"
+                    ></div>
+
+                    <div
+                        id="skeleton-text-medium"
+                        class="rm-skeleton rm-skeleton--text"
+                        style="inline-size: 75%;"
+                        aria-hidden="true"
+                    ></div>
+
+                    <div
+                        id="skeleton-text-short"
+                        class="rm-skeleton rm-skeleton--text"
+                        style="inline-size: 45%;"
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+            </section>
+
+
+            <!-- Circle -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-light-circle-title"
+            >
+                <h3 id="skeleton-light-circle-title">
+                    Circle — Light Theme
+                </h3>
+
+                <div class="rm-demo__group">
+
+                    <div
+                        id="skeleton-circle"
+                        class="rm-skeleton rm-skeleton--circle"
+                        style="inline-size: 3rem;"
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+            </section>
+
+
+            <!-- Loading Region -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-light-region-title"
+            >
+                <h3 id="skeleton-light-region-title">
+                    Loading Region — Light Theme
+                </h3>
+
+                <div
+                    id="skeleton-loading-region"
+                    class="rm-card"
+                    aria-busy="true"
+                    aria-labelledby="skeleton-loading-region-label"
+                >
+
+                    <div class="rm-card__body">
+
+                        <p
+                            id="skeleton-loading-region-label"
+                            class="rm-demo__metadata"
+                        >
+                            Loading account summary
+                        </p>
+
+
+                        <div
+                            class="rm-demo__stack"
+                            style="margin-block-start: var(--rm-space-4);"
+                        >
+
+                            <div
+                                class="rm-skeleton rm-skeleton--text"
+                                style="inline-size: 55%;"
+                                aria-hidden="true"
+                            ></div>
+
+                            <div
+                                class="rm-skeleton rm-skeleton--text"
+                                style="inline-size: 100%;"
+                                aria-hidden="true"
+                            ></div>
+
+                            <div
+                                class="rm-skeleton rm-skeleton--text"
+                                style="inline-size: 80%;"
+                                aria-hidden="true"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Composition -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-light-composition-title"
+            >
+                <h3 id="skeleton-light-composition-title">
+                    Primitive Composition — Light Theme
+                </h3>
+
+                <article
+                    id="skeleton-card-example"
+                    class="rm-card"
+                    aria-busy="true"
+                    aria-label="Loading profile information"
+                >
+
+                    <div class="rm-card__body">
+
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: var(--rm-space-4);
+                            "
+                        >
+
+                            <div
+                                class="rm-skeleton rm-skeleton--circle"
+                                style="
+                                    inline-size: 4rem;
+                                    flex: 0 0 auto;
+                                "
+                                aria-hidden="true"
+                            ></div>
+
+
+                            <div
+                                style="
+                                    display: grid;
+                                    gap: var(--rm-space-2);
+                                    flex: 1 1 auto;
+                                    min-inline-size: 0;
+                                "
+                            >
+
+                                <div
+                                    class="rm-skeleton rm-skeleton--text"
+                                    style="inline-size: 55%;"
+                                    aria-hidden="true"
+                                ></div>
+
+                                <div
+                                    class="rm-skeleton rm-skeleton--text"
+                                    style="inline-size: 80%;"
+                                    aria-hidden="true"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- Narrow Container -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-light-responsive-title"
+            >
+                <h3 id="skeleton-light-responsive-title">
+                    Narrow Container — Light Theme
+                </h3>
+
+                <div
+                    id="skeleton-narrow-container"
+                    class="rm-demo__narrow"
+                >
+
+                    <div
+                        id="skeleton-responsive"
+                        class="rm-skeleton"
+                        style="
+                            inline-size: 100%;
+                            block-size: 6rem;
+                        "
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="skeleton-dark-theme-title"
+        >
+            <h2 id="skeleton-dark-theme-title">
+                Skeleton — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="skeleton-dark-shapes-title"
+            >
+                <h3 id="skeleton-dark-shapes-title">
+                    Skeleton Shapes — Dark Theme
+                </h3>
+
+                <div class="rm-demo__stack">
+
+                    <div
+                        id="skeleton-dark-rectangle"
+                        class="rm-skeleton"
+                        style="
+                            inline-size: 100%;
+                            block-size: 8rem;
+                        "
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div
+                        id="skeleton-dark-text"
+                        class="rm-skeleton rm-skeleton--text"
+                        style="inline-size: 70%;"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div
+                        id="skeleton-dark-circle"
+                        class="rm-skeleton rm-skeleton--circle"
+                        style="inline-size: 3rem;"
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

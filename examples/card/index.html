@@ -1,0 +1,447 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Card Core
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./card-demo.css"
+    >
+</head>
+
+<body>
+
+    <main class="rm-demo">
+
+        <h1>
+            Rahardianmif UI Card Core
+        </h1>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="card-light-theme-title"
+        >
+            <h2 id="card-light-theme-title">
+                Card Core — Light Theme
+            </h2>
+
+
+            <!-- Basic Card -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-light-basic-title"
+            >
+                <h3 id="card-light-basic-title">
+                    Basic Card — Light Theme
+                </h3>
+
+                <div class="rm-demo__grid">
+
+                    <div
+                        id="card-basic"
+                        class="rm-card"
+                    >
+                        <div class="rm-card__body">
+                            Basic Card content.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Presentation -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-light-presentation-title"
+            >
+                <h3 id="card-light-presentation-title">
+                    Card Presentation — Light Theme
+                </h3>
+
+                <div class="rm-demo__grid">
+
+                    <article
+                        id="card-default"
+                        class="rm-card"
+                    >
+                        <div class="rm-card__body">
+                            Default Card
+                        </div>
+                    </article>
+
+
+                    <article
+                        id="card-bordered"
+                        class="rm-card rm-card--bordered"
+                    >
+                        <div class="rm-card__body">
+                            Bordered Card
+                        </div>
+                    </article>
+
+
+                    <article
+                        id="card-elevated"
+                        class="rm-card rm-card--elevated"
+                    >
+                        <div class="rm-card__body">
+                            Elevated Card
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- Full Anatomy -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-light-anatomy-title"
+            >
+                <h3 id="card-light-anatomy-title">
+                    Full Anatomy — Light Theme
+                </h3>
+
+                <article
+                    id="card-full"
+                    class="rm-card"
+                >
+                    <header class="rm-card__header">
+
+                        <div>
+                            <h4 class="rm-card__title">
+                                Payment
+                            </h4>
+
+                            <p class="rm-card__description">
+                                Current transaction information.
+                            </p>
+                        </div>
+
+
+                        <span
+                            class="rm-badge rm-badge--success"
+                        >
+                            <span
+                                class="rm-badge__dot"
+                                aria-hidden="true"
+                            ></span>
+
+                            Paid
+                        </span>
+
+                    </header>
+
+
+                    <div class="rm-card__body">
+
+                        <p class="rm-demo__body-copy">
+                            Payment was received and verified.
+                            You can open the transaction detail
+                            for additional information.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-card__footer">
+
+                        <div class="rm-card__actions">
+
+                            <button
+                                id="card-primary-action"
+                                class="
+                                    rm-button
+                                    rm-button--primary
+                                "
+                                type="button"
+                            >
+                                View detail
+                            </button>
+
+
+                            <button
+                                class="
+                                    rm-button
+                                    rm-button--secondary
+                                "
+                                type="button"
+                            >
+                                Download
+                            </button>
+
+                        </div>
+
+                    </footer>
+                </article>
+            </section>
+
+
+            <!-- Media -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-light-media-title"
+            >
+                <h3 id="card-light-media-title">
+                    Media Slot — Light Theme
+                </h3>
+
+                <article
+                    id="card-media"
+                    class="rm-card"
+                >
+
+                    <div
+                        class="
+                            rm-card__media
+                            rm-demo__media
+                        "
+                    >
+                        Media
+                    </div>
+
+
+                    <div class="rm-card__body">
+
+                        <h4 class="rm-card__title">
+                            Media Card Composition
+                        </h4>
+
+                        <p class="rm-card__description">
+                            The Card Core does not define
+                            advanced image behavior.
+                        </p>
+
+                    </div>
+
+                </article>
+            </section>
+
+
+            <!-- Long Content -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-light-long-title"
+            >
+                <h3 id="card-light-long-title">
+                    Long Content — Light Theme
+                </h3>
+
+                <div
+                    id="card-narrow-container"
+                    class="rm-demo__narrow"
+                >
+
+                    <article
+                        id="card-long"
+                        class="rm-card"
+                    >
+
+                        <header class="rm-card__header">
+
+                            <div>
+                                <h4 class="rm-card__title">
+                                    Pengaturan Administrasi dan
+                                    Konfigurasi Sistem Akademik
+                                </h4>
+
+                                <p class="rm-card__description">
+                                    Konfigurasi ini digunakan untuk
+                                    mengelola informasi akademik dengan
+                                    judul dan deskripsi yang lebih panjang.
+                                </p>
+                            </div>
+
+                        </header>
+
+
+                        <div class="rm-card__body">
+
+                            <p class="rm-demo__body-copy">
+                                Content tetap harus dapat menyesuaikan
+                                container sempit tanpa fixed width,
+                                clipping, atau horizontal overflow.
+                            </p>
+
+                        </div>
+
+
+                        <footer class="rm-card__footer">
+
+                            <div class="rm-card__actions">
+
+                                <button
+                                    class="
+                                        rm-button
+                                        rm-button--primary
+                                    "
+                                    type="button"
+                                >
+                                    Simpan Perubahan
+                                </button>
+
+                                <button
+                                    class="
+                                        rm-button
+                                        rm-button--secondary
+                                    "
+                                    type="button"
+                                >
+                                    Batalkan
+                                </button>
+
+                            </div>
+
+                        </footer>
+
+                    </article>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="card-dark-theme-title"
+        >
+            <h2 id="card-dark-theme-title">
+                Card Core — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-dark-presentation-title"
+            >
+                <h3 id="card-dark-presentation-title">
+                    Card Presentation — Dark Theme
+                </h3>
+
+                <div class="rm-demo__grid">
+
+                    <article
+                        id="card-dark-default"
+                        class="rm-card"
+                    >
+                        <div class="rm-card__body">
+                            Default Card
+                        </div>
+                    </article>
+
+
+                    <article
+                        id="card-dark-bordered"
+                        class="rm-card rm-card--bordered"
+                    >
+                        <div class="rm-card__body">
+                            Bordered Card
+                        </div>
+                    </article>
+
+
+                    <article
+                        id="card-dark-elevated"
+                        class="rm-card rm-card--elevated"
+                    >
+                        <div class="rm-card__body">
+                            Elevated Card
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="card-dark-composition-title"
+            >
+                <h3 id="card-dark-composition-title">
+                    Composition — Dark Theme
+                </h3>
+
+                <article class="rm-card">
+
+                    <header class="rm-card__header">
+
+                        <div>
+                            <h4 class="rm-card__title">
+                                Service Health
+                            </h4>
+
+                            <p class="rm-card__description">
+                                Current application service state.
+                            </p>
+                        </div>
+
+
+                        <span
+                            class="
+                                rm-status
+                                rm-status--success
+                            "
+                        >
+                            <span
+                                class="rm-status__indicator"
+                                aria-hidden="true"
+                            ></span>
+
+                            Operational
+                        </span>
+
+                    </header>
+
+
+                    <div class="rm-card__body">
+
+                        <p class="rm-demo__metadata">
+                            Last checked a few moments ago.
+                        </p>
+
+                    </div>
+
+                </article>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

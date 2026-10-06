@@ -1,0 +1,147 @@
+/*
+ * Rahardianmif UI
+ * Feedback State Component
+ *
+ * v0.3.7
+ *
+ * Region-level static feedback states:
+ * - Empty
+ * - No Result
+ * - Error
+ *
+ * No JavaScript.
+ */
+
+.rm-feedback-state {
+  --rm-feedback-state-accent: var(--rm-text-muted);
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  justify-items: center;
+
+  gap: var(--rm-space-4);
+
+  min-inline-size: 0;
+
+  padding: var(--rm-space-6);
+
+  border: 1px solid var(--rm-border-soft);
+  border-radius: var(--rm-radius-lg);
+
+  background: var(--rm-surface);
+  color: var(--rm-text-primary);
+
+  text-align: center;
+}
+
+
+/* ========================================
+ * States
+ * ======================================== */
+
+.rm-feedback-state--empty {
+  --rm-feedback-state-accent: var(--rm-text-muted);
+}
+
+.rm-feedback-state--no-result {
+  --rm-feedback-state-accent: var(--rm-info);
+}
+
+.rm-feedback-state--error {
+  --rm-feedback-state-accent: var(--rm-danger);
+  border-color: var(--rm-danger);
+}
+
+
+/* ========================================
+ * Visual
+ * ======================================== */
+
+.rm-feedback-state__visual {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  inline-size: var(--rm-space-8);
+  block-size: var(--rm-space-8);
+
+  flex: 0 0 auto;
+
+  color: var(--rm-feedback-state-accent);
+}
+
+.rm-feedback-state__visual svg {
+  display: block;
+
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+
+/* ========================================
+ * Content
+ * ======================================== */
+
+.rm-feedback-state__content {
+  display: grid;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+  max-inline-size: 36rem;
+}
+
+
+/* ========================================
+ * Title
+ * ======================================== */
+
+.rm-feedback-state__title {
+  margin: 0;
+
+  color: var(--rm-text-primary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-lg);
+  font-weight: var(--rm-font-weight-semibold);
+  line-height: var(--rm-line-height-snug);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Description
+ * ======================================== */
+
+.rm-feedback-state__description {
+  margin: 0;
+
+  color: var(--rm-text-secondary);
+
+  font-family: var(--rm-font-family-sans);
+  font-size: var(--rm-font-size-sm);
+  line-height: var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Actions
+ * ======================================== */
+
+.rm-feedback-state__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+}

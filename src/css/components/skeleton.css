@@ -1,0 +1,101 @@
+/*
+ * Rahardianmif UI
+ * Skeleton Component
+ *
+ * v0.3.6
+ *
+ * Visual placeholder for content
+ * that is expected to load.
+ *
+ * Shapes:
+ * - Rectangle: default
+ * - Text
+ * - Circle
+ *
+ * No JavaScript.
+ */
+
+.rm-skeleton {
+  box-sizing: border-box;
+
+  display: block;
+
+  min-inline-size: 0;
+  max-inline-size: 100%;
+
+  overflow: hidden;
+
+  border-radius: var(--rm-radius-md);
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--rm-surface-secondary) 25%,
+      var(--rm-surface-strong) 50%,
+      var(--rm-surface-secondary) 75%
+    );
+
+  background-size: 200% 100%;
+
+  animation:
+    rm-skeleton-shimmer
+    calc(
+      var(--rm-motion-extended)
+      +
+      var(--rm-motion-extended)
+      +
+      var(--rm-motion-extended)
+    )
+    ease-in-out
+    infinite;
+}
+
+
+/* ========================================
+ * Text
+ * ======================================== */
+
+.rm-skeleton--text {
+  block-size: 1em;
+
+  border-radius: var(--rm-radius-sm);
+}
+
+
+/* ========================================
+ * Circle
+ * ======================================== */
+
+.rm-skeleton--circle {
+  aspect-ratio: 1;
+
+  border-radius: var(--rm-radius-circle);
+}
+
+
+/* ========================================
+ * Animation
+ * ======================================== */
+
+@keyframes rm-skeleton-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-skeleton {
+    animation: none;
+
+    background: var(--rm-surface-secondary);
+  }
+}
