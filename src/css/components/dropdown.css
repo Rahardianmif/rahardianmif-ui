@@ -1,0 +1,361 @@
+/*
+ * Rahardianmif UI
+ * Dropdown Menu
+ *
+ * v0.5.6
+ */
+
+
+/* ========================================
+ * Dropdown Root
+ * ======================================== */
+
+.rm-dropdown {
+  box-sizing:
+    border-box;
+
+  position:
+    fixed;
+
+  inset:
+    auto;
+
+  z-index:
+    var(--rm-z-dropdown);
+
+  inline-size:
+    max-content;
+
+  min-inline-size:
+    12rem;
+
+  max-inline-size:
+    min(
+      20rem,
+      calc(
+        100vw
+        -
+        var(--rm-space-4)
+      )
+    );
+
+  max-block-size:
+    calc(
+      100vh
+      -
+      var(--rm-space-4)
+    );
+
+  max-block-size:
+    calc(
+      100dvb
+      -
+      var(--rm-space-4)
+    );
+
+  margin:
+    0;
+
+  padding:
+    var(--rm-space-1);
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface-elevated);
+
+  color:
+    var(--rm-text-primary);
+
+  box-shadow:
+    var(--rm-shadow-lg);
+
+  font-family:
+    var(--rm-font-family-sans);
+
+  overflow-x:
+    hidden;
+
+  overflow-y:
+    auto;
+
+  overscroll-behavior:
+    contain;
+
+  opacity:
+    0;
+
+  transform:
+    translate(
+      var(
+        --rm-floating-enter-x,
+        0px
+      ),
+      var(
+        --rm-floating-enter-y,
+        -4px
+      )
+    );
+
+  transition:
+    opacity
+      var(--rm-motion-fast),
+    transform
+      var(--rm-motion-fast),
+    overlay
+      var(--rm-motion-fast),
+    display
+      var(--rm-motion-fast);
+
+  transition-behavior:
+    normal,
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+
+/* ========================================
+ * Open State
+ * ======================================== */
+
+.rm-dropdown:popover-open {
+  opacity:
+    1;
+
+  transform:
+    translate(
+      0,
+      0
+    );
+}
+
+
+@starting-style {
+  .rm-dropdown:popover-open {
+    opacity:
+      0;
+
+    transform:
+      translate(
+        var(
+          --rm-floating-enter-x,
+          0px
+        ),
+        var(
+          --rm-floating-enter-y,
+          -4px
+        )
+      );
+  }
+}
+
+
+/* ========================================
+ * Menu Item
+ * ======================================== */
+
+.rm-dropdown__item {
+  appearance:
+    none;
+
+  box-sizing:
+    border-box;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    var(--rm-space-2);
+
+  inline-size:
+    100%;
+
+  min-block-size:
+    2.5rem;
+
+  padding:
+    var(--rm-space-2)
+    var(--rm-space-3);
+
+  border:
+    0;
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    transparent;
+
+  color:
+    var(--rm-text-primary);
+
+  font:
+    inherit;
+
+  font-size:
+    var(--rm-font-size-sm);
+
+  font-weight:
+    var(--rm-font-weight-medium);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  text-align:
+    start;
+
+  text-decoration:
+    none;
+
+  white-space:
+    normal;
+
+  overflow-wrap:
+    anywhere;
+
+  cursor:
+    pointer;
+
+  transition:
+    background-color
+      var(--rm-motion-fast),
+    color
+      var(--rm-motion-fast);
+}
+
+
+.rm-dropdown__item:hover:not(
+  [aria-disabled="true"]
+):not(:disabled) {
+  background:
+    var(--rm-surface-secondary);
+}
+
+
+.rm-dropdown__item:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset:
+    -2px;
+}
+
+
+.rm-dropdown__item[
+  aria-disabled="true"
+],
+.rm-dropdown__item:disabled {
+  opacity:
+    0.5;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* ========================================
+ * Item Icon Composition
+ * ======================================== */
+
+.rm-dropdown__item > svg {
+  flex:
+    0 0 auto;
+
+  inline-size:
+    1.125em;
+
+  block-size:
+    1.125em;
+
+  pointer-events:
+    none;
+}
+
+
+/* ========================================
+ * Danger Item
+ * ======================================== */
+
+.rm-dropdown__item--danger {
+  color:
+    var(--rm-danger);
+}
+
+
+.rm-dropdown__item--danger:hover:not(
+  [aria-disabled="true"]
+):not(:disabled) {
+  background:
+    var(--rm-surface-secondary);
+
+  color:
+    var(--rm-danger);
+}
+
+
+/* ========================================
+ * Separator
+ * ======================================== */
+
+.rm-dropdown__separator {
+  block-size:
+    1px;
+
+  margin:
+    var(--rm-space-1)
+    var(--rm-space-2);
+
+  border:
+    0;
+
+  background:
+    var(--rm-border-soft);
+
+  pointer-events:
+    none;
+}
+
+
+/* ========================================
+ * Responsive
+ * ======================================== */
+
+@media (max-width: 35.999rem) {
+  .rm-dropdown {
+    max-inline-size:
+      calc(
+        100vw
+        -
+        var(--rm-space-4)
+      );
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-dropdown,
+  .rm-dropdown__item {
+    transition:
+      none;
+  }
+
+  .rm-dropdown,
+  .rm-dropdown:popover-open {
+    transform:
+      none;
+  }
+}

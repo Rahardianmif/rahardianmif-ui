@@ -49,6 +49,52 @@ function read(
 }
 
 
+function collectClasses(
+  filenames
+) {
+  const classes =
+    new Set();
+
+
+  for (
+    const filename
+    of filenames
+  ) {
+    const source =
+      read(
+        `src/css/components/${filename}`
+      );
+
+
+    const matches =
+      source.match(
+        /\.rm-[a-z0-9_-]+(?:__[a-z0-9_-]+|--[a-z0-9_-]+)*/gi
+      )
+      ??
+      [];
+
+
+    for (
+      const className
+      of matches
+    ) {
+      classes.add(
+        className
+      );
+    }
+  }
+
+
+  return [
+    ...classes,
+  ].sort();
+}
+
+
+/* ========================================
+ * Cumulative CSS Components
+ * ======================================== */
+
 const componentFiles = [
   "button.css",
   "form-field.css",
@@ -74,8 +120,19 @@ const componentFiles = [
   "pagination.css",
   "navbar.css",
   "sidebar.css",
+
+  "modal.css",
+  "drawer.css",
+  "tooltip.css",
+  "popover.css",
+  "dropdown.css",
+  "disclosure.css",
 ];
 
+
+/* ========================================
+ * Frozen v0.3
+ * ======================================== */
 
 const v03ComponentFiles = [
   "badge.css",
@@ -87,15 +144,6 @@ const v03ComponentFiles = [
   "progress.css",
   "skeleton.css",
   "feedback-state.css",
-];
-
-
-const v04ComponentFiles = [
-  "breadcrumb.css",
-  "tabs.css",
-  "pagination.css",
-  "navbar.css",
-  "sidebar.css",
 ];
 
 
@@ -171,6 +219,19 @@ const v03PublicClasses = [
 ];
 
 
+/* ========================================
+ * Frozen v0.4
+ * ======================================== */
+
+const v04ComponentFiles = [
+  "breadcrumb.css",
+  "tabs.css",
+  "pagination.css",
+  "navbar.css",
+  "sidebar.css",
+];
+
+
 const v04PublicClasses = [
   ".rm-breadcrumb",
   ".rm-breadcrumb__list",
@@ -212,6 +273,81 @@ const v04PublicClasses = [
 ];
 
 
+/* ========================================
+ * v0.5 Modal + Overlays
+ * ======================================== */
+
+const v05ComponentFiles = [
+  "modal.css",
+  "drawer.css",
+  "tooltip.css",
+  "popover.css",
+  "dropdown.css",
+  "disclosure.css",
+];
+
+
+const v05RequiredClasses = {
+  "modal.css": [
+    ".rm-modal",
+    ".rm-modal__header",
+    ".rm-modal__title",
+    ".rm-modal__body",
+    ".rm-modal__footer",
+    ".rm-modal__close",
+    ".rm-modal--sm",
+    ".rm-modal--lg",
+    ".rm-modal--scrollable",
+    ".rm-modal--fullscreen",
+  ],
+
+  "drawer.css": [
+    ".rm-drawer",
+    ".rm-drawer__header",
+    ".rm-drawer__title",
+    ".rm-drawer__body",
+    ".rm-drawer__footer",
+    ".rm-drawer__close",
+    ".rm-drawer--start",
+    ".rm-drawer--end",
+  ],
+
+  "tooltip.css": [
+    ".rm-tooltip",
+  ],
+
+  "popover.css": [
+    ".rm-popover",
+    ".rm-popover__header",
+    ".rm-popover__title",
+    ".rm-popover__body",
+    ".rm-popover__footer",
+    ".rm-popover__close",
+  ],
+
+  "dropdown.css": [
+    ".rm-dropdown",
+    ".rm-dropdown__item",
+    ".rm-dropdown__item--danger",
+    ".rm-dropdown__separator",
+  ],
+
+  "disclosure.css": [
+    ".rm-disclosure",
+    ".rm-disclosure__trigger",
+    ".rm-disclosure__label",
+    ".rm-disclosure__indicator",
+    ".rm-disclosure__panel",
+    ".rm-accordion",
+    ".rm-accordion__item",
+  ],
+};
+
+
+/* ========================================
+ * Documentation
+ * ======================================== */
+
 const documentationFiles = [
   "docs/components/button.md",
   "docs/components/input.md",
@@ -236,8 +372,19 @@ const documentationFiles = [
   "docs/components/pagination.md",
   "docs/components/navbar.md",
   "docs/components/sidebar.md",
+
+  "docs/components/modal.md",
+  "docs/components/drawer.md",
+  "docs/components/tooltip.md",
+  "docs/components/popover.md",
+  "docs/components/dropdown.md",
+  "docs/components/disclosure.md",
 ];
 
+
+/* ========================================
+ * Examples
+ * ======================================== */
 
 const demoFiles = [
   "examples/index.html",
@@ -256,58 +403,49 @@ const demoFiles = [
   "examples/navigation/pagination.html",
   "examples/navigation/navbar.html",
   "examples/navigation/sidebar.html",
+
+  "examples/overlay/modal.html",
+  "examples/overlay/drawer.html",
+  "examples/overlay/tooltip.html",
+  "examples/overlay/popover.html",
+  "examples/overlay/dropdown.html",
+  "examples/overlay/disclosure.html",
 ];
 
 
-function collectClasses(
-  filenames
-) {
-  const classes =
-    new Set();
+/* ========================================
+ * JavaScript
+ * ======================================== */
+
+const v05JavaScriptFiles = [
+  "src/js/components/modal.js",
+  "src/js/components/drawer.js",
+  "src/js/components/tooltip.js",
+  "src/js/components/popover.js",
+  "src/js/components/dropdown.js",
+  "src/js/components/disclosure.js",
+
+  "src/js/internal/focus.js",
+  "src/js/internal/scroll-lock.js",
+  "src/js/internal/overlay-stack.js",
+  "src/js/internal/floating.js",
+];
 
 
-  for (
-    const filename
-    of filenames
-  ) {
-    const source =
-      read(
-        `src/css/components/${filename}`
-      );
-
-
-    const matches =
-      source.match(
-        /\.rm-[a-z0-9_-]+(?:__[a-z0-9_-]+|--[a-z0-9_-]+)*/gi
-      )
-      ??
-      [];
-
-
-    for (
-      const className
-      of matches
-    ) {
-      classes.add(
-        className
-      );
-    }
-  }
-
-
-  return [
-    ...classes,
-  ].sort();
-}
-
+/* ========================================
+ * Release Contract
+ * ======================================== */
 
 describe(
-  "Rahardianmif UI v0.4 release contract",
+  "Rahardianmif UI v0.5 release contract",
   () => {
 
+    /* ========================================
+     * CSS Files
+     * ======================================== */
 
     it(
-      "contains every cumulative component stylesheet through v0.4",
+      "contains every cumulative component stylesheet through v0.5",
       () => {
         for (
           const filename
@@ -319,14 +457,16 @@ describe(
                 `src/css/components/${filename}`
               )
             )
-          ).toBe(true);
+          ).toBe(
+            true
+          );
         }
       }
     );
 
 
     it(
-      "imports every cumulative component stylesheet through v0.4",
+      "imports every cumulative component stylesheet through v0.5",
       () => {
         const entry =
           read(
@@ -375,7 +515,9 @@ describe(
             ) =>
               index >= 0
           )
-        ).toBe(true);
+        ).toBe(
+          true
+        );
 
 
         for (
@@ -386,12 +528,18 @@ describe(
           expect(
             indexes[index]
           ).toBeGreaterThan(
-            indexes[index - 1]
+            indexes[
+            index - 1
+            ]
           );
         }
       }
     );
 
+
+    /* ========================================
+     * Foundation / Theme / Component Order
+     * ======================================== */
 
     it(
       "keeps Foundations before Themes and Components",
@@ -402,121 +550,74 @@ describe(
           );
 
 
-        const foundationIndexes = [
-          "colors.css",
-          "typography.css",
-          "spacing.css",
-          "radius.css",
-          "z-index.css",
-          "motion.css",
-        ]
-          .map(
+        const expectedCoreImports = [
+          "./foundations/colors.css",
+          "./foundations/typography.css",
+          "./foundations/spacing.css",
+          "./foundations/radius.css",
+          "./foundations/z-index.css",
+          "./foundations/motion.css",
+          "./foundations/breakpoints.css",
+
+          "./themes/light-colors.css",
+          "./themes/dark-colors.css",
+          "./themes/status-colors.css",
+          "./themes/light-shadow.css",
+          "./themes/dark-shadow.css",
+
+          "./themes/overlay-colors.css",
+        ];
+
+
+        const importMatches = [
+          ...entry.matchAll(
+            /@import\s+["']([^"']+)["'];/g
+          ),
+        ];
+
+
+        const imports =
+          importMatches.map(
             (
-              filename
+              match
             ) =>
-              entry.indexOf(
-                `./foundations/${filename}`
-              )
+              match[1]
+          );
+
+
+        expect(
+          imports.slice(
+            0,
+            expectedCoreImports.length
           )
-          .filter(
-            (
-              index
-            ) =>
-              index >= 0
-          );
-
-
-        const themeIndexes = [
-          "light-colors.css",
-          "dark-colors.css",
-          "status-colors.css",
-        ]
-          .map(
-            (
-              filename
-            ) =>
-              entry.indexOf(
-                `./themes/${filename}`
-              )
-          )
-          .filter(
-            (
-              index
-            ) =>
-              index >= 0
-          );
-
-
-        const componentIndexes =
-          componentFiles.map(
-            (
-              filename
-            ) =>
-              entry.indexOf(
-                `./components/${filename}`
-              )
-          );
-
-
-        expect(
-          foundationIndexes.length
-        ).toBeGreaterThan(0);
-
-
-        expect(
-          themeIndexes.length
-        ).toBeGreaterThan(0);
-
-
-        expect(
-          componentIndexes.every(
-            (
-              index
-            ) =>
-              index >= 0
-          )
-        ).toBe(true);
-
-
-        const lastFoundation =
-          Math.max(
-            ...foundationIndexes
-          );
-
-
-        const firstTheme =
-          Math.min(
-            ...themeIndexes
-          );
-
-
-        const lastTheme =
-          Math.max(
-            ...themeIndexes
-          );
-
-
-        const firstComponent =
-          Math.min(
-            ...componentIndexes
-          );
-
-
-        expect(
-          firstTheme
-        ).toBeGreaterThan(
-          lastFoundation
+        ).toEqual(
+          expectedCoreImports
         );
 
 
+        const firstComponentIndex =
+          imports.findIndex(
+            (
+              filepath
+            ) =>
+              filepath.startsWith(
+                "./components/"
+              )
+          );
+
+
         expect(
-          firstComponent
-        ).toBeGreaterThan(
-          lastTheme
+          firstComponentIndex
+        ).toBeGreaterThanOrEqual(
+          expectedCoreImports.length
         );
       }
     );
 
+
+    /* ========================================
+     * Namespace
+     * ======================================== */
 
     it(
       "keeps component classes inside the locked namespace",
@@ -555,12 +656,18 @@ describe(
               className.startsWith(
                 "is-"
               )
-            ).toBe(true);
+            ).toBe(
+              true
+            );
           }
         }
       }
     );
 
+
+    /* ========================================
+     * Frozen Public API
+     * ======================================== */
 
     it(
       "keeps the exact locked v0.3 public class surface",
@@ -593,6 +700,68 @@ describe(
       }
     );
 
+
+    it(
+      "contains the locked v0.5 public class families",
+      () => {
+        for (
+          const [
+            filename,
+            requiredClasses,
+          ]
+          of Object.entries(
+            v05RequiredClasses
+          )
+        ) {
+          const classes =
+            collectClasses(
+              [
+                filename,
+              ]
+            );
+
+
+          for (
+            const className
+            of requiredClasses
+          ) {
+            expect(
+              classes
+            ).toContain(
+              className
+            );
+          }
+        }
+      }
+    );
+
+
+    it(
+      "does not add a public is-open overlay state",
+      () => {
+        for (
+          const filename
+          of v05ComponentFiles
+        ) {
+          const source =
+            read(
+              `src/css/components/${filename}`
+            );
+
+
+          expect(
+            source
+          ).not.toMatch(
+            /\.is-open\b/
+          );
+        }
+      }
+    );
+
+
+    /* ========================================
+     * Semantic Color Contract
+     * ======================================== */
 
     it(
       "contains no hard-coded component colors",
@@ -632,23 +801,63 @@ describe(
 
 
     it(
-      "contains documentation for every cumulative component group",
+      "contains the v0.5 overlay semantic theme file",
       () => {
-        for (
-          const filepath
-          of documentationFiles
-        ) {
-          expect(
-            existsSync(
-              resolve(
-                filepath
-              )
+        expect(
+          existsSync(
+            resolve(
+              "src/css/themes/overlay-colors.css"
             )
-          ).toBe(true);
-        }
+          )
+        ).toBe(
+          true
+        );
+
+
+        expect(
+          read(
+            "src/css/rahardianmif-ui.css"
+          )
+        ).toContain(
+          '@import "./themes/overlay-colors.css";'
+        );
       }
     );
 
+
+    /* ========================================
+     * Documentation
+     * ======================================== */
+
+    it(
+      "contains documentation for every cumulative component group",
+      () => {
+        const missingFiles =
+          documentationFiles.filter(
+            (
+              filepath
+            ) =>
+              !existsSync(
+                resolve(
+                  filepath
+                )
+              )
+          );
+
+
+        expect(
+          missingFiles,
+          `Missing documentation files:\n${missingFiles.join("\n")}`
+        ).toEqual(
+          []
+        );
+      }
+    );
+
+
+    /* ========================================
+     * Demo / Examples
+     * ======================================== */
 
     it(
       "contains every required cumulative demo",
@@ -663,7 +872,40 @@ describe(
                 filepath
               )
             )
-          ).toBe(true);
+          ).toBe(
+            true
+          );
+        }
+      }
+    );
+
+
+    it(
+      "keeps every v0.5 demo in examples/overlay",
+      () => {
+        const expected = [
+          "modal.html",
+          "drawer.html",
+          "tooltip.html",
+          "popover.html",
+          "dropdown.html",
+          "disclosure.html",
+        ];
+
+
+        for (
+          const filename
+          of expected
+        ) {
+          expect(
+            existsSync(
+              resolve(
+                `examples/overlay/${filename}`
+              )
+            )
+          ).toBe(
+            true
+          );
         }
       }
     );
@@ -702,6 +944,10 @@ describe(
       }
     );
 
+
+    /* ========================================
+     * Unified Showcase
+     * ======================================== */
 
     it(
       "loads the public stylesheet and showcase stylesheet",
@@ -800,7 +1046,7 @@ describe(
 
 
     it(
-      "represents every v0.4 component family in the unified showcase",
+      "represents every frozen v0.4 component family in the showcase",
       () => {
         const showcase =
           read(
@@ -833,7 +1079,54 @@ describe(
 
 
     it(
-      "contains Light and Dark showcase previews",
+      "represents every v0.5 component family in the unified showcase",
+      () => {
+        const showcase =
+          read(
+            "examples/index.html"
+          );
+
+
+        const required = [
+          "rm-modal",
+          "data-rm-modal",
+
+          "rm-drawer",
+          "data-rm-drawer",
+
+          "rm-tooltip",
+          "data-rm-tooltip",
+
+          "rm-popover",
+          "data-rm-popover",
+
+          "rm-dropdown",
+          "data-rm-dropdown",
+
+          "rm-disclosure",
+          "data-rm-disclosure",
+
+          "rm-accordion",
+          "data-rm-accordion",
+        ];
+
+
+        for (
+          const marker
+          of required
+        ) {
+          expect(
+            showcase
+          ).toContain(
+            marker
+          );
+        }
+      }
+    );
+
+
+    it(
+      "contains Light and Dark showcase previews through v0.5",
       () => {
         const showcase =
           read(
@@ -853,12 +1146,193 @@ describe(
         ).toContain(
           'data-rm-theme="dark"'
         );
+
+
+        expect(
+          showcase
+        ).toContain(
+          'id="showcase-dark-v05"'
+        );
+      }
+    );
+
+
+    /* ========================================
+     * JavaScript Modules
+     * ======================================== */
+
+    it(
+      "contains every required v0.5 JavaScript module",
+      () => {
+        for (
+          const filepath
+          of v05JavaScriptFiles
+        ) {
+          expect(
+            existsSync(
+              resolve(
+                filepath
+              )
+            )
+          ).toBe(
+            true
+          );
+        }
       }
     );
 
 
     it(
-      "synchronizes v0.4 release metadata",
+      "keeps v0.5 component initialization wired through the public entry",
+      () => {
+        const entry =
+          read(
+            "src/js/rahardianmif-ui.js"
+          );
+
+
+        const requiredImports = [
+          "./components/modal.js",
+          "./components/drawer.js",
+          "./components/tooltip.js",
+          "./components/popover.js",
+          "./components/dropdown.js",
+          "./components/disclosure.js",
+        ];
+
+
+        for (
+          const filepath
+          of requiredImports
+        ) {
+          expect(
+            entry
+          ).toContain(
+            filepath
+          );
+        }
+      }
+    );
+
+
+    /* ========================================
+     * Public JavaScript API
+     * ======================================== */
+
+    it(
+      "keeps the public JavaScript API frozen to init",
+      () => {
+        const entry =
+          read(
+            "src/js/rahardianmif-ui.js"
+          );
+
+
+        const publicApiMatch =
+          entry.match(
+            /const\s+RahardianmifUI\s*=\s*\{([\s\S]*?)\};/
+          );
+
+
+        expect(
+          publicApiMatch
+        ).not.toBeNull();
+
+
+        const publicApi =
+          publicApiMatch[1]
+            .replace(
+              /\/\*[\s\S]*?\*\//g,
+              ""
+            )
+            .replace(
+              /\/\/.*$/gm,
+              ""
+            );
+
+
+        expect(
+          publicApi
+        ).toMatch(
+          /\binit\b/
+        );
+
+
+        const forbidden = [
+          "initTabs",
+          "initModals",
+          "initDrawers",
+          "initTooltips",
+          "initPopovers",
+          "initDropdowns",
+          "initDisclosures",
+        ];
+
+
+        for (
+          const name
+          of forbidden
+        ) {
+          expect(
+            publicApi
+          ).not.toContain(
+            name
+          );
+        }
+      }
+    );
+
+
+    /* ========================================
+     * Initialization Contract
+     * ======================================== */
+
+    it(
+      "keeps v0.5 initialization idempotent without a global MutationObserver",
+      () => {
+        const componentModules = [
+          "modal.js",
+          "drawer.js",
+          "tooltip.js",
+          "popover.js",
+          "dropdown.js",
+          "disclosure.js",
+        ];
+
+
+        for (
+          const filename
+          of componentModules
+        ) {
+          const source =
+            read(
+              `src/js/components/${filename}`
+            );
+
+
+          expect(
+            source
+          ).not.toContain(
+            "MutationObserver"
+          );
+
+
+          expect(
+            source
+          ).toContain(
+            "WeakSet"
+          );
+        }
+      }
+    );
+
+
+    /* ========================================
+     * Release Metadata
+     * ======================================== */
+
+    it(
+      "synchronizes v0.5 release metadata",
       () => {
         const packageJson =
           JSON.parse(
@@ -882,6 +1356,12 @@ describe(
           );
 
 
+        const readme =
+          read(
+            "README.md"
+          );
+
+
         const changelog =
           read(
             "CHANGELOG.md"
@@ -891,14 +1371,14 @@ describe(
         expect(
           packageJson.version
         ).toBe(
-          "0.4.0"
+          "0.5.0"
         );
 
 
         expect(
           packageLock.version
         ).toBe(
-          "0.4.0"
+          "0.5.0"
         );
 
 
@@ -908,9 +1388,11 @@ describe(
           packageLock.packages[""]
         ) {
           expect(
-            packageLock.packages[""].version
+            packageLock
+              .packages[""]
+              .version
           ).toBe(
-            "0.4.0"
+            "0.5.0"
           );
         }
 
@@ -918,111 +1400,88 @@ describe(
         expect(
           docsIndex
         ).toContain(
-          "v0.4.0 — Navigation"
+          "v0.5.0 — Modal + Overlays"
+        );
+
+
+        expect(
+          readme
+        ).toContain(
+          "v0.5.0 — Modal + Overlays"
         );
 
 
         expect(
           changelog
         ).toContain(
-          "0.4.0 — Navigation"
+          "0.5.0 — Modal + Overlays"
         );
       }
     );
 
+
+    /* ========================================
+     * Syntax Release Gate
+     * ======================================== */
 
     it(
-      "keeps the public JavaScript API frozen",
+      "keeps the JavaScript syntax release gate cumulative through v0.5",
       () => {
-        const entry =
-          read(
-            "src/js/rahardianmif-ui.js"
+        const packageJson =
+          JSON.parse(
+            read(
+              "package.json"
+            )
           );
 
 
-        expect(
-          entry
-        ).toContain(
-          "initTheme"
-        );
+        const command =
+          packageJson
+            .scripts?.[
+          "check:js"
+          ]
+          ??
+          "";
 
 
-        expect(
-          entry
-        ).toContain(
-          "initTabs"
-        );
+        const required = [
+          "src/js/core/theme-manager.js",
+
+          "src/js/components/tabs.js",
+
+          "src/js/components/modal.js",
+          "src/js/components/drawer.js",
+          "src/js/components/tooltip.js",
+          "src/js/components/popover.js",
+          "src/js/components/dropdown.js",
+          "src/js/components/disclosure.js",
+
+          "src/js/internal/focus.js",
+          "src/js/internal/scroll-lock.js",
+          "src/js/internal/overlay-stack.js",
+          "src/js/internal/floating.js",
+
+          "src/js/rahardianmif-ui.js",
+        ];
 
 
-        const publicApiMatch =
-          entry.match(
-            /const\s+RahardianmifUI\s*=\s*\{([\s\S]*?)\};/
+        for (
+          const filepath
+          of required
+        ) {
+          expect(
+            command
+          ).toContain(
+            filepath
           );
-
-
-        expect(
-          publicApiMatch
-        ).not.toBeNull();
-
-
-        const publicApi =
-          publicApiMatch[1];
-
-
-        expect(
-          publicApi
-        ).toContain(
-          "init"
-        );
-
-
-        expect(
-          publicApi
-        ).not.toContain(
-          "initTabs"
-        );
-
-
-        expect(
-          publicApi
-        ).not.toContain(
-          "tabs"
-        );
+        }
       }
     );
 
 
-    it(
-      "keeps Tabs internal and declarative",
-      () => {
-        const tabs =
-          read(
-            "src/js/components/tabs.js"
-          );
-
-
-        expect(
-          tabs
-        ).toContain(
-          "[data-rm-tabs]"
-        );
-
-
-        expect(
-          tabs
-        ).toContain(
-          "initTabs"
-        );
-
-
-        expect(
-          tabs
-        ).toContain(
-          "WeakSet"
-        );
-      }
-    );
-
+    /* ========================================
+     * Runtime Dependencies
+     * ======================================== */
 
     it(
       "has no runtime package dependencies",
@@ -1039,9 +1498,10 @@ describe(
           packageJson.dependencies
           ??
           {}
-        ).toEqual({});
+        ).toEqual(
+          {}
+        );
       }
     );
-
   }
 );

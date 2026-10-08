@@ -1,0 +1,19 @@
+/*
+ * Rahardianmif UI
+ * Overlay Semantic Color Tokens
+ *
+ * v0.5.1
+ *
+ * Additive semantic tokens for overlay components.
+ */
+
+:root,
+[data-rm-theme="light"] {
+  --rm-overlay-backdrop:
+    rgb(2 6 23 / 0.56);
+}
+
+[data-rm-theme="dark"] {
+  --rm-overlay-backdrop:
+    rgb(2 6 23 / 0.72);
+}

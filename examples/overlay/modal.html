@@ -1,0 +1,1954 @@
+<!doctype html>
+<html lang="en" data-rm-theme="light">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Modal
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./overlay-demo.css"
+    >
+</head>
+
+
+<body>
+
+    <main class="rm-demo">
+
+        <header>
+
+            <h1>
+                Rahardianmif UI Modal
+            </h1>
+
+            <p class="rm-demo__intro">
+                Modal Core, dialog patterns and modal variants built
+                on the native dialog element with declarative triggers,
+                focus restoration, responsive sizing, theme support and
+                Reduced Motion support.
+            </p>
+
+        </header>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="modal-light-theme-title"
+        >
+
+            <h2 id="modal-light-theme-title">
+                Modal — Light Theme
+            </h2>
+
+
+            <!-- ========================================
+             * Basic Modal
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="modal-basic-title"
+            >
+
+                <h3 id="modal-basic-title">
+                    Basic Modal
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Standard modal using the default size.
+                    It can be dismissed using the close control,
+                    action button, Escape key or backdrop.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-trigger="modal-basic"
+                        >
+                            Open Basic Modal
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="modal-basic"
+                    class="rm-modal"
+                    data-rm-modal
+                    aria-labelledby="modal-basic-heading"
+                    aria-describedby="modal-basic-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-basic-heading"
+                            class="rm-modal__title"
+                        >
+                            Account Information
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p id="modal-basic-description">
+                                Review your account information
+                                before continuing.
+                            </p>
+
+                            <p class="rm-demo__muted">
+                                Modal content can contain normal text,
+                                forms, alerts, tabs and other
+                                Rahardianmif UI components.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Continue
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Confirmation Dialog
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="confirmation-dialog-title"
+            >
+
+                <h3 id="confirmation-dialog-title">
+                    Confirmation Dialog
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Confirmation Dialog reuses Modal Core.
+                    Backdrop dismissal is disabled so the user
+                    makes an explicit decision.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--danger"
+                            data-rm-modal-trigger="delete-confirmation"
+                        >
+                            Delete Project
+                        </button>
+
+                    </div>
+
+
+                    <p class="rm-demo__note">
+                        The safer Cancel action uses autofocus.
+                        Escape still closes the dialog, while
+                        clicking the backdrop does not.
+                    </p>
+
+                </div>
+
+
+                <dialog
+                    id="delete-confirmation"
+                    class="rm-modal rm-modal--sm"
+                    data-rm-modal
+                    data-rm-modal-static
+                    aria-labelledby="delete-confirmation-heading"
+                    aria-describedby="delete-confirmation-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="delete-confirmation-heading"
+                            class="rm-modal__title"
+                        >
+                            Delete Project?
+                        </h2>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p id="delete-confirmation-description">
+                            This permanently deletes the project
+                            and its associated data. This action
+                            cannot be undone.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                            autofocus
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--danger"
+                            data-rm-modal-close
+                        >
+                            Delete Project
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Alert Dialog
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="alert-dialog-title"
+            >
+
+                <h3 id="alert-dialog-title">
+                    Alert Dialog
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Alert Dialog is reserved for important
+                    conditions that require the user's attention
+                    before continuing.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-trigger="session-alert"
+                        >
+                            Open Alert Dialog
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="session-alert"
+                    class="rm-modal rm-modal--sm"
+                    data-rm-modal
+                    data-rm-modal-static
+                    role="alertdialog"
+                    aria-labelledby="session-alert-heading"
+                    aria-describedby="session-alert-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="session-alert-heading"
+                            class="rm-modal__title"
+                        >
+                            Session Expired
+                        </h2>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p id="session-alert-description">
+                                Your session has expired.
+                                Sign in again to continue working.
+                            </p>
+
+
+                            <div class="rm-alert rm-alert--warning">
+
+                                <div class="rm-alert__content">
+
+                                    <p class="rm-alert__message">
+                                        Unsaved server-side changes may
+                                        need to be submitted again.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                            autofocus
+                        >
+                            Sign In Again
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Modal Sizes
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="modal-sizes-title"
+            >
+
+                <h3 id="modal-sizes-title">
+                    Modal Sizes
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Modal Core provides Small, Default and
+                    Large sizes. Default does not require
+                    an additional modifier class.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__sizes">
+
+                        <div class="rm-demo__size-row">
+
+                            <div class="rm-demo__size-label">
+
+                                <strong>
+                                    Small
+                                </strong>
+
+                                <span>
+                                    .rm-modal--sm
+                                </span>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="rm-button rm-button--outline"
+                                data-rm-modal-trigger="modal-small"
+                            >
+                                Open Small
+                            </button>
+
+                        </div>
+
+
+                        <div class="rm-demo__size-row">
+
+                            <div class="rm-demo__size-label">
+
+                                <strong>
+                                    Default
+                                </strong>
+
+                                <span>
+                                    .rm-modal
+                                </span>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="rm-button rm-button--outline"
+                                data-rm-modal-trigger="modal-default"
+                            >
+                                Open Default
+                            </button>
+
+                        </div>
+
+
+                        <div class="rm-demo__size-row">
+
+                            <div class="rm-demo__size-label">
+
+                                <strong>
+                                    Large
+                                </strong>
+
+                                <span>
+                                    .rm-modal--lg
+                                </span>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="rm-button rm-button--outline"
+                                data-rm-modal-trigger="modal-large"
+                            >
+                                Open Large
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="modal-small"
+                    class="rm-modal rm-modal--sm"
+                    data-rm-modal
+                    aria-labelledby="modal-small-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-small-heading"
+                            class="rm-modal__title"
+                        >
+                            Small Modal
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p>
+                            Use the Small size for concise
+                            contextual content.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+
+                <dialog
+                    id="modal-default"
+                    class="rm-modal"
+                    data-rm-modal
+                    aria-labelledby="modal-default-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-default-heading"
+                            class="rm-modal__title"
+                        >
+                            Default Modal
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p>
+                            The default Modal size is intended
+                            for common application dialogs and forms.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+
+                <dialog
+                    id="modal-large"
+                    class="rm-modal rm-modal--lg"
+                    data-rm-modal
+                    aria-labelledby="modal-large-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-large-heading"
+                            class="rm-modal__title"
+                        >
+                            Large Modal
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p>
+                                Large Modal provides more horizontal
+                                space for richer application content.
+                            </p>
+
+                            <p class="rm-demo__muted">
+                                It still respects the viewport and
+                                automatically becomes narrower on
+                                smaller screens.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Scrollable Modal
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="scrollable-modal-title"
+            >
+
+                <h3 id="scrollable-modal-title">
+                    Scrollable Modal
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Scrollable Modal keeps the header and footer
+                    available while the body becomes the scrolling
+                    region for long content.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-trigger="scrollable-modal"
+                        >
+                            Open Scrollable Modal
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="scrollable-modal"
+                    class="rm-modal rm-modal--lg rm-modal--scrollable"
+                    data-rm-modal
+                    aria-labelledby="scrollable-modal-heading"
+                    aria-describedby="scrollable-modal-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="scrollable-modal-heading"
+                            class="rm-modal__title"
+                        >
+                            Terms and Conditions
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p id="scrollable-modal-description">
+                                This example intentionally contains
+                                long content so the scrolling behavior
+                                can be reviewed.
+                            </p>
+
+                            <h4>
+                                1. Service Usage
+                            </h4>
+
+                            <p>
+                                Users are responsible for using the service
+                                according to applicable policies, permissions
+                                and organizational rules.
+                            </p>
+
+                            <p>
+                                Access credentials must not be shared with
+                                unauthorized parties. Activities performed
+                                using an account may be recorded for operational
+                                and security purposes.
+                            </p>
+
+                            <h4>
+                                2. Data Responsibility
+                            </h4>
+
+                            <p>
+                                Information entered into the system should be
+                                accurate, relevant and handled according to
+                                the organization's data management requirements.
+                            </p>
+
+                            <p>
+                                Sensitive information should only be processed
+                                when the user has the appropriate authority and
+                                business requirement.
+                            </p>
+
+                            <h4>
+                                3. Availability
+                            </h4>
+
+                            <p>
+                                Service availability may occasionally be
+                                affected by maintenance, infrastructure updates
+                                or unexpected technical conditions.
+                            </p>
+
+                            <p>
+                                Administrators may temporarily restrict access
+                                when necessary to protect service integrity or
+                                perform maintenance.
+                            </p>
+
+                            <h4>
+                                4. User Responsibilities
+                            </h4>
+
+                            <p>
+                                Users should review information before submitting
+                                important operations and report unexpected
+                                behavior through the appropriate support channel.
+                            </p>
+
+                            <p>
+                                Actions with permanent consequences should be
+                                performed only after confirming the affected
+                                records and intended outcome.
+                            </p>
+
+                            <h4>
+                                5. Agreement
+                            </h4>
+
+                            <p>
+                                Continuing indicates that the user has reviewed
+                                and understood the conditions presented in this
+                                example.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Accept
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Fullscreen Modal
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="fullscreen-modal-title"
+            >
+
+                <h3 id="fullscreen-modal-title">
+                    Fullscreen Modal
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Fullscreen Modal fills the available browser
+                    viewport and remains scroll-safe without using
+                    the Browser Fullscreen API.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-trigger="fullscreen-modal"
+                        >
+                            Open Fullscreen Modal
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="fullscreen-modal"
+                    class="rm-modal rm-modal--fullscreen"
+                    data-rm-modal
+                    aria-labelledby="fullscreen-modal-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="fullscreen-modal-heading"
+                            class="rm-modal__title"
+                        >
+                            Application Workspace
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p>
+                                Fullscreen Modal provides a larger
+                                temporary workspace without navigating
+                                away from the current application context.
+                            </p>
+
+
+                            <div class="rm-alert rm-alert--info">
+
+                                <div class="rm-alert__content">
+
+                                    <p class="rm-alert__title">
+                                        Viewport-safe layout
+                                    </p>
+
+                                    <p class="rm-alert__message">
+                                        The body remains scrollable while
+                                        header and footer actions remain
+                                        available.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="rm-demo__form">
+
+                                <div class="rm-demo__form-row">
+
+                                    <div class="rm-field">
+
+                                        <label
+                                            class="rm-field__label"
+                                            for="workspace-title"
+                                        >
+                                            Title
+                                        </label>
+
+                                        <input
+                                            id="workspace-title"
+                                            class="rm-input"
+                                            type="text"
+                                            value="Example Workspace"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="rm-field">
+
+                                        <label
+                                            class="rm-field__label"
+                                            for="workspace-status"
+                                        >
+                                            Status
+                                        </label>
+
+                                        <select
+                                            id="workspace-status"
+                                            class="rm-select"
+                                        >
+                                            <option>
+                                                Draft
+                                            </option>
+
+                                            <option>
+                                                Active
+                                            </option>
+
+                                            <option>
+                                                Archived
+                                            </option>
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="rm-field">
+
+                                    <label
+                                        class="rm-field__label"
+                                        for="workspace-description"
+                                    >
+                                        Description
+                                    </label>
+
+                                    <textarea
+                                        id="workspace-description"
+                                        class="rm-textarea"
+                                        rows="8"
+                                    >Fullscreen Modal can contain forms and other existing Rahardianmif UI components.</textarea>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Save Workspace
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Form Composition
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="modal-form-title"
+            >
+
+                <h3 id="modal-form-title">
+                    Form Composition
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Modal Core can compose with existing form components
+                    without introducing Modal-specific form APIs.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-trigger="modal-profile"
+                        >
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+
+                    <p class="rm-demo__note">
+                        This example explicitly uses autofocus on the
+                        Name field to demonstrate the Modal Core
+                        initial-focus contract.
+                    </p>
+
+                </div>
+
+
+                <dialog
+                    id="modal-profile"
+                    class="rm-modal"
+                    data-rm-modal
+                    aria-labelledby="modal-profile-heading"
+                    aria-describedby="modal-profile-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-profile-heading"
+                            class="rm-modal__title"
+                        >
+                            Edit Profile
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <form
+                            id="profile-form"
+                            class="rm-demo__form"
+                        >
+
+                            <p
+                                id="modal-profile-description"
+                                class="rm-demo__muted"
+                            >
+                                Update your public profile information.
+                            </p>
+
+
+                            <div class="rm-field">
+
+                                <label
+                                    class="rm-field__label"
+                                    for="profile-name"
+                                >
+                                    Name
+                                </label>
+
+                                <input
+                                    id="profile-name"
+                                    class="rm-input"
+                                    type="text"
+                                    value="Rahardianmif"
+                                    autofocus
+                                >
+
+                            </div>
+
+
+                            <div class="rm-demo__form-row">
+
+                                <div class="rm-field">
+
+                                    <label
+                                        class="rm-field__label"
+                                        for="profile-role"
+                                    >
+                                        Role
+                                    </label>
+
+                                    <input
+                                        id="profile-role"
+                                        class="rm-input"
+                                        type="text"
+                                        value="Frontend Developer"
+                                    >
+
+                                </div>
+
+
+                                <div class="rm-field">
+
+                                    <label
+                                        class="rm-field__label"
+                                        for="profile-status"
+                                    >
+                                        Status
+                                    </label>
+
+                                    <select
+                                        id="profile-status"
+                                        class="rm-select"
+                                    >
+                                        <option>
+                                            Available
+                                        </option>
+
+                                        <option>
+                                            Busy
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="rm-field">
+
+                                <label
+                                    class="rm-field__label"
+                                    for="profile-bio"
+                                >
+                                    Bio
+                                </label>
+
+                                <textarea
+                                    id="profile-bio"
+                                    class="rm-textarea"
+                                    rows="4"
+                                >Frontend developer focused on reusable and accessible UI systems.</textarea>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            form="profile-form"
+                            class="rm-button rm-button--primary"
+                        >
+                            Save Changes
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Focus Restoration
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="modal-focus-title"
+            >
+
+                <h3 id="modal-focus-title">
+                    Focus Restoration
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    After the Modal closes, focus should return
+                    to the element that opened it.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            id="focus-restoration-trigger"
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-trigger="modal-focus"
+                        >
+                            Test Focus Restoration
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="modal-focus"
+                    class="rm-modal rm-modal--sm"
+                    data-rm-modal
+                    aria-labelledby="modal-focus-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-focus-heading"
+                            class="rm-modal__title"
+                        >
+                            Focus Restoration
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p>
+                            Close this Modal using the button,
+                            Escape key or backdrop.
+                        </p>
+
+                        <p class="rm-demo__muted">
+                            Keyboard focus should return to
+                            the original trigger.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Close Modal
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="modal-dark-theme-title"
+        >
+
+            <h2 id="modal-dark-theme-title">
+                Modal — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="modal-dark-basic-title"
+            >
+
+                <h3 id="modal-dark-basic-title">
+                    Basic Modal — Dark Theme
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    The same Modal component uses semantic theme
+                    tokens without Dark Mode-specific component CSS.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-trigger="modal-dark"
+                        >
+                            Open Dark Modal
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="modal-dark"
+                    class="rm-modal"
+                    data-rm-modal
+                    aria-labelledby="modal-dark-heading"
+                    aria-describedby="modal-dark-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="modal-dark-heading"
+                            class="rm-modal__title"
+                        >
+                            Dark Theme Modal
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p id="modal-dark-description">
+                                Modal colors, borders, text, elevation
+                                and controls inherit the Dark Theme
+                                semantic tokens.
+                            </p>
+
+
+                            <div class="rm-alert rm-alert--info">
+
+                                <div class="rm-alert__content">
+
+                                    <p class="rm-alert__title">
+                                        Component Composition
+                                    </p>
+
+                                    <p class="rm-alert__message">
+                                        Existing Rahardianmif UI components
+                                        can be placed inside Modal content.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Continue
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * v0.5.2 Dark Theme Coverage
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="modal-dark-v052-title"
+            >
+
+                <h3 id="modal-dark-v052-title">
+                    Dialog Patterns & Variants — Dark Theme
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Confirmation, Alert, Scrollable and Fullscreen
+                    Modal patterns use the same semantic tokens in
+                    Dark Theme.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--danger"
+                            data-rm-modal-trigger="dark-confirmation"
+                        >
+                            Confirmation
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-trigger="dark-alert"
+                        >
+                            Alert Dialog
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-trigger="dark-scrollable"
+                        >
+                            Scrollable
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-trigger="dark-fullscreen"
+                        >
+                            Fullscreen
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="dark-confirmation"
+                    class="rm-modal rm-modal--sm"
+                    data-rm-modal
+                    data-rm-modal-static
+                    aria-labelledby="dark-confirmation-heading"
+                    aria-describedby="dark-confirmation-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="dark-confirmation-heading"
+                            class="rm-modal__title"
+                        >
+                            Remove Access?
+                        </h2>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p id="dark-confirmation-description">
+                            This removes the user's current access
+                            to the selected workspace.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--outline"
+                            data-rm-modal-close
+                            autofocus
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--danger"
+                            data-rm-modal-close
+                        >
+                            Remove Access
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+
+                <dialog
+                    id="dark-alert"
+                    class="rm-modal rm-modal--sm"
+                    data-rm-modal
+                    data-rm-modal-static
+                    role="alertdialog"
+                    aria-labelledby="dark-alert-heading"
+                    aria-describedby="dark-alert-description"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="dark-alert-heading"
+                            class="rm-modal__title"
+                        >
+                            Connection Interrupted
+                        </h2>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p id="dark-alert-description">
+                            The operation could not be completed.
+                            Check the connection before retrying.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                            autofocus
+                        >
+                            OK
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+
+                <dialog
+                    id="dark-scrollable"
+                    class="rm-modal rm-modal--scrollable"
+                    data-rm-modal
+                    aria-labelledby="dark-scrollable-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="dark-scrollable-heading"
+                            class="rm-modal__title"
+                        >
+                            Scrollable Dark Modal
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p>
+                                This variation confirms that the
+                                scrollable layout works with the
+                                Dark Theme token mapping.
+                            </p>
+
+                            <p>
+                                Long content remains inside the body
+                                scrolling region while the header and
+                                footer remain available.
+                            </p>
+
+                            <p>
+                                Semantic surfaces, text, borders and
+                                elevation are inherited from the theme
+                                rather than hard-coded in Modal CSS.
+                            </p>
+
+                            <p>
+                                Additional content is included so the
+                                scrolling behavior can be observed at
+                                smaller viewport heights.
+                            </p>
+
+                            <p>
+                                Keyboard users must still be able to
+                                reach every interactive element in the
+                                scrolling body and footer.
+                            </p>
+
+                            <p>
+                                Closing the Modal restores focus to the
+                                trigger that opened it.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+
+                <dialog
+                    id="dark-fullscreen"
+                    class="rm-modal rm-modal--fullscreen"
+                    data-rm-modal
+                    aria-labelledby="dark-fullscreen-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="dark-fullscreen-heading"
+                            class="rm-modal__title"
+                        >
+                            Fullscreen Dark Workspace
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p>
+                                Fullscreen Modal uses the available
+                                browser viewport while preserving Dark
+                                Theme semantic styling.
+                            </p>
+
+                            <div class="rm-alert rm-alert--info">
+
+                                <div class="rm-alert__content">
+
+                                    <p class="rm-alert__title">
+                                        Fullscreen layout
+                                    </p>
+
+                                    <p class="rm-alert__message">
+                                        This is a viewport-filling dialog,
+                                        not the Browser Fullscreen API.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="rm-button rm-button--primary"
+                            data-rm-modal-close
+                        >
+                            Close Workspace
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script type="module">
+        import RahardianmifUI
+            from "../../src/js/rahardianmif-ui.js";
+
+        RahardianmifUI.init();
+    </script>
+
+</body>
+
+</html>

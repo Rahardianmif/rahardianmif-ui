@@ -1,0 +1,795 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Drawer
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./overlay-demo.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="rm-demo">
+
+        <header>
+
+            <h1>
+                Rahardianmif UI Drawer
+            </h1>
+
+            <p class="rm-demo__intro">
+                Modal offcanvas surface based on the native
+                dialog element with start and end placement,
+                focus restoration, backdrop dismissal,
+                scroll locking and Reduced Motion support.
+            </p>
+
+        </header>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="drawer-light-title"
+        >
+
+            <h2 id="drawer-light-title">
+                Drawer — Light Theme
+            </h2>
+
+
+            <!-- ========================================
+             * End Drawer
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="drawer-end-title"
+            >
+
+                <h3 id="drawer-end-title">
+                    End Drawer
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    End is the default Drawer placement.
+                    The panel enters from the logical
+                    inline-end edge of the viewport.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-trigger="drawer-settings"
+                        >
+                            Open Settings
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="drawer-settings"
+                    class="
+                        rm-drawer
+                        rm-drawer--end
+                    "
+                    data-rm-drawer
+                    aria-labelledby="drawer-settings-title"
+                    aria-describedby="drawer-settings-description"
+                >
+
+                    <header class="rm-drawer__header">
+
+                        <h2
+                            id="drawer-settings-title"
+                            class="rm-drawer__title"
+                        >
+                            Settings
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-drawer__close"
+                            data-rm-drawer-close
+                            aria-label="Close drawer"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-drawer__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p
+                                id="drawer-settings-description"
+                                class="rm-demo__muted"
+                            >
+                                Update temporary application
+                                preferences without leaving the
+                                current page.
+                            </p>
+
+
+                            <div class="rm-field">
+
+                                <label
+                                    class="rm-field__label"
+                                    for="drawer-display-name"
+                                >
+                                    Display Name
+                                </label>
+
+                                <input
+                                    id="drawer-display-name"
+                                    class="rm-input"
+                                    type="text"
+                                    value="Rahardianmif"
+                                    autofocus
+                                >
+
+                            </div>
+
+
+                            <div class="rm-field">
+
+                                <label
+                                    class="rm-field__label"
+                                    for="drawer-language"
+                                >
+                                    Language
+                                </label>
+
+                                <select
+                                    id="drawer-language"
+                                    class="rm-select"
+                                >
+
+                                    <option>
+                                        English
+                                    </option>
+
+                                    <option>
+                                        Bahasa Indonesia
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div
+                                class="
+                                    rm-alert
+                                    rm-alert--info
+                                "
+                            >
+
+                                <div class="rm-alert__content">
+
+                                    <p class="rm-alert__title">
+                                        Component Composition
+                                    </p>
+
+                                    <p class="rm-alert__message">
+                                        Drawer content can compose
+                                        with existing Rahardianmif UI
+                                        components.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-drawer__footer">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            data-rm-drawer-close
+                        >
+                            Cancel
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-close
+                        >
+                            Save Changes
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Start Drawer
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="drawer-start-title"
+            >
+
+                <h3 id="drawer-start-title">
+                    Start Drawer
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Start placement opens from the logical
+                    inline-start edge. It remains a generic
+                    Drawer and does not modify Sidebar or
+                    Navbar contracts.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            data-rm-drawer-trigger="drawer-details"
+                        >
+                            Open Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="drawer-details"
+                    class="
+                        rm-drawer
+                        rm-drawer--start
+                    "
+                    data-rm-drawer
+                    aria-labelledby="drawer-details-title"
+                    aria-describedby="drawer-details-description"
+                >
+
+                    <header class="rm-drawer__header">
+
+                        <h2
+                            id="drawer-details-title"
+                            class="rm-drawer__title"
+                        >
+                            Record Details
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-drawer__close"
+                            data-rm-drawer-close
+                            aria-label="Close drawer"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-drawer__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p
+                                id="drawer-details-description"
+                            >
+                                This example demonstrates the
+                                logical start placement.
+                            </p>
+
+
+                            <div class="rm-card">
+
+                                <div class="rm-card__header">
+
+                                    <h3 class="rm-card__title">
+                                        Example Record
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="rm-card__body">
+
+                                    <p>
+                                        Drawer is a temporary
+                                        modal surface and remains
+                                        separate from Sidebar.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="rm-demo__muted">
+                                Close this Drawer using the close
+                                control, footer button, Escape key,
+                                or backdrop.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-drawer__footer">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- ========================================
+             * Scrollable Body
+             * ======================================== -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="drawer-scroll-title"
+            >
+
+                <h3 id="drawer-scroll-title">
+                    Scrollable Drawer Body
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Drawer is scroll-safe by default.
+                    Header and footer remain available while
+                    long body content scrolls independently.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-trigger="drawer-long-content"
+                        >
+                            Open Long Content
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="drawer-long-content"
+                    class="
+                        rm-drawer
+                        rm-drawer--end
+                    "
+                    data-rm-drawer
+                    aria-labelledby="drawer-long-title"
+                >
+
+                    <header class="rm-drawer__header">
+
+                        <h2
+                            id="drawer-long-title"
+                            class="rm-drawer__title"
+                        >
+                            Activity Details
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-drawer__close"
+                            data-rm-drawer-close
+                            aria-label="Close drawer"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-drawer__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p>
+                                The body contains intentionally
+                                long content to demonstrate its
+                                independent scrolling region.
+                            </p>
+
+
+                            <h3>
+                                Activity 1
+                            </h3>
+
+                            <p>
+                                Initial data was created and
+                                prepared for review by the
+                                responsible user.
+                            </p>
+
+
+                            <h3>
+                                Activity 2
+                            </h3>
+
+                            <p>
+                                The record was reviewed and
+                                supporting information was
+                                checked for completeness.
+                            </p>
+
+
+                            <h3>
+                                Activity 3
+                            </h3>
+
+                            <p>
+                                Additional information was added
+                                to provide context for subsequent
+                                processing.
+                            </p>
+
+
+                            <h3>
+                                Activity 4
+                            </h3>
+
+                            <p>
+                                A status update was recorded after
+                                the required information had been
+                                reviewed.
+                            </p>
+
+
+                            <h3>
+                                Activity 5
+                            </h3>
+
+                            <p>
+                                The record remained available for
+                                additional review without changing
+                                the current application page.
+                            </p>
+
+
+                            <h3>
+                                Activity 6
+                            </h3>
+
+                            <p>
+                                Drawer body scrolling keeps the
+                                header and footer controls
+                                accessible throughout the flow.
+                            </p>
+
+
+                            <h3>
+                                Activity 7
+                            </h3>
+
+                            <p>
+                                This final section exists to ensure
+                                the body becomes taller than the
+                                available viewport.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-drawer__footer">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-close
+                        >
+                            Close
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="drawer-dark-title"
+        >
+
+            <h2 id="drawer-dark-title">
+                Drawer — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="drawer-dark-example-title"
+            >
+
+                <h3 id="drawer-dark-example-title">
+                    End Drawer — Dark Theme
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Drawer styling remains theme-independent
+                    and inherits semantic Dark Theme tokens.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-trigger="drawer-dark"
+                        >
+                            Open Dark Drawer
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="drawer-dark"
+                    class="
+                        rm-drawer
+                        rm-drawer--end
+                    "
+                    data-rm-drawer
+                    aria-labelledby="drawer-dark-heading"
+                >
+
+                    <header class="rm-drawer__header">
+
+                        <h2
+                            id="drawer-dark-heading"
+                            class="rm-drawer__title"
+                        >
+                            Dark Theme Drawer
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-drawer__close"
+                            data-rm-drawer-close
+                            aria-label="Close drawer"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M6 6 18 18"></path>
+                                <path d="M18 6 6 18"></path>
+                            </svg>
+
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-drawer__body">
+
+                        <div class="rm-demo__content-stack">
+
+                            <p>
+                                Surface, text, border and elevation
+                                come from existing semantic tokens.
+                            </p>
+
+
+                            <div
+                                class="
+                                    rm-alert
+                                    rm-alert--info
+                                "
+                            >
+
+                                <div class="rm-alert__content">
+
+                                    <p class="rm-alert__title">
+                                        Dark Theme
+                                    </p>
+
+                                    <p class="rm-alert__message">
+                                        No Drawer-specific Dark
+                                        Theme selectors are required.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-drawer__footer">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script type="module">
+
+        import RahardianmifUI
+            from "../../src/js/rahardianmif-ui.js";
+
+
+        RahardianmifUI.init();
+
+    </script>
+
+</body>
+
+</html>

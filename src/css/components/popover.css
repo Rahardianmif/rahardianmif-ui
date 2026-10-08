@@ -1,0 +1,458 @@
+/*
+ * Rahardianmif UI
+ * Popover Component
+ *
+ * v0.5.5
+ *
+ * Interactive contextual floating surface.
+ */
+
+
+/* ========================================
+ * Popover Core
+ * ======================================== */
+
+.rm-popover {
+  box-sizing:
+    border-box;
+
+  position:
+    fixed;
+
+  inset:
+    auto;
+
+  z-index:
+    var(--rm-z-dropdown);
+
+  inline-size:
+    min(
+      22rem,
+      calc(
+        100vw
+        -
+        var(--rm-space-4)
+      )
+    );
+
+  max-inline-size:
+    calc(
+      100vw
+      -
+      var(--rm-space-4)
+    );
+
+  max-block-size:
+    calc(
+      100vh
+      -
+      var(--rm-space-4)
+    );
+
+  max-block-size:
+    calc(
+      100dvb
+      -
+      var(--rm-space-4)
+    );
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface-elevated);
+
+  color:
+    var(--rm-text-primary);
+
+  box-shadow:
+    var(--rm-shadow-lg);
+
+  font-family:
+    var(--rm-font-family-sans);
+
+  overflow:
+    hidden;
+
+  opacity:
+    0;
+
+  transform:
+    translate(
+      var(
+        --rm-floating-enter-x,
+        0px
+      ),
+      var(
+        --rm-floating-enter-y,
+        -4px
+      )
+    );
+
+  transition:
+    opacity
+      var(--rm-motion-fast),
+    transform
+      var(--rm-motion-fast),
+    overlay
+      var(--rm-motion-fast),
+    display
+      var(--rm-motion-fast);
+
+  transition-behavior:
+    normal,
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+
+/* ========================================
+ * Open State
+ * ======================================== */
+
+.rm-popover:popover-open {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  opacity:
+    1;
+
+  transform:
+    translate(
+      0,
+      0
+    );
+}
+
+
+@starting-style {
+  .rm-popover:popover-open {
+    opacity:
+      0;
+
+    transform:
+      translate(
+        var(
+          --rm-floating-enter-x,
+          0px
+        ),
+        var(
+          --rm-floating-enter-y,
+          -4px
+        )
+      );
+  }
+}
+
+
+/* ========================================
+ * Header
+ * ======================================== */
+
+.rm-popover__header {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  flex:
+    0 0 auto;
+
+  gap:
+    var(--rm-space-3);
+
+  min-inline-size:
+    0;
+
+  padding:
+    var(--rm-space-4);
+
+  border-block-end:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Title
+ * ======================================== */
+
+.rm-popover__title {
+  min-inline-size:
+    0;
+
+  margin:
+    0;
+
+  color:
+    var(--rm-text-primary);
+
+  font-size:
+    var(--rm-font-size-base);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-snug);
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+/* ========================================
+ * Body
+ * ======================================== */
+
+.rm-popover__body {
+  flex:
+    1 1 auto;
+
+  min-inline-size:
+    0;
+
+  min-block-size:
+    0;
+
+  padding:
+    var(--rm-space-4);
+
+  color:
+    var(--rm-text-primary);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-x:
+    hidden;
+
+  overflow-y:
+    auto;
+
+  overscroll-behavior:
+    contain;
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+.rm-popover__body > :first-child {
+  margin-block-start:
+    0;
+}
+
+
+.rm-popover__body > :last-child {
+  margin-block-end:
+    0;
+}
+
+
+/* ========================================
+ * Footer
+ * ======================================== */
+
+.rm-popover__footer {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    flex-end;
+
+  flex:
+    0 0 auto;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    var(--rm-space-2);
+
+  min-inline-size:
+    0;
+
+  padding:
+    var(--rm-space-3)
+    var(--rm-space-4);
+
+  border-block-start:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Close Control
+ * ======================================== */
+
+.rm-popover__close {
+  appearance:
+    none;
+
+  box-sizing:
+    border-box;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex:
+    0 0 auto;
+
+  inline-size:
+    44px;
+
+  block-size:
+    44px;
+
+  margin:
+    calc(
+      0px
+      -
+      var(--rm-space-2)
+    );
+
+  padding:
+    0;
+
+  border:
+    0;
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    transparent;
+
+  color:
+    var(--rm-text-secondary);
+
+  font:
+    inherit;
+
+  cursor:
+    pointer;
+
+  transition:
+    background-color
+      var(--rm-motion-fast),
+    color
+      var(--rm-motion-fast);
+}
+
+
+.rm-popover__close:hover:not(:disabled) {
+  background:
+    var(--rm-surface-secondary);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+.rm-popover__close:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset:
+    2px;
+}
+
+
+.rm-popover__close:disabled {
+  opacity:
+    0.5;
+
+  cursor:
+    not-allowed;
+}
+
+
+.rm-popover__close > svg {
+  inline-size:
+    1.25em;
+
+  block-size:
+    1.25em;
+
+  pointer-events:
+    none;
+}
+
+
+/* ========================================
+ * Mobile
+ * ======================================== */
+
+@media (max-width: 35.999rem) {
+  .rm-popover {
+    inline-size:
+      min(
+        20rem,
+        calc(
+          100vw
+          -
+          var(--rm-space-4)
+        )
+      );
+  }
+
+  .rm-popover__header,
+  .rm-popover__body {
+    padding:
+      var(--rm-space-3);
+  }
+
+  .rm-popover__footer {
+    padding:
+      var(--rm-space-3);
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-popover,
+  .rm-popover__close {
+    transition:
+      none;
+  }
+
+  .rm-popover,
+  .rm-popover:popover-open {
+    transform:
+      none;
+  }
+}

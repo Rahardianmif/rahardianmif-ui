@@ -1,0 +1,861 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Popover
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./overlay-demo.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="rm-demo">
+
+    <header>
+
+        <h1>
+            Rahardianmif UI Popover
+        </h1>
+
+        <p class="rm-demo__intro">
+            Interactive contextual floating surfaces
+            using the native Popover API and the shared
+            Rahardianmif UI floating foundation.
+        </p>
+
+    </header>
+
+
+    <!-- ========================================
+     * Light Theme
+     * ======================================== -->
+
+    <section
+        class="rm-demo__theme"
+        data-rm-theme="light"
+        aria-labelledby="popover-light-title"
+    >
+
+        <h2 id="popover-light-title">
+            Popover — Light Theme
+        </h2>
+
+
+        <!-- Basic -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="popover-basic-title"
+        >
+
+            <h3 id="popover-basic-title">
+                Basic Popover
+            </h3>
+
+            <p class="rm-demo__section-description">
+                The trigger toggles an interactive contextual
+                surface. Focus stays on the trigger unless an
+                explicit autofocus target is supplied.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-demo__actions">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="profile-popover"
+                        data-rm-popover-trigger="profile-popover"
+                    >
+                        Profile
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="profile-popover"
+                class="rm-popover"
+                data-rm-popover
+                data-rm-popover-placement="bottom"
+                popover="manual"
+                role="dialog"
+                aria-labelledby="profile-popover-title"
+            >
+
+                <header class="rm-popover__header">
+
+                    <h2
+                        id="profile-popover-title"
+                        class="rm-popover__title"
+                    >
+                        Profile
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="rm-popover__close"
+                        data-rm-popover-close
+                        aria-label="Close profile popover"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M6 6 18 18"></path>
+                            <path d="M18 6 6 18"></path>
+                        </svg>
+
+                    </button>
+
+                </header>
+
+
+                <div class="rm-popover__body">
+
+                    <div class="rm-demo__content-stack">
+
+                        <strong>
+                            Rahardianmif
+                        </strong>
+
+                        <p class="rm-demo__muted">
+                            Frontend Developer focused on
+                            accessible and reusable UI systems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <footer class="rm-popover__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        data-rm-popover-close
+                    >
+                        Close
+                    </button>
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-popover-close
+                    >
+                        View Profile
+                    </button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+
+        <!-- Placements -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="popover-placement-title"
+        >
+
+            <h3 id="popover-placement-title">
+                Placements
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Top, bottom, start and end are preferred
+                placements. Collision handling can flip the
+                surface when necessary.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-demo__actions">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="popover-top"
+                        data-rm-popover-trigger="popover-top"
+                    >
+                        Top
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="popover-bottom"
+                        data-rm-popover-trigger="popover-bottom"
+                    >
+                        Bottom
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="popover-start"
+                        data-rm-popover-trigger="popover-start"
+                    >
+                        Start
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="popover-end"
+                        data-rm-popover-trigger="popover-end"
+                    >
+                        End
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="popover-top"
+                class="rm-popover"
+                data-rm-popover
+                data-rm-popover-placement="top"
+                popover="manual"
+                role="dialog"
+                aria-label="Top placement popover"
+            >
+                <div class="rm-popover__body">
+                    Preferred top placement.
+                </div>
+            </div>
+
+
+            <div
+                id="popover-bottom"
+                class="rm-popover"
+                data-rm-popover
+                data-rm-popover-placement="bottom"
+                popover="manual"
+                role="dialog"
+                aria-label="Bottom placement popover"
+            >
+                <div class="rm-popover__body">
+                    Preferred bottom placement.
+                </div>
+            </div>
+
+
+            <div
+                id="popover-start"
+                class="rm-popover"
+                data-rm-popover
+                data-rm-popover-placement="start"
+                popover="manual"
+                role="dialog"
+                aria-label="Start placement popover"
+            >
+                <div class="rm-popover__body">
+                    Logical start placement.
+                </div>
+            </div>
+
+
+            <div
+                id="popover-end"
+                class="rm-popover"
+                data-rm-popover
+                data-rm-popover-placement="end"
+                popover="manual"
+                role="dialog"
+                aria-label="End placement popover"
+            >
+                <div class="rm-popover__body">
+                    Logical end placement.
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Compact form -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="popover-form-title"
+        >
+
+            <h3 id="popover-form-title">
+                Compact Form
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Popover may contain small contextual forms.
+                This example explicitly opts into focus
+                transfer using autofocus.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-demo__actions">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="filter-popover"
+                        data-rm-popover-trigger="filter-popover"
+                    >
+                        Quick Filter
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="filter-popover"
+                class="rm-popover"
+                data-rm-popover
+                data-rm-popover-placement="bottom"
+                popover="manual"
+                role="dialog"
+                aria-labelledby="filter-popover-title"
+            >
+
+                <header class="rm-popover__header">
+
+                    <h2
+                        id="filter-popover-title"
+                        class="rm-popover__title"
+                    >
+                        Quick Filter
+                    </h2>
+
+                </header>
+
+
+                <div class="rm-popover__body">
+
+                    <div class="rm-demo__content-stack">
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="popover-keyword"
+                            >
+                                Keyword
+                            </label>
+
+                            <input
+                                id="popover-keyword"
+                                class="rm-input"
+                                type="search"
+                                placeholder="Search records"
+                                autofocus
+                            >
+
+                        </div>
+
+
+                        <div class="rm-field">
+
+                            <label
+                                class="rm-field__label"
+                                for="popover-status"
+                            >
+                                Status
+                            </label>
+
+                            <select
+                                id="popover-status"
+                                class="rm-select"
+                            >
+                                <option>
+                                    All
+                                </option>
+
+                                <option>
+                                    Active
+                                </option>
+
+                                <option>
+                                    Archived
+                                </option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <footer class="rm-popover__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        data-rm-popover-close
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-popover-close
+                    >
+                        Apply
+                    </button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+
+        <!-- Modal composition -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="popover-modal-demo-title"
+        >
+
+            <h3 id="popover-modal-demo-title">
+                Popover inside Modal
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--outline
+                    "
+                    data-rm-modal-trigger="popover-demo-modal"
+                >
+                    Open Modal
+                </button>
+
+            </div>
+
+
+            <dialog
+                id="popover-demo-modal"
+                class="
+                    rm-modal
+                    rm-modal--sm
+                "
+                data-rm-modal
+                aria-labelledby="popover-demo-modal-title"
+            >
+
+                <header class="rm-modal__header">
+
+                    <h2
+                        id="popover-demo-modal-title"
+                        class="rm-modal__title"
+                    >
+                        Modal with Popover
+                    </h2>
+
+                </header>
+
+
+                <div class="rm-modal__body">
+
+                    <p>
+                        The Popover remains independent from
+                        Modal scroll locking and modality.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="modal-action-popover"
+                        data-rm-popover-trigger="modal-action-popover"
+                    >
+                        More Actions
+                    </button>
+
+
+                    <div
+                        id="modal-action-popover"
+                        class="rm-popover"
+                        data-rm-popover
+                        popover="manual"
+                        role="dialog"
+                        aria-label="More actions"
+                    >
+
+                        <div class="rm-popover__body">
+
+                            <p>
+                                Interactive contextual content
+                                can be opened from Modal.
+                            </p>
+
+                        </div>
+
+
+                        <footer class="rm-popover__footer">
+
+                            <button
+                                type="button"
+                                class="
+                                    rm-button
+                                    rm-button--primary
+                                "
+                                data-rm-popover-close
+                            >
+                                Done
+                            </button>
+
+                        </footer>
+
+                    </div>
+
+                </div>
+
+
+                <footer class="rm-modal__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-modal-close
+                    >
+                        Close Modal
+                    </button>
+
+                </footer>
+
+            </dialog>
+
+        </section>
+
+
+        <!-- Drawer composition -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="popover-drawer-demo-title"
+        >
+
+            <h3 id="popover-drawer-demo-title">
+                Popover inside Drawer
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--outline
+                    "
+                    data-rm-drawer-trigger="popover-demo-drawer"
+                >
+                    Open Drawer
+                </button>
+
+            </div>
+
+
+            <dialog
+                id="popover-demo-drawer"
+                class="
+                    rm-drawer
+                    rm-drawer--end
+                "
+                data-rm-drawer
+                aria-labelledby="popover-demo-drawer-title"
+            >
+
+                <header class="rm-drawer__header">
+
+                    <h2
+                        id="popover-demo-drawer-title"
+                        class="rm-drawer__title"
+                    >
+                        Drawer with Popover
+                    </h2>
+
+                </header>
+
+
+                <div class="rm-drawer__body">
+
+                    <p>
+                        Popover uses the floating layer and
+                        does not modify Drawer modality.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="drawer-settings-popover"
+                        data-rm-popover-trigger="drawer-settings-popover"
+                    >
+                        Options
+                    </button>
+
+
+                    <div
+                        id="drawer-settings-popover"
+                        class="rm-popover"
+                        data-rm-popover
+                        data-rm-popover-placement="start"
+                        popover="manual"
+                        role="dialog"
+                        aria-label="Drawer options"
+                    >
+
+                        <div class="rm-popover__body">
+
+                            <p>
+                                Contextual options remain
+                                attached to their trigger.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <footer class="rm-drawer__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-drawer-close
+                    >
+                        Done
+                    </button>
+
+                </footer>
+
+            </dialog>
+
+        </section>
+
+    </section>
+
+
+    <!-- ========================================
+     * Dark Theme
+     * ======================================== -->
+
+    <section
+        class="rm-demo__theme"
+        data-rm-theme="dark"
+        aria-labelledby="popover-dark-title"
+    >
+
+        <h2 id="popover-dark-title">
+            Popover — Dark Theme
+        </h2>
+
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="popover-dark-demo-title"
+        >
+
+            <h3 id="popover-dark-demo-title">
+                Basic Popover — Dark Theme
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--primary
+                    "
+                    aria-haspopup="dialog"
+                    aria-expanded="false"
+                    aria-controls="dark-popover"
+                    data-rm-popover-trigger="dark-popover"
+                >
+                    Open Popover
+                </button>
+
+            </div>
+
+
+            <div
+                id="dark-popover"
+                class="rm-popover"
+                data-rm-popover
+                popover="manual"
+                role="dialog"
+                aria-labelledby="dark-popover-title"
+            >
+
+                <header class="rm-popover__header">
+
+                    <h2
+                        id="dark-popover-title"
+                        class="rm-popover__title"
+                    >
+                        Dark Theme
+                    </h2>
+
+                </header>
+
+
+                <div class="rm-popover__body">
+
+                    <p>
+                        Surface, text, borders and elevation
+                        inherit existing semantic theme tokens.
+                    </p>
+
+                </div>
+
+
+                <footer class="rm-popover__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-popover-close
+                    >
+                        Done
+                    </button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<script type="module">
+
+    import RahardianmifUI
+        from "../../src/js/rahardianmif-ui.js";
+
+
+    RahardianmifUI.init();
+
+</script>
+
+</body>
+
+</html>

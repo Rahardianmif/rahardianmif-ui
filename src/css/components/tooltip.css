@@ -1,0 +1,164 @@
+/*
+ * Rahardianmif UI
+ * Tooltip Component
+ *
+ * v0.5.4
+ *
+ * Short, supplementary and non-interactive.
+ */
+
+.rm-tooltip {
+  box-sizing:
+    border-box;
+
+  position:
+    fixed;
+
+  inset:
+    auto;
+
+  z-index:
+    var(--rm-z-tooltip);
+
+  inline-size:
+    max-content;
+
+  max-inline-size:
+    min(
+      32ch,
+      calc(
+        100vw
+        -
+        var(--rm-space-4)
+      )
+    );
+
+  margin:
+    0;
+
+  padding:
+    var(--rm-space-2)
+    var(--rm-space-3);
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    var(--rm-surface-elevated);
+
+  color:
+    var(--rm-text-primary);
+
+  box-shadow:
+    var(--rm-shadow-md);
+
+  font-family:
+    var(--rm-font-family-sans);
+
+  font-size:
+    var(--rm-font-size-sm);
+
+  font-weight:
+    var(--rm-font-weight-medium);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-wrap:
+    anywhere;
+
+  pointer-events:
+    none;
+
+  opacity:
+    0;
+
+  transform:
+    translate(
+      var(
+        --rm-floating-enter-x,
+        0px
+      ),
+      var(
+        --rm-floating-enter-y,
+        4px
+      )
+    );
+
+  transition:
+    opacity
+      var(--rm-motion-fast),
+    transform
+      var(--rm-motion-fast),
+    overlay
+      var(--rm-motion-fast),
+    display
+      var(--rm-motion-fast);
+
+  transition-behavior:
+    normal,
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+
+/* ========================================
+ * Open State
+ * ======================================== */
+
+.rm-tooltip:popover-open {
+  opacity:
+    1;
+
+  transform:
+    translate(
+      0,
+      0
+    );
+}
+
+
+@starting-style {
+  .rm-tooltip:popover-open {
+    opacity:
+      0;
+
+    transform:
+      translate(
+        var(
+          --rm-floating-enter-x,
+          0px
+        ),
+        var(
+          --rm-floating-enter-y,
+          4px
+        )
+      );
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-tooltip {
+    transition:
+      none;
+
+    transform:
+      none;
+  }
+
+
+  .rm-tooltip:popover-open {
+    transform:
+      none;
+  }
+}

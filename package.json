@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "type": "module",
   "engines": {
     "node": ">=22.12.0 <23"
@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check:js": "node --check src/js/core/theme-manager.js && node --check src/js/components/tabs.js && node --check src/js/rahardianmif-ui.js",
+    "check:js": "node --check src/js/core/theme-manager.js && node --check src/js/components/tabs.js && node --check src/js/components/modal.js && node --check src/js/components/drawer.js && node --check src/js/components/tooltip.js && node --check src/js/components/popover.js && node --check src/js/components/dropdown.js && node --check src/js/components/disclosure.js && node --check src/js/internal/focus.js && node --check src/js/internal/scroll-lock.js && node --check src/js/internal/overlay-stack.js && node --check src/js/internal/floating.js && node --check src/js/rahardianmif-ui.js",
     "test:unit": "vitest run",
     "test:browser": "playwright test tests/browser",
     "test:a11y": "playwright test tests/accessibility",

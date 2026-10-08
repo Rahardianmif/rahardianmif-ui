@@ -1,0 +1,365 @@
+/*
+ * Rahardianmif UI
+ * Overlay Examples
+ *
+ * v0.5
+ *
+ * Demo-only styles.
+ * Not part of the public component API.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+
+  background:
+    var(--rm-page-bg);
+
+  color:
+    var(--rm-text-primary);
+
+  font-family:
+    var(--rm-font-family-sans);
+
+  line-height:
+    var(--rm-line-height-normal);
+}
+
+
+/* ========================================
+ * Demo Layout
+ * ======================================== */
+
+.rm-demo {
+  display: grid;
+
+  gap:
+    var(--rm-space-8);
+
+  inline-size:
+    min(
+      calc(
+        100%
+        -
+        (
+          var(--rm-space-4)
+          *
+          2
+        )
+      ),
+      72rem
+    );
+
+  margin-inline:
+    auto;
+
+  padding-block:
+    var(--rm-space-8)
+    var(--rm-space-12);
+}
+
+
+.rm-demo > h1 {
+  margin: 0;
+}
+
+
+.rm-demo__intro {
+  max-inline-size:
+    48rem;
+
+  margin: 0;
+
+  color:
+    var(--rm-text-secondary);
+}
+
+
+/* ========================================
+ * Theme Preview
+ * ======================================== */
+
+.rm-demo__theme {
+  display: grid;
+
+  gap:
+    var(--rm-space-6);
+
+  padding:
+    var(--rm-space-6);
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-page-bg);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+.rm-demo__theme > h2 {
+  margin: 0;
+}
+
+
+/* ========================================
+ * Sections
+ * ======================================== */
+
+.rm-demo__section {
+  display: grid;
+
+  gap:
+    var(--rm-space-4);
+}
+
+
+.rm-demo__section > h3 {
+  margin: 0;
+
+  font-size:
+    var(--rm-font-size-lg);
+}
+
+
+.rm-demo__section-description {
+  max-inline-size:
+    48rem;
+
+  margin: 0;
+
+  color:
+    var(--rm-text-secondary);
+}
+
+
+/* ========================================
+ * Demo Surface
+ * ======================================== */
+
+.rm-demo__surface {
+  display: grid;
+
+  gap:
+    var(--rm-space-4);
+
+  min-inline-size: 0;
+
+  padding:
+    var(--rm-space-5);
+
+  border:
+    1px solid
+    var(--rm-border-soft);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface);
+}
+
+
+/* ========================================
+ * Actions
+ * ======================================== */
+
+.rm-demo__actions {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    var(--rm-space-3);
+}
+
+
+/* ========================================
+ * Size Preview
+ * ======================================== */
+
+.rm-demo__sizes {
+  display: grid;
+
+  gap:
+    var(--rm-space-3);
+}
+
+
+.rm-demo__size-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap:
+    var(--rm-space-3);
+
+  padding:
+    var(--rm-space-4);
+
+  border:
+    1px solid
+    var(--rm-border-soft);
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    var(--rm-surface-secondary);
+}
+
+
+.rm-demo__size-label {
+  display: grid;
+
+  gap:
+    var(--rm-space-1);
+}
+
+
+.rm-demo__size-label strong {
+  color:
+    var(--rm-text-primary);
+}
+
+
+.rm-demo__size-label span {
+  color:
+    var(--rm-text-secondary);
+
+  font-size:
+    var(--rm-font-size-sm);
+}
+
+
+/* ========================================
+ * Demo Form
+ * ======================================== */
+
+.rm-demo__form {
+  display: grid;
+
+  gap:
+    var(--rm-space-4);
+}
+
+
+.rm-demo__form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    var(--rm-space-4);
+}
+
+
+/* ========================================
+ * Notes
+ * ======================================== */
+
+.rm-demo__note {
+  margin: 0;
+
+  padding:
+    var(--rm-space-4);
+
+  border-inline-start:
+    3px solid
+    var(--rm-primary);
+
+  border-radius:
+    var(--rm-radius-sm);
+
+  background:
+    var(--rm-primary-soft);
+
+  color:
+    var(--rm-text-primary);
+
+  font-size:
+    var(--rm-font-size-sm);
+}
+
+
+/* ========================================
+ * Example Content
+ * ======================================== */
+
+.rm-demo__content-stack {
+  display: grid;
+
+  gap:
+    var(--rm-space-4);
+}
+
+
+.rm-demo__content-stack > * {
+  margin-block:
+    0;
+}
+
+
+.rm-demo__muted {
+  color:
+    var(--rm-text-secondary);
+}
+
+
+/* ========================================
+ * Responsive
+ * ======================================== */
+
+@media (max-width: 40rem) {
+  .rm-demo {
+    padding-block:
+      var(--rm-space-5)
+      var(--rm-space-8);
+  }
+
+
+  .rm-demo__theme {
+    padding:
+      var(--rm-space-4);
+  }
+
+
+  .rm-demo__surface {
+    padding:
+      var(--rm-space-4);
+  }
+
+
+  .rm-demo__form-row {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .rm-demo__size-row {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+}

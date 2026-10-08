@@ -1,0 +1,987 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Dropdown Menu
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./overlay-demo.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="rm-demo">
+
+    <header>
+
+        <h1>
+            Rahardianmif UI Dropdown Menu
+        </h1>
+
+        <p class="rm-demo__intro">
+            Application action menus with native Popover,
+            keyboard navigation, roving focus, alignment,
+            typeahead and shared floating ownership.
+        </p>
+
+    </header>
+
+
+    <!-- ========================================
+     * Light Theme
+     * ======================================== -->
+
+    <section
+        class="rm-demo__theme"
+        data-rm-theme="light"
+        aria-labelledby="dropdown-light-title"
+    >
+
+        <h2 id="dropdown-light-title">
+            Dropdown Menu — Light Theme
+        </h2>
+
+
+        <!-- ========================================
+         * Basic Actions
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-basic-title"
+        >
+
+            <h3 id="dropdown-basic-title">
+                Basic Actions
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Open the menu using click, Enter, Space
+                or ArrowDown. ArrowUp opens the menu and
+                focuses the final enabled item.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-demo__actions">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="record-actions"
+                        data-rm-dropdown-trigger="record-actions"
+                    >
+                        Actions
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="record-actions"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-placement="bottom"
+                data-rm-dropdown-align="start"
+                popover="manual"
+                role="menu"
+                aria-label="Record actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Edit
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Duplicate
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Download
+                </button>
+
+
+                <div
+                    class="rm-dropdown__separator"
+                    role="separator"
+                ></div>
+
+
+                <button
+                    type="button"
+                    class="
+                        rm-dropdown__item
+                        rm-dropdown__item--danger
+                    "
+                    role="menuitem"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Alignment
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-alignment-title"
+        >
+
+            <h3 id="dropdown-alignment-title">
+                Alignment
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Dropdown supports logical start, center
+                and end alignment. Placement and alignment
+                remain collision-aware.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-demo__actions">
+
+
+                    <!-- Start -->
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="dropdown-align-start"
+                        data-rm-dropdown-trigger="dropdown-align-start"
+                    >
+                        Start
+                    </button>
+
+
+                    <!-- Center -->
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="dropdown-align-center"
+                        data-rm-dropdown-trigger="dropdown-align-center"
+                    >
+                        Center
+                    </button>
+
+
+                    <!-- End -->
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="dropdown-align-end"
+                        data-rm-dropdown-trigger="dropdown-align-end"
+                    >
+                        End
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="dropdown-align-start"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-placement="bottom"
+                data-rm-dropdown-align="start"
+                popover="manual"
+                role="menu"
+                aria-label="Start aligned actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    First Action
+                </button>
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Second Action
+                </button>
+
+            </div>
+
+
+            <div
+                id="dropdown-align-center"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-placement="bottom"
+                data-rm-dropdown-align="center"
+                popover="manual"
+                role="menu"
+                aria-label="Center aligned actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    First Action
+                </button>
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Second Action
+                </button>
+
+            </div>
+
+
+            <div
+                id="dropdown-align-end"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-placement="bottom"
+                data-rm-dropdown-align="end"
+                popover="manual"
+                role="menu"
+                aria-label="End aligned actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    First Action
+                </button>
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Second Action
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Keyboard + Typeahead
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-keyboard-title"
+        >
+
+            <h3 id="dropdown-keyboard-title">
+                Keyboard Navigation & Typeahead
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Use Arrow Up, Arrow Down, Home, End,
+                Enter, Space and Escape. Typing letters
+                searches enabled menu items.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-demo__actions">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="keyboard-menu"
+                        data-rm-dropdown-trigger="keyboard-menu"
+                    >
+                        File Actions
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="keyboard-menu"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-placement="bottom"
+                data-rm-dropdown-align="start"
+                popover="manual"
+                role="menu"
+                aria-label="File actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Archive
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Copy
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Download
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Duplicate
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Edit
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Rename
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Disabled + Danger
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-states-title"
+        >
+
+            <h3 id="dropdown-states-title">
+                Item States
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Disabled items are skipped by keyboard
+                navigation and typeahead. Danger remains
+                a semantic visual treatment only.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--outline
+                    "
+                    aria-haspopup="menu"
+                    aria-expanded="false"
+                    aria-controls="states-menu"
+                    data-rm-dropdown-trigger="states-menu"
+                >
+                    Manage
+                </button>
+
+            </div>
+
+
+            <div
+                id="states-menu"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-align="end"
+                popover="manual"
+                role="menu"
+                aria-label="Management actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Edit
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                    aria-disabled="true"
+                >
+                    Archive
+                </button>
+
+
+                <div
+                    class="rm-dropdown__separator"
+                    role="separator"
+                ></div>
+
+
+                <button
+                    type="button"
+                    class="
+                        rm-dropdown__item
+                        rm-dropdown__item--danger
+                    "
+                    role="menuitem"
+                >
+                    Delete Permanently
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Links
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-links-title"
+        >
+
+            <h3 id="dropdown-links-title">
+                Navigation Items
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Links are valid menu items when the
+                Dropdown represents a compact application
+                action menu.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--outline
+                    "
+                    aria-haspopup="menu"
+                    aria-expanded="false"
+                    aria-controls="navigation-actions"
+                    data-rm-dropdown-trigger="navigation-actions"
+                >
+                    Navigate
+                </button>
+
+            </div>
+
+
+            <div
+                id="navigation-actions"
+                class="rm-dropdown"
+                data-rm-dropdown
+                popover="manual"
+                role="menu"
+                aria-label="Navigation actions"
+            >
+
+                <a
+                    href="#dropdown-link-target"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    View Details
+                </a>
+
+
+                <a
+                    href="#dropdown-link-target"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Open Activity
+                </a>
+
+            </div>
+
+
+            <p
+                id="dropdown-link-target"
+                class="rm-demo__note"
+            >
+                Example in-page navigation target.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================
+         * Modal Composition
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-modal-title"
+        >
+
+            <h3 id="dropdown-modal-title">
+                Dropdown inside Modal
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--outline
+                    "
+                    data-rm-modal-trigger="dropdown-demo-modal"
+                >
+                    Open Modal
+                </button>
+
+            </div>
+
+
+            <dialog
+                id="dropdown-demo-modal"
+                class="
+                    rm-modal
+                    rm-modal--sm
+                "
+                data-rm-modal
+                aria-labelledby="dropdown-demo-modal-title"
+            >
+
+                <header class="rm-modal__header">
+
+                    <h2
+                        id="dropdown-demo-modal-title"
+                        class="rm-modal__title"
+                    >
+                        Modal Actions
+                    </h2>
+
+                </header>
+
+
+                <div class="rm-modal__body">
+
+                    <p>
+                        Dropdown remains an independent
+                        floating menu above Modal.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="modal-dropdown"
+                        data-rm-dropdown-trigger="modal-dropdown"
+                    >
+                        More Actions
+                    </button>
+
+
+                    <div
+                        id="modal-dropdown"
+                        class="rm-dropdown"
+                        data-rm-dropdown
+                        data-rm-dropdown-align="start"
+                        popover="manual"
+                        role="menu"
+                        aria-label="Modal actions"
+                    >
+
+                        <button
+                            type="button"
+                            class="rm-dropdown__item"
+                            role="menuitem"
+                        >
+                            Edit
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-dropdown__item"
+                            role="menuitem"
+                        >
+                            Duplicate
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <footer class="rm-modal__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-modal-close
+                    >
+                        Done
+                    </button>
+
+                </footer>
+
+            </dialog>
+
+        </section>
+
+
+        <!-- ========================================
+         * Drawer Composition
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-drawer-title"
+        >
+
+            <h3 id="dropdown-drawer-title">
+                Dropdown inside Drawer
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--outline
+                    "
+                    data-rm-drawer-trigger="dropdown-demo-drawer"
+                >
+                    Open Drawer
+                </button>
+
+            </div>
+
+
+            <dialog
+                id="dropdown-demo-drawer"
+                class="
+                    rm-drawer
+                    rm-drawer--end
+                "
+                data-rm-drawer
+                aria-labelledby="dropdown-demo-drawer-title"
+            >
+
+                <header class="rm-drawer__header">
+
+                    <h2
+                        id="dropdown-demo-drawer-title"
+                        class="rm-drawer__title"
+                    >
+                        Drawer Actions
+                    </h2>
+
+                </header>
+
+
+                <div class="rm-drawer__body">
+
+                    <p>
+                        Dropdown can be triggered from inside
+                        the Drawer without modifying Drawer
+                        modality.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--outline
+                        "
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        aria-controls="drawer-dropdown"
+                        data-rm-dropdown-trigger="drawer-dropdown"
+                    >
+                        Actions
+                    </button>
+
+
+                    <div
+                        id="drawer-dropdown"
+                        class="rm-dropdown"
+                        data-rm-dropdown
+                        data-rm-dropdown-placement="start"
+                        data-rm-dropdown-align="start"
+                        popover="manual"
+                        role="menu"
+                        aria-label="Drawer actions"
+                    >
+
+                        <button
+                            type="button"
+                            class="rm-dropdown__item"
+                            role="menuitem"
+                        >
+                            Edit
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rm-dropdown__item"
+                            role="menuitem"
+                        >
+                            Share
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <footer class="rm-drawer__footer">
+
+                    <button
+                        type="button"
+                        class="
+                            rm-button
+                            rm-button--primary
+                        "
+                        data-rm-drawer-close
+                    >
+                        Done
+                    </button>
+
+                </footer>
+
+            </dialog>
+
+        </section>
+
+    </section>
+
+
+    <!-- ========================================
+     * Dark Theme
+     * ======================================== -->
+
+    <section
+        class="rm-demo__theme"
+        data-rm-theme="dark"
+        aria-labelledby="dropdown-dark-title"
+    >
+
+        <h2 id="dropdown-dark-title">
+            Dropdown Menu — Dark Theme
+        </h2>
+
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dropdown-dark-demo-title"
+        >
+
+            <h3 id="dropdown-dark-demo-title">
+                Basic Menu — Dark Theme
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <button
+                    type="button"
+                    class="
+                        rm-button
+                        rm-button--primary
+                    "
+                    aria-haspopup="menu"
+                    aria-expanded="false"
+                    aria-controls="dark-dropdown"
+                    data-rm-dropdown-trigger="dark-dropdown"
+                >
+                    Actions
+                </button>
+
+            </div>
+
+
+            <div
+                id="dark-dropdown"
+                class="rm-dropdown"
+                data-rm-dropdown
+                data-rm-dropdown-align="end"
+                popover="manual"
+                role="menu"
+                aria-label="Dark theme actions"
+            >
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Edit
+                </button>
+
+
+                <button
+                    type="button"
+                    class="rm-dropdown__item"
+                    role="menuitem"
+                >
+                    Duplicate
+                </button>
+
+
+                <div
+                    class="rm-dropdown__separator"
+                    role="separator"
+                ></div>
+
+
+                <button
+                    type="button"
+                    class="
+                        rm-dropdown__item
+                        rm-dropdown__item--danger
+                    "
+                    role="menuitem"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<script type="module">
+
+    import RahardianmifUI
+        from "../../src/js/rahardianmif-ui.js";
+
+
+    RahardianmifUI.init();
+
+</script>
+
+</body>
+
+</html>

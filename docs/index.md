@@ -10,9 +10,9 @@ Core tetap framework-agnostic.
 
 ## Current Version
 
-**v0.4.0 — Navigation**
+**v0.5.0 — Modal + Overlays**
 
-v0.4 merupakan cumulative release.
+v0.5 merupakan cumulative release.
 
 Contract versi sebelumnya tetap frozen:
 
@@ -20,3 +20,4 @@ Contract versi sebelumnya tetap frozen:
 v0.1 Foundations + Tokens
 v0.2 Buttons + Basic Forms
 v0.3 Cards + Feedback
+v0.4 Navigation

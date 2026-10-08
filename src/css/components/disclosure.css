@@ -1,0 +1,436 @@
+/*
+ * Rahardianmif UI
+ * Disclosure + Accordion
+ *
+ * v0.5.7
+ *
+ * Disclosure is the primitive.
+ * Accordion is a composition layer.
+ */
+
+
+/* ========================================
+ * Standalone Disclosure
+ * ======================================== */
+
+.rm-disclosure {
+  box-sizing:
+    border-box;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Trigger
+ * ======================================== */
+
+.rm-disclosure__trigger {
+  appearance:
+    none;
+
+  box-sizing:
+    border-box;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    var(--rm-space-4);
+
+  inline-size:
+    100%;
+
+  min-block-size:
+    3rem;
+
+  margin:
+    0;
+
+  padding:
+    var(--rm-space-4)
+    var(--rm-space-5);
+
+  border:
+    0;
+
+  border-radius:
+    0;
+
+  background:
+    transparent;
+
+  color:
+    var(--rm-text-primary);
+
+  font:
+    inherit;
+
+  text-align:
+    start;
+
+  cursor:
+    pointer;
+
+  transition:
+    background-color
+      var(--rm-motion-fast),
+    color
+      var(--rm-motion-fast);
+}
+
+
+.rm-disclosure__trigger:hover:not(
+  :disabled
+) {
+  background:
+    var(--rm-surface-secondary);
+}
+
+
+.rm-disclosure__trigger:focus-visible {
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset:
+    -2px;
+}
+
+
+.rm-disclosure__trigger:disabled {
+  opacity:
+    0.5;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* ========================================
+ * Label
+ * ======================================== */
+
+.rm-disclosure__label {
+  flex:
+    1 1 auto;
+
+  min-inline-size:
+    0;
+
+  color:
+    inherit;
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-snug);
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+/* ========================================
+ * Indicator
+ * ======================================== */
+
+.rm-disclosure__indicator {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex:
+    0 0 auto;
+
+  inline-size:
+    1.25rem;
+
+  block-size:
+    1.25rem;
+
+  color:
+    var(--rm-text-secondary);
+
+  transform:
+    rotate(0deg);
+
+  transform-origin:
+    center;
+
+  transition:
+    transform
+      var(--rm-motion-fast),
+    color
+      var(--rm-motion-fast);
+
+  pointer-events:
+    none;
+}
+
+
+.rm-disclosure__indicator > svg {
+  inline-size:
+    100%;
+
+  block-size:
+    100%;
+
+  pointer-events:
+    none;
+}
+
+
+.rm-disclosure__trigger[
+  aria-expanded="true"
+]
+.rm-disclosure__indicator {
+  transform:
+    rotate(180deg);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Panel
+ * ======================================== */
+
+.rm-disclosure__panel {
+  box-sizing:
+    border-box;
+
+  padding:
+    var(--rm-space-4)
+    var(--rm-space-5);
+
+  border-block-start:
+    1px solid
+    var(--rm-border-soft);
+
+  color:
+    var(--rm-text-primary);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+.rm-disclosure__panel[hidden] {
+  display:
+    none;
+}
+
+
+.rm-disclosure__panel > :first-child {
+  margin-block-start:
+    0;
+}
+
+
+.rm-disclosure__panel > :last-child {
+  margin-block-end:
+    0;
+}
+
+
+/* ========================================
+ * Accordion
+ * ======================================== */
+
+.rm-accordion {
+  box-sizing:
+    border-box;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-lg);
+
+  background:
+    var(--rm-surface);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+/* ========================================
+ * Accordion Item
+ * ======================================== */
+
+.rm-accordion__item {
+  box-sizing:
+    border-box;
+
+  min-inline-size:
+    0;
+}
+
+
+.rm-accordion__item
++
+.rm-accordion__item {
+  border-block-start:
+    1px solid
+    var(--rm-border);
+}
+
+
+/*
+ * Heading wrappers remain semantic while
+ * the Disclosure button provides the
+ * interaction.
+ */
+
+.rm-accordion__item
+>
+:is(
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+) {
+  margin:
+    0;
+
+  padding:
+    0;
+
+  font:
+    inherit;
+}
+
+
+/*
+ * The Accordion root already owns the
+ * outer border, so individual Disclosure
+ * items do not require another wrapper
+ * border.
+ */
+
+.rm-accordion__item
+.rm-disclosure__trigger {
+  border-radius:
+    0;
+}
+
+
+/*
+ * Remove the panel separator when an
+ * Accordion item's trigger is followed by
+ * the panel through a semantic heading.
+ *
+ * The panel still receives a clear
+ * structural separator.
+ */
+
+.rm-accordion__item
+.rm-disclosure__panel {
+  background:
+    var(--rm-surface);
+
+  border-block-start:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Nested Standalone Disclosure
+ * ======================================== */
+
+.rm-disclosure__panel
+.rm-disclosure {
+  margin-block:
+    var(--rm-space-4);
+
+  background:
+    var(--rm-surface-elevated);
+}
+
+
+/* ========================================
+ * Responsive
+ * ======================================== */
+
+@media (max-width: 35.999rem) {
+  .rm-disclosure__trigger {
+    gap:
+      var(--rm-space-3);
+
+    padding:
+      var(--rm-space-4);
+  }
+
+
+  .rm-disclosure__panel {
+    padding:
+      var(--rm-space-4);
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-disclosure__trigger,
+  .rm-disclosure__indicator {
+    transition:
+      none;
+  }
+
+
+  .rm-disclosure__indicator,
+  .rm-disclosure__trigger[
+    aria-expanded="true"
+  ]
+  .rm-disclosure__indicator {
+    transform:
+      none;
+  }
+}

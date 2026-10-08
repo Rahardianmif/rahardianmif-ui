@@ -1,0 +1,987 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Disclosure & Accordion
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../overlay/overlay-demo.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="rm-demo">
+
+    <header>
+
+        <h1>
+            Rahardianmif UI Disclosure & Accordion
+        </h1>
+
+        <p class="rm-demo__intro">
+            Disclosure is the expandable-content primitive.
+            Accordion composes multiple Disclosure items
+            with single or multiple expansion policies.
+        </p>
+
+    </header>
+
+
+    <!-- ========================================
+     * Light Theme
+     * ======================================== -->
+
+    <section
+        class="rm-demo__theme"
+        data-rm-theme="light"
+        aria-labelledby="disclosure-light-title"
+    >
+
+        <h2 id="disclosure-light-title">
+            Disclosure — Light Theme
+        </h2>
+
+
+        <!-- ========================================
+         * Standalone Disclosure
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="standalone-disclosure-title"
+        >
+
+            <h3 id="standalone-disclosure-title">
+                Standalone Disclosure
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Click, Enter or Space toggles the controlled
+                panel. Focus remains on the trigger.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-disclosure">
+
+                    <button
+                        type="button"
+                        class="rm-disclosure__trigger"
+                        data-rm-disclosure-trigger="account-disclosure"
+                        aria-expanded="false"
+                        aria-controls="account-disclosure"
+                    >
+
+                        <span class="rm-disclosure__label">
+                            Account Information
+                        </span>
+
+
+                        <span
+                            class="rm-disclosure__indicator"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                focusable="false"
+                            >
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="account-disclosure"
+                        class="rm-disclosure__panel"
+                        data-rm-disclosure
+                        hidden
+                    >
+
+                        <p>
+                            Disclosure panels may contain text,
+                            links, forms, buttons and other
+                            application content.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Initially Open
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="initial-disclosure-title"
+        >
+
+            <h3 id="initial-disclosure-title">
+                Initially Open
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Initial state comes from the panel's hidden
+                attribute. JavaScript synchronizes
+                aria-expanded during initialization.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-disclosure">
+
+                    <button
+                        type="button"
+                        class="rm-disclosure__trigger"
+                        data-rm-disclosure-trigger="initial-open-panel"
+                        aria-expanded="false"
+                        aria-controls="initial-open-panel"
+                    >
+
+                        <span class="rm-disclosure__label">
+                            Additional Details
+                        </span>
+
+                        <span
+                            class="rm-disclosure__indicator"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                focusable="false"
+                            >
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="initial-open-panel"
+                        class="rm-disclosure__panel"
+                        data-rm-disclosure
+                    >
+
+                        <p>
+                            This panel is open in the original
+                            markup because it does not have the
+                            hidden attribute.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Disabled
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="disabled-disclosure-title"
+        >
+
+            <h3 id="disabled-disclosure-title">
+                Disabled Disclosure
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-disclosure">
+
+                    <button
+                        type="button"
+                        class="rm-disclosure__trigger"
+                        data-rm-disclosure-trigger="disabled-panel"
+                        aria-expanded="false"
+                        aria-controls="disabled-panel"
+                        disabled
+                    >
+
+                        <span class="rm-disclosure__label">
+                            Restricted Settings
+                        </span>
+
+                        <span
+                            class="rm-disclosure__indicator"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                focusable="false"
+                            >
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="disabled-panel"
+                        class="rm-disclosure__panel"
+                        data-rm-disclosure
+                        hidden
+                    >
+                        Restricted content.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Nested Standalone Disclosure
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="nested-disclosure-title"
+        >
+
+            <h3 id="nested-disclosure-title">
+                Nested Disclosure
+            </h3>
+
+            <p class="rm-demo__section-description">
+                A standalone Disclosure may be nested inside
+                another panel while keeping independent state.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div class="rm-disclosure">
+
+                    <button
+                        type="button"
+                        class="rm-disclosure__trigger"
+                        data-rm-disclosure-trigger="outer-panel"
+                        aria-expanded="false"
+                        aria-controls="outer-panel"
+                    >
+
+                        <span class="rm-disclosure__label">
+                            Advanced Settings
+                        </span>
+
+                        <span
+                            class="rm-disclosure__indicator"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                focusable="false"
+                            >
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="outer-panel"
+                        class="rm-disclosure__panel"
+                        data-rm-disclosure
+                        hidden
+                    >
+
+                        <p>
+                            The nested Disclosure below does
+                            not become part of an Accordion
+                            group automatically.
+                        </p>
+
+
+                        <div class="rm-disclosure">
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="nested-panel"
+                                aria-expanded="false"
+                                aria-controls="nested-panel"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Developer Options
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                id="nested-panel"
+                                class="rm-disclosure__panel"
+                                data-rm-disclosure
+                                hidden
+                            >
+
+                                <p>
+                                    Nested content remains
+                                    independently controllable.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Single Accordion
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="single-accordion-title"
+        >
+
+            <h3 id="single-accordion-title">
+                Single Accordion
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Only one item is open at a time. The currently
+                open item may also be collapsed.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div
+                    class="rm-accordion"
+                    data-rm-accordion
+                    data-rm-accordion-mode="single"
+                >
+
+
+                    <!-- Account -->
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="accordion-account"
+                                aria-expanded="true"
+                                aria-controls="accordion-account"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Account
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="accordion-account"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                        >
+
+                            <p>
+                                Manage general account
+                                information and profile data.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Billing -->
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="accordion-billing"
+                                aria-expanded="false"
+                                aria-controls="accordion-billing"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Billing
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="accordion-billing"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                            hidden
+                        >
+
+                            <p>
+                                Review billing information and
+                                payment preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Security -->
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="accordion-security"
+                                aria-expanded="false"
+                                aria-controls="accordion-security"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Security
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="accordion-security"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                            hidden
+                        >
+
+                            <div class="rm-demo__content-stack">
+
+                                <p>
+                                    Security panels may also
+                                    contain existing form
+                                    components.
+                                </p>
+
+
+                                <div class="rm-field">
+
+                                    <label
+                                        class="rm-field__label"
+                                        for="security-email"
+                                    >
+                                        Recovery Email
+                                    </label>
+
+                                    <input
+                                        id="security-email"
+                                        class="rm-input"
+                                        type="email"
+                                        value="user@example.com"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         * Multiple Accordion
+         * ======================================== -->
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="multiple-accordion-title"
+        >
+
+            <h3 id="multiple-accordion-title">
+                Multiple Accordion
+            </h3>
+
+            <p class="rm-demo__section-description">
+                Multiple mode allows several items to remain
+                expanded simultaneously.
+            </p>
+
+
+            <div class="rm-demo__surface">
+
+                <div
+                    class="rm-accordion"
+                    data-rm-accordion
+                    data-rm-accordion-mode="multiple"
+                >
+
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="multiple-one"
+                                aria-expanded="true"
+                                aria-controls="multiple-one"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    General
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="multiple-one"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                        >
+                            General settings content.
+                        </div>
+
+                    </div>
+
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="multiple-two"
+                                aria-expanded="true"
+                                aria-controls="multiple-two"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Notifications
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="multiple-two"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                        >
+                            Notification settings content.
+                        </div>
+
+                    </div>
+
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="multiple-three"
+                                aria-expanded="false"
+                                aria-controls="multiple-three"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Privacy
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="multiple-three"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                            hidden
+                        >
+                            Privacy settings content.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- ========================================
+     * Dark Theme
+     * ======================================== -->
+
+    <section
+        class="rm-demo__theme"
+        data-rm-theme="dark"
+        aria-labelledby="disclosure-dark-title"
+    >
+
+        <h2 id="disclosure-dark-title">
+            Disclosure — Dark Theme
+        </h2>
+
+
+        <section
+            class="rm-demo__section"
+            aria-labelledby="dark-disclosure-example-title"
+        >
+
+            <h3 id="dark-disclosure-example-title">
+                Dark Theme Accordion
+            </h3>
+
+
+            <div class="rm-demo__surface">
+
+                <div
+                    class="rm-accordion"
+                    data-rm-accordion
+                    data-rm-accordion-mode="single"
+                >
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="dark-general"
+                                aria-expanded="true"
+                                aria-controls="dark-general"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    General
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="dark-general"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                        >
+
+                            <p>
+                                Disclosure and Accordion consume
+                                existing semantic theme tokens.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="rm-accordion__item">
+
+                        <h3>
+
+                            <button
+                                type="button"
+                                class="rm-disclosure__trigger"
+                                data-rm-disclosure-trigger="dark-advanced"
+                                aria-expanded="false"
+                                aria-controls="dark-advanced"
+                            >
+
+                                <span class="rm-disclosure__label">
+                                    Advanced
+                                </span>
+
+                                <span
+                                    class="rm-disclosure__indicator"
+                                    aria-hidden="true"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        focusable="false"
+                                    >
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                        </h3>
+
+
+                        <div
+                            id="dark-advanced"
+                            class="rm-disclosure__panel"
+                            data-rm-disclosure
+                            hidden
+                        >
+                            Advanced settings.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<script type="module">
+
+    import RahardianmifUI
+        from "../../src/js/rahardianmif-ui.js";
+
+
+    RahardianmifUI.init();
+
+</script>
+
+</body>
+
+</html>

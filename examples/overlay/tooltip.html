@@ -1,0 +1,710 @@
+<!doctype html>
+
+<html lang="en" data-rm-theme="light">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Rahardianmif UI — Tooltip
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../../src/css/rahardianmif-ui.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./overlay-demo.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="rm-demo">
+
+        <header>
+
+            <h1>
+                Rahardianmif UI Tooltip
+            </h1>
+
+            <p class="rm-demo__intro">
+                Short, supplementary and non-interactive
+                floating information with keyboard focus,
+                pointer hover, logical placement, automatic
+                collision handling and Reduced Motion support.
+            </p>
+
+        </header>
+
+
+        <!-- ========================================
+         * Light Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="light"
+            aria-labelledby="tooltip-light-title"
+        >
+
+            <h2 id="tooltip-light-title">
+                Tooltip — Light Theme
+            </h2>
+
+
+            <!-- Basic -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-basic-title"
+            >
+
+                <h3 id="tooltip-basic-title">
+                    Basic Tooltip
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Focus or hover the button. Tooltip does
+                    not receive focus and does not contain
+                    interactive controls.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            aria-describedby="tooltip-save"
+                            data-rm-tooltip-trigger="tooltip-save"
+                        >
+                            Save Changes
+                        </button>
+
+
+                        <div
+                            id="tooltip-save"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Save your current changes
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Icon-only -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-icon-title"
+            >
+
+                <h3 id="tooltip-icon-title">
+                    Icon-only Control
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    The control keeps its own accessible name.
+                    Tooltip is supplementary description,
+                    not a replacement for aria-label.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-label="Delete record"
+                            aria-describedby="tooltip-delete"
+                            data-rm-tooltip-trigger="tooltip-delete"
+                        >
+
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="M3 6h18"></path>
+                                <path d="M8 6V4h8v2"></path>
+                                <path d="M19 6l-1 14H6L5 6"></path>
+                                <path d="M10 11v5"></path>
+                                <path d="M14 11v5"></path>
+                            </svg>
+
+                        </button>
+
+
+                        <div
+                            id="tooltip-delete"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Delete record
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Placements -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-placement-title"
+            >
+
+                <h3 id="tooltip-placement-title">
+                    Placements
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Placement values are preferred positions.
+                    Tooltip may automatically flip when the
+                    preferred side does not have enough space.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+
+                        <!-- Top -->
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-top"
+                            data-rm-tooltip-trigger="tooltip-top"
+                        >
+                            Top
+                        </button>
+
+                        <div
+                            id="tooltip-top"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="top"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Preferred top placement
+                        </div>
+
+
+                        <!-- Bottom -->
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-bottom"
+                            data-rm-tooltip-trigger="tooltip-bottom"
+                        >
+                            Bottom
+                        </button>
+
+                        <div
+                            id="tooltip-bottom"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="bottom"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Preferred bottom placement
+                        </div>
+
+
+                        <!-- Start -->
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-start"
+                            data-rm-tooltip-trigger="tooltip-start"
+                        >
+                            Start
+                        </button>
+
+                        <div
+                            id="tooltip-start"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="start"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Logical start placement
+                        </div>
+
+
+                        <!-- End -->
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-end"
+                            data-rm-tooltip-trigger="tooltip-end"
+                        >
+                            End
+                        </button>
+
+                        <div
+                            id="tooltip-end"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="end"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Logical end placement
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Long text -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-wrap-title"
+            >
+
+                <h3 id="tooltip-wrap-title">
+                    Wrapping Content
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Tooltip remains compact but can wrap
+                    moderately longer supplementary text.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-wrap"
+                            data-rm-tooltip-trigger="tooltip-wrap"
+                        >
+                            Hover for Details
+                        </button>
+
+
+                        <div
+                            id="tooltip-wrap"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="bottom"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Changes are saved locally before
+                            being synchronized with the server.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Modal composition -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-modal-title"
+            >
+
+                <h3 id="tooltip-modal-title">
+                    Tooltip inside Modal
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Tooltip can appear above a Modal without
+                    changing Modal focus or scroll-lock
+                    behavior.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-modal-trigger="tooltip-modal"
+                        >
+                            Open Modal
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="tooltip-modal"
+                    class="
+                        rm-modal
+                        rm-modal--sm
+                    "
+                    data-rm-modal
+                    aria-labelledby="tooltip-modal-heading"
+                >
+
+                    <header class="rm-modal__header">
+
+                        <h2
+                            id="tooltip-modal-heading"
+                            class="rm-modal__title"
+                        >
+                            Modal with Tooltip
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-modal__close"
+                            data-rm-modal-close
+                            aria-label="Close modal"
+                        >
+                            ×
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-modal__body">
+
+                        <p>
+                            Focus or hover the action below.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-modal-action"
+                            data-rm-tooltip-trigger="tooltip-modal-action"
+                        >
+                            More Information
+                        </button>
+
+
+                        <div
+                            id="tooltip-modal-action"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="bottom"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Tooltip remains non-interactive
+                            inside Modal.
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-modal__footer">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-modal-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+
+            <!-- Drawer composition -->
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-drawer-title"
+            >
+
+                <h3 id="tooltip-drawer-title">
+                    Tooltip inside Drawer
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Floating positioning also works from
+                    triggers inside the Drawer top layer.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            data-rm-drawer-trigger="tooltip-drawer"
+                        >
+                            Open Drawer
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <dialog
+                    id="tooltip-drawer"
+                    class="
+                        rm-drawer
+                        rm-drawer--end
+                    "
+                    data-rm-drawer
+                    aria-labelledby="tooltip-drawer-heading"
+                >
+
+                    <header class="rm-drawer__header">
+
+                        <h2
+                            id="tooltip-drawer-heading"
+                            class="rm-drawer__title"
+                        >
+                            Drawer with Tooltip
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="rm-drawer__close"
+                            data-rm-drawer-close
+                            aria-label="Close drawer"
+                        >
+                            ×
+                        </button>
+
+                    </header>
+
+
+                    <div class="rm-drawer__body">
+
+                        <p>
+                            Tooltip stays independent from
+                            Drawer modality.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--outline
+                            "
+                            aria-describedby="tooltip-drawer-action"
+                            data-rm-tooltip-trigger="tooltip-drawer-action"
+                        >
+                            Status Information
+                        </button>
+
+
+                        <div
+                            id="tooltip-drawer-action"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="start"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Current status is available
+                        </div>
+
+                    </div>
+
+
+                    <footer class="rm-drawer__footer">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            data-rm-drawer-close
+                        >
+                            Done
+                        </button>
+
+                    </footer>
+
+                </dialog>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+         * Dark Theme
+         * ======================================== -->
+
+        <section
+            class="rm-demo__theme"
+            data-rm-theme="dark"
+            aria-labelledby="tooltip-dark-title"
+        >
+
+            <h2 id="tooltip-dark-title">
+                Tooltip — Dark Theme
+            </h2>
+
+
+            <section
+                class="rm-demo__section"
+                aria-labelledby="tooltip-dark-example-title"
+            >
+
+                <h3 id="tooltip-dark-example-title">
+                    Basic Tooltip — Dark Theme
+                </h3>
+
+                <p class="rm-demo__section-description">
+                    Tooltip consumes the same semantic
+                    surface, border, text and elevation
+                    tokens in Dark Theme.
+                </p>
+
+
+                <div class="rm-demo__surface">
+
+                    <div class="rm-demo__actions">
+
+                        <button
+                            type="button"
+                            class="
+                                rm-button
+                                rm-button--primary
+                            "
+                            aria-describedby="tooltip-dark-example"
+                            data-rm-tooltip-trigger="tooltip-dark-example"
+                        >
+                            Dark Tooltip
+                        </button>
+
+
+                        <div
+                            id="tooltip-dark-example"
+                            class="rm-tooltip"
+                            data-rm-tooltip
+                            data-rm-tooltip-placement="top"
+                            role="tooltip"
+                            popover="manual"
+                        >
+                            Dark Theme Tooltip
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script type="module">
+
+        import RahardianmifUI
+            from "../../src/js/rahardianmif-ui.js";
+
+
+        RahardianmifUI.init();
+
+    </script>
+
+</body>
+
+</html>

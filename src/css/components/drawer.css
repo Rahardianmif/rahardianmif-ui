@@ -1,0 +1,689 @@
+/*
+ * Rahardianmif UI
+ * Drawer / Offcanvas Component
+ *
+ * v0.5.3
+ *
+ * Foundation:
+ * - Native <dialog>
+ * - Start / End placement
+ * - Modal offcanvas behavior
+ * - Scroll-safe body
+ * - Light / Dark through semantic tokens
+ * - Reduced Motion
+ */
+
+
+/* ========================================
+ * Drawer Core
+ * ======================================== */
+
+.rm-drawer {
+  --rm-drawer-inline-size: 24rem;
+  --rm-drawer-closed-translate: 100%;
+
+  box-sizing: border-box;
+
+  position: fixed;
+
+  inset-block:
+    0;
+
+  inset-inline-start:
+    auto;
+
+  inset-inline-end:
+    0;
+
+  inline-size:
+    min(
+      var(--rm-drawer-inline-size),
+      calc(
+        100%
+        -
+        var(--rm-space-8)
+      )
+    );
+
+  block-size:
+    100vh;
+
+  block-size:
+    100dvb;
+
+  max-inline-size:
+    100%;
+
+  max-block-size:
+    none;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    0;
+
+  border-inline-start:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    0;
+
+  background:
+    var(--rm-surface-elevated);
+
+  color:
+    var(--rm-text-primary);
+
+  box-shadow:
+    var(--rm-shadow-lg);
+
+  font-family:
+    var(--rm-font-family-sans);
+
+  overflow:
+    hidden;
+
+  z-index:
+    var(--rm-z-drawer);
+
+  opacity:
+    0;
+
+  transform:
+    translateX(
+      var(--rm-drawer-closed-translate)
+    );
+
+  transition:
+    opacity
+      var(--rm-motion-normal),
+    transform
+      var(--rm-motion-normal),
+    overlay
+      var(--rm-motion-normal),
+    display
+      var(--rm-motion-normal);
+
+  transition-behavior:
+    normal,
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+
+/* ========================================
+ * Default / End Placement
+ * ======================================== */
+
+.rm-drawer,
+.rm-drawer--end {
+  --rm-drawer-closed-translate: 100%;
+
+  inset-inline-start:
+    auto;
+
+  inset-inline-end:
+    0;
+
+  border-inline-start:
+    1px solid
+    var(--rm-border);
+
+  border-inline-end:
+    0;
+}
+
+
+/*
+ * Logical direction support.
+ * Inline-end is the left edge in RTL.
+ */
+
+.rm-drawer:dir(rtl),
+.rm-drawer--end:dir(rtl) {
+  --rm-drawer-closed-translate: -100%;
+}
+
+
+/* ========================================
+ * Start Placement
+ * ======================================== */
+
+.rm-drawer--start {
+  --rm-drawer-closed-translate: -100%;
+
+  inset-inline-start:
+    0;
+
+  inset-inline-end:
+    auto;
+
+  border-inline-start:
+    0;
+
+  border-inline-end:
+    1px solid
+    var(--rm-border);
+}
+
+
+.rm-drawer--start:dir(rtl) {
+  --rm-drawer-closed-translate: 100%;
+}
+
+
+/* ========================================
+ * Open State
+ * ======================================== */
+
+.rm-drawer[open] {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  opacity:
+    1;
+
+  transform:
+    translateX(0);
+}
+
+
+@starting-style {
+  .rm-drawer[open] {
+    opacity:
+      0;
+
+    transform:
+      translateX(
+        var(--rm-drawer-closed-translate)
+      );
+  }
+}
+
+
+/* ========================================
+ * Backdrop
+ * ======================================== */
+
+.rm-drawer::backdrop {
+  background:
+    var(--rm-overlay-backdrop);
+
+  opacity:
+    0;
+
+  transition:
+    opacity
+      var(--rm-motion-normal),
+    overlay
+      var(--rm-motion-normal),
+    display
+      var(--rm-motion-normal);
+
+  transition-behavior:
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+
+.rm-drawer[open]::backdrop {
+  opacity:
+    1;
+}
+
+
+@starting-style {
+  .rm-drawer[open]::backdrop {
+    opacity:
+      0;
+  }
+}
+
+
+/* ========================================
+ * Header
+ * ======================================== */
+
+.rm-drawer__header {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  flex:
+    0 0 auto;
+
+  gap:
+    var(--rm-space-4);
+
+  min-inline-size:
+    0;
+
+  padding-block-start:
+    max(
+      var(--rm-space-5),
+      env(
+        safe-area-inset-top,
+        0px
+      )
+    );
+
+  padding-block-end:
+    var(--rm-space-5);
+
+  padding-inline-start:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-left,
+        0px
+      )
+    );
+
+  padding-inline-end:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-right,
+        0px
+      )
+    );
+
+  border-block-end:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Title
+ * ======================================== */
+
+.rm-drawer__title {
+  min-inline-size:
+    0;
+
+  margin:
+    0;
+
+  color:
+    var(--rm-text-primary);
+
+  font-size:
+    var(--rm-font-size-xl);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-snug);
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+/* ========================================
+ * Body
+ * ======================================== */
+
+.rm-drawer__body {
+  flex:
+    1 1 auto;
+
+  min-inline-size:
+    0;
+
+  min-block-size:
+    0;
+
+  padding-block:
+    var(--rm-space-6);
+
+  padding-inline-start:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-left,
+        0px
+      )
+    );
+
+  padding-inline-end:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-right,
+        0px
+      )
+    );
+
+  color:
+    var(--rm-text-primary);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-x:
+    hidden;
+
+  overflow-y:
+    auto;
+
+  overscroll-behavior:
+    contain;
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+.rm-drawer__body > :first-child {
+  margin-block-start:
+    0;
+}
+
+
+.rm-drawer__body > :last-child {
+  margin-block-end:
+    0;
+}
+
+
+/* ========================================
+ * Footer
+ * ======================================== */
+
+.rm-drawer__footer {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    flex-end;
+
+  flex:
+    0 0 auto;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    var(--rm-space-2);
+
+  min-inline-size:
+    0;
+
+  padding-block-start:
+    var(--rm-space-4);
+
+  padding-block-end:
+    max(
+      var(--rm-space-4),
+      env(
+        safe-area-inset-bottom,
+        0px
+      )
+    );
+
+  padding-inline-start:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-left,
+        0px
+      )
+    );
+
+  padding-inline-end:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-right,
+        0px
+      )
+    );
+
+  border-block-start:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Close Control
+ * ======================================== */
+
+.rm-drawer__close {
+  appearance:
+    none;
+
+  box-sizing:
+    border-box;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex:
+    0 0 auto;
+
+  inline-size:
+    44px;
+
+  block-size:
+    44px;
+
+  margin:
+    calc(
+      0px
+      -
+      var(--rm-space-2)
+    );
+
+  padding:
+    0;
+
+  border:
+    0;
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    transparent;
+
+  color:
+    var(--rm-text-secondary);
+
+  font:
+    inherit;
+
+  cursor:
+    pointer;
+
+  transition:
+    background-color
+      var(--rm-motion-fast),
+    color
+      var(--rm-motion-fast);
+}
+
+
+.rm-drawer__close:hover:not(:disabled) {
+  background:
+    var(--rm-surface-secondary);
+
+  color:
+    var(--rm-text-primary);
+}
+
+
+.rm-drawer__close:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset:
+    2px;
+}
+
+
+.rm-drawer__close:disabled {
+  opacity:
+    0.5;
+
+  cursor:
+    not-allowed;
+}
+
+
+.rm-drawer__close > svg {
+  inline-size:
+    1.25em;
+
+  block-size:
+    1.25em;
+
+  pointer-events:
+    none;
+}
+
+
+/* ========================================
+ * Responsive
+ * ======================================== */
+
+@media (max-width: 35.999rem) {
+  .rm-drawer {
+    inline-size:
+      min(
+        22rem,
+        calc(
+          100%
+          -
+          var(--rm-space-4)
+        )
+      );
+  }
+
+
+  .rm-drawer__header {
+    padding-block-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-top,
+          0px
+        )
+      );
+
+    padding-block-end:
+      var(--rm-space-4);
+
+    padding-inline-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-left,
+          0px
+        )
+      );
+
+    padding-inline-end:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-right,
+          0px
+        )
+      );
+  }
+
+
+  .rm-drawer__body {
+    padding-block:
+      var(--rm-space-4);
+
+    padding-inline-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-left,
+          0px
+        )
+      );
+
+    padding-inline-end:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-right,
+          0px
+        )
+      );
+  }
+
+
+  .rm-drawer__footer {
+    padding-inline-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-left,
+          0px
+        )
+      );
+
+    padding-inline-end:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-right,
+          0px
+        )
+      );
+  }
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-drawer,
+  .rm-drawer::backdrop,
+  .rm-drawer__close {
+    transition:
+      none;
+  }
+
+
+  .rm-drawer,
+  .rm-drawer[open] {
+    transform:
+      none;
+  }
+}

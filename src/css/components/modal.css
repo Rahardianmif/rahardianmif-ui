@@ -1,0 +1,646 @@
+/*
+ * Rahardianmif UI
+ * Modal Component
+ *
+ * v0.5.1 — Modal Core
+ *
+ * Foundation:
+ * - Native <dialog>
+ * - Default / SM / LG
+ * - Light / Dark through semantic tokens
+ * - Native modality
+ * - Reduced Motion
+ */
+
+.rm-modal {
+  --rm-modal-max-inline-size: 40rem;
+
+  box-sizing: border-box;
+
+  inline-size:
+    min(
+      calc(
+        100%
+        -
+        var(--rm-space-12)
+      ),
+      var(--rm-modal-max-inline-size)
+    );
+
+  max-inline-size:
+    var(--rm-modal-max-inline-size);
+
+  max-block-size:
+    calc(
+      100dvb
+      -
+      var(--rm-space-12)
+    );
+
+  margin: auto;
+  padding: 0;
+
+  border:
+    1px solid
+    var(--rm-border);
+
+  border-radius:
+    var(--rm-radius-xl);
+
+  background:
+    var(--rm-surface-elevated);
+
+  color:
+    var(--rm-text-primary);
+
+  box-shadow:
+    var(--rm-shadow-xl);
+
+  font-family:
+    var(--rm-font-family-sans);
+
+  overflow: auto;
+
+  z-index:
+    var(--rm-z-modal);
+
+  opacity: 0;
+
+  transform:
+    translateY(
+      var(--rm-space-2)
+    )
+    scale(0.985);
+
+  transition:
+    opacity
+      var(--rm-motion-normal),
+    transform
+      var(--rm-motion-normal),
+    overlay
+      var(--rm-motion-normal),
+    display
+      var(--rm-motion-normal);
+
+  transition-behavior:
+    normal,
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+
+/* ========================================
+ * Open State
+ * ======================================== */
+
+.rm-modal[open] {
+  display: flex;
+  flex-direction: column;
+
+  opacity: 1;
+
+  transform: none;
+}
+
+@starting-style {
+  .rm-modal[open] {
+    opacity: 0;
+
+    transform:
+      translateY(
+        var(--rm-space-2)
+      )
+      scale(0.985);
+  }
+}
+
+
+/* ========================================
+ * Backdrop
+ * ======================================== */
+
+.rm-modal::backdrop {
+  background:
+    var(--rm-overlay-backdrop);
+
+  opacity: 0;
+
+  transition:
+    opacity
+      var(--rm-motion-normal),
+    overlay
+      var(--rm-motion-normal),
+    display
+      var(--rm-motion-normal);
+
+  transition-behavior:
+    normal,
+    allow-discrete,
+    allow-discrete;
+}
+
+.rm-modal[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  .rm-modal[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+
+/* ========================================
+ * Sizes
+ * ======================================== */
+
+.rm-modal--sm {
+  --rm-modal-max-inline-size: 28rem;
+}
+
+.rm-modal--lg {
+  --rm-modal-max-inline-size: 56rem;
+}
+
+
+/* ========================================
+ * Scrollable Modal
+ * v0.5.2
+ * ======================================== */
+
+.rm-modal--scrollable {
+  overflow: hidden;
+}
+
+.rm-modal--scrollable .rm-modal__body {
+  flex:
+    1 1 auto;
+
+  min-block-size:
+    0;
+
+  overflow-y:
+    auto;
+
+  overscroll-behavior:
+    contain;
+}
+
+
+/* ========================================
+ * Fullscreen Modal
+ * v0.5.2
+ * ======================================== */
+
+.rm-modal--fullscreen {
+  --rm-modal-max-inline-size: none;
+
+  inline-size:
+    100%;
+
+  max-inline-size:
+    none;
+
+  block-size:
+    100vh;
+
+  block-size:
+    100dvb;
+
+  max-block-size:
+    none;
+
+  margin:
+    0;
+
+  border:
+    0;
+
+  border-radius:
+    0;
+
+  overflow:
+    hidden;
+
+  transform:
+    none;
+}
+
+
+.rm-modal--fullscreen[open] {
+  transform:
+    none;
+}
+
+
+.rm-modal--fullscreen .rm-modal__header {
+  padding-block-start:
+    max(
+      var(--rm-space-5),
+      env(
+        safe-area-inset-top,
+        0px
+      )
+    );
+
+  padding-inline-start:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-left,
+        0px
+      )
+    );
+
+  padding-inline-end:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-right,
+        0px
+      )
+    );
+}
+
+
+.rm-modal--fullscreen .rm-modal__body {
+  flex:
+    1 1 auto;
+
+  min-block-size:
+    0;
+
+  overflow-y:
+    auto;
+
+  overscroll-behavior:
+    contain;
+
+  padding-inline-start:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-left,
+        0px
+      )
+    );
+
+  padding-inline-end:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-right,
+        0px
+      )
+    );
+}
+
+
+.rm-modal--fullscreen .rm-modal__footer {
+  padding-block-end:
+    max(
+      var(--rm-space-4),
+      env(
+        safe-area-inset-bottom,
+        0px
+      )
+    );
+
+  padding-inline-start:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-left,
+        0px
+      )
+    );
+
+  padding-inline-end:
+    max(
+      var(--rm-space-6),
+      env(
+        safe-area-inset-right,
+        0px
+      )
+    );
+}
+
+
+@starting-style {
+  .rm-modal--fullscreen[open] {
+    opacity:
+      0;
+
+    transform:
+      none;
+  }
+}
+
+/* ========================================
+ * Header
+ * ======================================== */
+
+.rm-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--rm-space-4);
+
+  min-inline-size: 0;
+
+  padding:
+    var(--rm-space-5)
+    var(--rm-space-6);
+
+  border-block-end:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Title
+ * ======================================== */
+
+.rm-modal__title {
+  min-inline-size: 0;
+
+  margin: 0;
+
+  color:
+    var(--rm-text-primary);
+
+  font-size:
+    var(--rm-font-size-xl);
+
+  font-weight:
+    var(--rm-font-weight-semibold);
+
+  line-height:
+    var(--rm-line-height-snug);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+ * Body
+ * ======================================== */
+
+.rm-modal__body {
+  min-inline-size: 0;
+  min-block-size: 0;
+
+  padding:
+    var(--rm-space-6);
+
+  color:
+    var(--rm-text-primary);
+
+  line-height:
+    var(--rm-line-height-normal);
+
+  overflow-wrap: anywhere;
+}
+
+.rm-modal__body > :first-child {
+  margin-block-start: 0;
+}
+
+.rm-modal__body > :last-child {
+  margin-block-end: 0;
+}
+
+
+/* ========================================
+ * Footer
+ * ======================================== */
+
+.rm-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: var(--rm-space-2);
+
+  min-inline-size: 0;
+
+  padding:
+    var(--rm-space-4)
+    var(--rm-space-6);
+
+  border-block-start:
+    1px solid
+    var(--rm-border-soft);
+}
+
+
+/* ========================================
+ * Close Control
+ * ======================================== */
+
+.rm-modal__close {
+  appearance: none;
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  inline-size: 44px;
+  block-size: 44px;
+
+  margin:
+    calc(
+      0px
+      -
+      var(--rm-space-2)
+    );
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius:
+    var(--rm-radius-md);
+
+  background:
+    transparent;
+
+  color:
+    var(--rm-text-secondary);
+
+  font: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background-color
+      var(--rm-motion-fast),
+    color
+      var(--rm-motion-fast);
+}
+
+.rm-modal__close:hover:not(:disabled) {
+  background:
+    var(--rm-surface-secondary);
+
+  color:
+    var(--rm-text-primary);
+}
+
+.rm-modal__close:focus-visible {
+  outline:
+    2px solid
+    var(--rm-primary);
+
+  outline-offset: 2px;
+}
+
+.rm-modal__close:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.rm-modal__close > svg {
+  inline-size: 1.25em;
+  block-size: 1.25em;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+ * Responsive
+ * XS range: < 36rem
+ * ======================================== */
+
+@media (max-width: 35.999rem) {
+  .rm-modal {
+    inline-size:
+      calc(
+        100%
+        -
+        var(--rm-space-6)
+      );
+
+    max-block-size:
+      calc(
+        100dvb
+        -
+        var(--rm-space-6)
+      );
+  }
+
+  .rm-modal__header {
+    padding:
+      var(--rm-space-4);
+  }
+
+  .rm-modal__body {
+    padding:
+      var(--rm-space-4);
+  }
+
+  .rm-modal__footer {
+    padding:
+      var(--rm-space-4);
+  }
+
+  .rm-modal--fullscreen {
+    inline-size:
+      100%;
+
+    block-size:
+      100vh;
+
+    block-size:
+      100dvb;
+
+    max-block-size:
+      none;
+  }
+
+
+  .rm-modal--fullscreen .rm-modal__header {
+    padding-block-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-top,
+          0px
+        )
+      );
+  }
+
+
+  .rm-modal--fullscreen .rm-modal__body {
+    padding:
+      var(--rm-space-4);
+
+    padding-inline-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-left,
+          0px
+        )
+      );
+
+    padding-inline-end:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-right,
+          0px
+        )
+      );
+  }
+
+
+  .rm-modal--fullscreen .rm-modal__footer {
+    padding-inline-start:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-left,
+          0px
+        )
+      );
+
+    padding-inline-end:
+      max(
+        var(--rm-space-4),
+        env(
+          safe-area-inset-right,
+          0px
+        )
+      );
+  }
+
+}
+
+
+/* ========================================
+ * Reduced Motion
+ * ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-modal,
+  .rm-modal::backdrop,
+  .rm-modal__close {
+    transition: none;
+  }
+
+  .rm-modal,
+  .rm-modal[open] {
+    transform: none;
+  }
+}
